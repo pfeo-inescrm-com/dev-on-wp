@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: INES CRM Marketplace\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-09 14:26+0000\n"
-"PO-Revision-Date: 2019-07-09 14:34+0000\n"
+"PO-Revision-Date: 2019-07-16 15:18+0000\n"
 "Language-Team: French (France)\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
@@ -49,11 +49,11 @@ msgstr ""
 
 #: page-contact.php:30
 msgid "How can We <span class=\"highlighted\">Help?</span>"
-msgstr "Vous souhatiez rejoindre la Marketplace INES CRM ?"
+msgstr "Vous souhaitez rejoindre la Marketplace INES CRM ?"
 
 #: page-contact.php:46
 msgid "Office Address"
-msgstr "Adresse de bureau"
+msgstr "Nos bureaux"
 
 #: page-contact.php:50
 msgid "54 bis rue Sala, 69002 Lyon"
@@ -113,7 +113,7 @@ msgstr "gratuit"
 
 #: inc/inesmktplc-wc-template-functions.php:62
 msgid "on demand"
-msgstr ""
+msgstr "sur devis"
 
 #: inc/inesmktplc-wc-template-functions.php:207
 msgid "Items per page"
@@ -272,7 +272,7 @@ msgstr "Gratuit"
 
 #: inc/widgets/class-inesmktplc-widget-product-pricing.php:111
 msgid "On Demand"
-msgstr ""
+msgstr "Sur Devis"
 
 #: inc/widgets/class-inesmktplc-widget-product-pricing.php:135
 msgid "Pricing"
@@ -284,7 +284,7 @@ msgstr "Installer"
 
 #: woocommerce/single-product/sidebar-single-product.php:32
 msgid "Quotation"
-msgstr "Devis"
+msgstr "Demande de devis"
 
 #: woocommerce/single-product/sidebar-single-product.php:42
 msgid "Product Information"
