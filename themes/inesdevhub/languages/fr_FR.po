@@ -1,0 +1,327 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: INES CRM Marketplace\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-09 14:26+0000\n"
+"PO-Revision-Date: 2019-07-16 15:18+0000\n"
+"Language-Team: French (France)\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.0; wp-5.2.2\n"
+"Last-Translator: p.feo <p.feo@inescrm.com>\n"
+"Language: fr_FR"
+
+#: 404.php:15
+msgid "Oops! Page Not Found"
+msgstr "Oops ! Page non trouvée"
+
+#: 404.php:18
+msgid "Back to Home"
+msgstr "Retour à l'accueil"
+
+#: BK_20190517_home.php:38 page-home.php:34
+msgid "home background image"
+msgstr "accueil image de fond"
+
+#: BK_20190517_home.php:47 page-home.php:43
+msgid "Welcome to INES Marketplace!"
+msgstr "Bienvenue sur la Marketplace INES !"
+
+#: BK_20190517_home.php:54 page-home.php:50
+#: template-parts/header-search-fullwidth.php:39
+msgid "Simply connect your <span>CRM</span> to your Tools"
+msgstr "Connectez simplement votre <span>CRM</span> à vos applications"
+
+#: BK_20190517_home.php:66 page-home.php:62
+msgid "Integration catalogue"
+msgstr "Catalogue d'intégrations"
+
+#: footer.php:184
+msgid "All rights reserved"
+msgstr "Tous droits réservés"
+
+#. Name of the template
+msgid "Contact"
+msgstr ""
+
+#: page-contact.php:30
+msgid "How can We <span class=\"highlighted\">Help?</span>"
+msgstr "Vous souhaitez rejoindre la Marketplace INES CRM ?"
+
+#: page-contact.php:46
+msgid "Office Address"
+msgstr "Nos bureaux"
+
+#: page-contact.php:50
+msgid "54 bis rue Sala, 69002 Lyon"
+msgstr ""
+
+#: page-contact.php:60
+msgid "Phone Number"
+msgstr "Numéro de téléphone"
+
+#: page-contact.php:74
+msgid "E-Mail"
+msgstr ""
+
+#: page-contact.php:90
+msgid "Leave Your Messages"
+msgstr "Laissez-nous votre message"
+
+#. Name of the template
+msgid "Home"
+msgstr "Accueil"
+
+#. Name of the template
+msgid "Login"
+msgstr ""
+
+#: page-login.php:42
+msgid "<strong>Oh snap!</strong> Invalid username and/or password."
+msgstr ""
+"<strong>Oh oh!</strong> Nom d'utilisateur et / ou mot de passe incorrect."
+
+#: page-login.php:44
+msgid "<strong>Oh snap!</strong> Username and/or Password is empty."
+msgstr ""
+"<strong>Oh oh!</strong> Le nom d'utilisateur et / ou le mot de passe est "
+"vide."
+
+#: page-login.php:46
+msgid "<strong>Oh snap!</strong> You are logged out."
+msgstr "<strong>Oh oh!</strong> Vous êtes déconnecté."
+
+#. Name of the template
+msgid "Presentation"
+msgstr "Présentation"
+
+#: search.php:24
+msgid "results found based on keyword(s):"
+msgstr "résultats trouvés en fonction des mots-clés:"
+
+#: search.php:69
+#, fuzzy
+msgid "Nothing found. Please try a different search"
+msgstr "Rien n'a été trouvé. S'il vous plaît, essayez une recherche différente"
+
+#: inc/inesmktplc-wc-template-functions.php:59
+msgid "free"
+msgstr "gratuit"
+
+#: inc/inesmktplc-wc-template-functions.php:62
+msgid "on demand"
+msgstr "sur devis"
+
+#: inc/inesmktplc-wc-template-functions.php:207
+msgid "Items per page"
+msgstr "Résultats par page"
+
+#: inc/inesmktplc-wc-template-functions.php:214
+msgid "items per page"
+msgstr "résultats par page"
+
+#: inc/setup.php:11
+msgid "Primary Menu"
+msgstr ""
+
+#: inc/setup.php:12
+msgid "Woocommerce #1 Menu"
+msgstr ""
+
+#: inc/sidebars.php:9
+msgid "Sidebar Marketplace - General"
+msgstr ""
+
+#: inc/sidebars.php:11
+msgid "INES Marketplace general sidebar"
+msgstr ""
+
+#: inc/sidebars.php:31
+msgid "Sidebar Marketplace - Footer 1st column"
+msgstr ""
+
+#: inc/sidebars.php:33
+msgid "INES Marketplace sidebar for footer 1st column"
+msgstr ""
+
+#: inc/sidebars.php:50
+msgid "Sidebar Marketplace - Footer 2nd column"
+msgstr ""
+
+#: inc/sidebars.php:52
+msgid "INES Marketplace sidebar for footer 2nd column"
+msgstr ""
+
+#: inc/sidebars.php:69
+msgid "Sidebar Marketplace - Footer 3rd column"
+msgstr ""
+
+#: inc/sidebars.php:71
+msgid "INES Marketplace sidebar for footer 3rd column"
+msgstr ""
+
+#: inc/sidebars.php:88
+msgid "Sidebar Marketplace - Footer 4th column"
+msgstr ""
+
+#: inc/sidebars.php:90
+msgid "INES Marketplace sidebar for footer 4th column"
+msgstr ""
+
+#: inc/sidebars.php:127
+msgid "Sidebar Marketplace - Shop page"
+msgstr ""
+
+#: inc/sidebars.php:129
+msgid "INES Marketplace sidebar for product filtering in shop page"
+msgstr ""
+
+#: template-parts/author-area-cart.php:99
+msgid "Sub-total :"
+msgstr ""
+
+#: template-parts/author-area-cart.php:107
+msgid "View Cart"
+msgstr "Voir le panier"
+
+#: template-parts/author-area-cart.php:110
+msgid "Checkout"
+msgstr "Valider mon panier"
+
+#: template-parts/author-area-cart.php:119
+msgid "Your cart is empty"
+msgstr "Votre panier est vide"
+
+#: template-parts/author-area-not-loggedin.php:11
+msgid "Members Area Login"
+msgstr "Connexion membres"
+
+#: template-parts/call-to-action-fullwidth.php:16
+msgid "Do you want to join our Marketplace?"
+msgstr "Vous souhaitez rejoindre notre Marketplace ?"
+
+#: template-parts/call-to-action-fullwidth.php:20
+msgid "Increase efficiency. Get the most out of your tools in a few clicks."
+msgstr ""
+"Gagnez en efficacité. Tirez le meilleur de vos outils en quelques clics."
+
+#: template-parts/call-to-action-fullwidth.php:23
+msgctxt "url"
+msgid "contact-us"
+msgstr "contactez-nous"
+
+#: template-parts/call-to-action-fullwidth.php:24
+msgid "Contact us"
+msgstr "Contactez-nous"
+
+#: template-parts/content-page.php:25
+msgid "Pages:"
+msgstr "Pages :"
+
+#: template-parts/header-search-fullwidth.php:35
+msgid "Integrate <span>INES</span> with all your tools"
+msgstr "Intégrez <span>INES</span> avec tous vos outils"
+
+#: template-parts/search-form-large.php:10
+#: template-parts/search-form-large.php:13
+msgid "Find your tools..."
+msgstr "Trouvez vos outils ..."
+
+#: template-parts/search-form-large.php:18
+msgid "Search..."
+msgstr "Chercher ..."
+
+#: template-parts/search-form-small.php:12
+msgid "Search for:"
+msgstr "Chercher ..."
+
+#: woocommerce/content-product.php:63 woocommerce/single-product/related.php:72
+msgid "More info"
+msgstr "Plus d'info"
+
+#: inc/widgets/class-inesmktplc-widget-categories.php:103
+#: inc/widgets/class-inesmktplc-widget-product-modules.php:101
+msgid "Categories"
+msgstr "Catégories"
+
+#: inc/widgets/class-inesmktplc-widget-categories.php:113
+#: inc/widgets/class-inesmktplc-widget-filter-products-checkbox.php:114
+#: inc/widgets/class-inesmktplc-widget-product-modules.php:108
+#: inc/widgets/class-inesmktplc-widget-product-pricing.php:142
+msgid "Title:"
+msgstr "Titre :"
+
+#: inc/widgets/class-inesmktplc-widget-categories.php:146
+#: inc/widgets/class-inesmktplc-widget-product-modules.php:116
+#: inc/widgets/class-inesmktplc-widget-product-pricing.php:153
+#, fuzzy
+msgid "Show post counts"
+msgstr "Afficher les posts"
+
+#: inc/widgets/class-inesmktplc-widget-filter-products-checkbox.php:48
+#: inc/widgets/class-inesmktplc-widget-filter-products-checkbox.php:107
+msgid "Filter Products"
+msgstr "Filtrer les produits"
+
+#: inc/widgets/class-inesmktplc-widget-product-pricing.php:102
+msgid "Free"
+msgstr "Gratuit"
+
+#: inc/widgets/class-inesmktplc-widget-product-pricing.php:111
+msgid "On Demand"
+msgstr "Sur Devis"
+
+#: inc/widgets/class-inesmktplc-widget-product-pricing.php:135
+msgid "Pricing"
+msgstr "Prix"
+
+#: woocommerce/single-product/sidebar-single-product.php:28
+msgid "Install"
+msgstr "Installer"
+
+#: woocommerce/single-product/sidebar-single-product.php:32
+msgid "Quotation"
+msgstr "Demande de devis"
+
+#: woocommerce/single-product/sidebar-single-product.php:42
+msgid "Product Information"
+msgstr "Information Produit"
+
+#: woocommerce/single-product/sidebar-single-product.php:49
+msgid "Category"
+msgstr "Catégorie"
+
+#: woocommerce/single-product/sidebar-single-product.php:60
+msgid "No attributes"
+msgstr ""
+"\n"
+"Aucun attribut"
+
+#: woocommerce/single-product/sidebar-single-product.php:310
+msgid "Submit"
+msgstr "Envoyer"
+
+#. Name of the theme
+msgid "INES CRM Marketplace"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"This is a custom marketplace theme built for INES CRM based on MartPlace "
+"html template"
+msgstr ""
+
+#. URI of the theme
+msgid "https://github.com/pfeo-inescrm-com/marketplace"
+msgstr ""
+
+#. Author of the theme
+msgid "INES CRM team | pfeo"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://www.inescrm.fr"
+msgstr ""

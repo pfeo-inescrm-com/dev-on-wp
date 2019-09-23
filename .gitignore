@@ -1,0 +1,9 @@
+index.php
+backups/
+#languages/
+#plugins/
+themes/index.php
+themes/twentynineteen/
+updraft/
+upgrade/
+uploads/

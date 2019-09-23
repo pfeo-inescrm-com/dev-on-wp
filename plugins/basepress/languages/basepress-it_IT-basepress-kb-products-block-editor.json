@@ -1,0 +1,16 @@
+{
+  "translation-revision-date": "+0000",
+  "generator": "",
+  "domain": "basepress",
+  "locale_data": {
+    "messages": {
+      "":                                                             {
+        "domain":       "basepress",
+        "plural-forms": "n != 1",
+        "lang":         "it-it"
+      },
+      "KB Products List": ["Lista Knowledge Base"],
+      "Displays the list of active Knowledge Bases.": ["Visualizza l'elenco dei Knowledge Base attivi."]
+    }
+  }
+}

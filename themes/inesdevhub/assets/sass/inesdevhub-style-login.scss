@@ -1,0 +1,39 @@
+/*--------------------------------------------------------------
+# This stylesheet is not being used
+# as for version 0.3.0
+# It was replaced with 
+# custom login page template
+# you can check
+# at page-login.php
+# for more info
+--------------------------------------------------------------*/
+
+
+
+
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+// $font-family-base: 'Raleway', Helvetica, sans-serif;
+// $font-size-base: 16px;
+
+$primary: #0066AC;
+$secondary: #B5D6FA;
+$transparent: rgba(0, 0, 0, 0);
+$white: #FFF;
+$black: #000;
+$darkGray: lighten($black, 15%);
+$lightGray: lighten($black, 75%);
+$orange: #FF9800;
+$text-primary: #707070;
+$linkedInColor: #1985bc;
+$twitterColor: #00baff;
+$facebookColor: #516ca4;
+
+/*--------------------------------------------------------------
+# General Elements
+--------------------------------------------------------------*/
+
+body.login {
+    background-color:$lightGray;
+}

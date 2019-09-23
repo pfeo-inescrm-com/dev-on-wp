@@ -1,0 +1,927 @@
+/*
+Theme Name: BasePress admin styles
+Theme URI: 
+Author: codesavory.com
+Author URI: codesavory.com
+Description: This is the admin theme for BasePress
+Version: 2.2.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: 
+*/
+
+body.basepress-modal-on{
+	height: 100%;
+	overflow-y: hidden;
+}
+
+.knowledgebase_page_basepress_products #wpbody-content *,
+.knowledgebase_page_basepress_sections #wpbody-content *,
+.knowledgebase_page_basepress_postorder *,
+.basepress_page_basepress_icons_manager *{
+	box-sizing: border-box;
+}
+
+#basepress-products{
+	margin-top: 2.5em;
+}
+
+#product-image,
+#product-image-edit,
+#section-image,
+#section-image-edit,
+#section-icon,
+#section-icon-edit{
+	position: relative;
+	width: 250px;
+	height: 250px;
+	border: 1px solid #ddd;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+	background-color: #fff;
+	overflow: hidden;
+}
+
+#section-icon,
+#section-icon-edit{
+	width: 100px;
+	height: 100px;
+	padding: 25px 0;
+	font-size: 50px;
+	text-align: center;
+}
+
+#product-image img,
+#product-image-edit img,
+#section-image img,
+#section-image-edit img{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#product-image img[src=""],
+#product-image-edit img[src=""],
+#section-image img[src=""],
+#section-image-edit img[src=""]{
+	display: none;
+}
+
+#product-image img.horizontal,
+#product-image-edit img.horizontal,
+#section-image img.horizontal,
+#section-image-edit img.horizontal{
+	width: 100%;
+	height: auto;
+	top: 50%;
+	transform: translateY( -50% );
+}
+
+#product-image img.vertical,
+#product-image-edit img.vertical,
+#section-image img.vertical,
+#section-image-edit img.vertical{
+	width: auto;
+	height: 100%;
+	left: 50%;
+	transform: translateX( -50% );
+}
+
+#product-buttons,
+#section-buttons{
+	margin-bottom: 30px;
+}
+#product-buttons a,
+#section-buttons a{
+	margin-bottom: 5px;
+}
+
+/* Products and Sections page */
+
+.products-header,
+.sections-header{
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	margin-top: 5px;
+	border: 1px solid #ddd;
+	border-spacing: 5px;
+	background-color: #fff;
+}
+
+#products-table,
+#sections-table{
+	margin: 5px 0;
+}
+
+#products-table ul,
+#sections-table ul{
+	box-sizing: content-box;
+	margin: 0;
+}
+#products-table ul,
+#sections-table ul{
+	box-sizing: content-box;
+}
+
+#products-table li,
+#sections-table li{
+	margin: 0 0 5px;	
+}
+
+.product-image-th{
+	display: table-cell;
+	width: 88px;
+	padding: 5px;
+}
+
+.section-icon-th,
+.section-image-th{
+	display: table-cell;
+	width: 60px;
+	padding: 5px;
+}
+
+.product-row,
+.section-row{
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	max-height: 100px;
+	border-spacing: 5px;
+	border: 1px solid #ddd;
+	background-color: #fff;
+	cursor: default;
+}
+
+.product-row.invisible,
+.section-row.invisible{
+	border-color: #cf503f;
+}
+
+.product-name,
+.product-description,
+.product-slug,
+.product-count,
+.product-actions,
+.section-name,
+.section-description,
+.section-slug,
+.section-count,
+.section-actions{
+	display: table-cell;
+	padding: 5px;
+	vertical-align: top;
+}
+
+.product-name div,
+.product-description div,
+.product-slug div,
+.product-count div,
+.product-actions div,
+.section-name div,
+.section-description div,
+.section-slug div,
+.section-count div,
+.section-actions div{
+	max-height: 88px;
+	overflow: hidden;
+	word-break: break-all;
+}
+
+.section-name > div{
+	cursor: pointer;  
+}
+
+.section-name > div:hover{
+	color: #0073aa;  
+}
+
+.product-image{
+	display: table-cell;
+	width: 88px;
+	height: 88px;
+	background: center/contain no-repeat #ddd;
+}
+
+.section-icon,
+.section-image{
+	display: table-cell;
+	width: 60px;
+	min-width: 60px;
+	max-width: 60px;
+	vertical-align: top;
+	overflow: hidden;
+}
+
+.section-icon > div{
+	height: 60px;
+	padding: 10px 0;
+	background-color: #ddd;
+	font-size: 40px;
+	text-align: center;
+}
+
+.section-image > div{
+	height: 60px;
+	background-color: #ddd;
+	background-size: cover;
+}
+
+.product-image img{
+	width: 100%;
+	height: auto;
+}
+
+.product-info,
+.section-info{
+	display: table-row;
+	height: 100px;
+}
+
+.product-name,
+.product-slug,
+.section-name,
+.section-slug{
+	width: 20%;
+}
+
+.product-count,
+.section-count{
+	width: 60px;
+}
+
+.product-actions,
+.section-actions{
+	width: 30px;
+	vertical-align: middle;
+}
+
+
+.product-actions .dashicons,
+.section-actions .dashicons{
+	display: none;
+	width: 20px;
+	height: 20px;
+	margin-top: 10px;
+	font-size: 20px;
+}
+
+.product-actions .dashicons:hover,
+.section-actions .dashicons:hover{
+	color: #0085ba;
+}
+
+.product-actions .dashicons:first-of-type,
+.section-actions .dashicons:first-of-type{
+	margin-top: 0;
+}
+
+.product-row:hover .dashicons,
+.section-row:hover .dashicons{
+	display: inline-block;
+}
+
+#section-breadcrumb{
+	height: 28px;
+	margin-left: 10px;
+	padding: 5px 0;
+}
+
+#section-breadcrumb *{
+	display: inline;
+}
+
+#section-breadcrumb li {
+	margin-right: 5px;
+}
+
+@media (max-width:1279px){
+	.product-name, .product-slug,
+	.section-name, .section-slug{
+		width: auto;
+	}
+	.product-description,
+	.section-description{
+		display: none;
+	}
+}
+
+#product-section-styles{
+	margin-bottom: 2em;
+}
+
+
+/* Edit Product */
+
+#edit-product-wrap,
+#edit-section-wrap{
+	display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -20px;
+	right: 0;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 999;
+}
+
+#edit-basepress-product,
+#edit-basepress-section{
+	width: 100%;
+	max-width: 600px;
+	margin: 10px auto;
+	padding: 20px;
+	background-color: #fff;
+}
+
+#edit-basepress-product input,
+#edit-basepress-section input,
+#edit-basepress-product textarea,
+#edit-basepress-section textarea{
+	width: 100%;
+}
+
+#product-visibility{
+	display: none;
+}
+
+#product-visibility + label:before{
+	display: inline-block;
+	margin-left: 10px;
+	font-family: 'Dashicons';
+	font-weight: normal;
+	font-size: 30px;
+	vertical-align: text-top;
+	content: "\f530";
+}
+
+#product-visibility:checked + label:before{
+	content: "\f177";
+}
+
+#default-category-edit{
+	margin: 1em 0;
+}
+
+
+/* Icons Selector */
+
+#icon-selector-wrap{
+	display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 999;
+}
+
+#icon-selector{
+	position: fixed;
+	width: 530px;
+	height: calc( 100% - 100px );
+	top: 50px;
+	left: 50%;
+	margin: 0 auto;
+	margin-left: -275px;
+	padding: 0 5px 0 25px;
+	background-color: #fff;
+	text-align: center;
+}
+
+#icon-selector-header{
+	height: 50px;
+}
+
+#icon-selector-body{
+	height: calc( 100% - 100px);
+	text-align: left;
+	overflow-y: auto;
+}
+
+.basepress-icon{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	margin: 2px;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	background-color: #dadada;
+	font-size: 25px;
+	text-align: center;
+}
+
+.basepress-icon:hover,
+.basepress-icon.selected{
+	border-color: #3ec0f4;
+	background-color: #5ac9f5;
+	color: #fff;
+}
+
+.basepress-icon span{
+	display: inline-block;
+	line-height: 36px;
+	cursor: default;
+}
+
+
+/* Posts Order page */
+
+#posts-order-header{
+	display: table;
+	width: 100%;
+	margin-top: 5px;
+	padding: 5px;
+	border-spacing: 5px;
+	border: 1px solid #ddd;
+	background-color: #fff;
+}
+
+#posts-order-table ul{
+	width: 100%;
+	margin-top: 5px;
+}
+
+#posts-order-table ul li{
+	display: table;
+	width: 100%;
+	margin-bottom: -1px;
+	padding: 5px;
+	border-spacing: 5px;
+	border: 1px solid #ddd;
+	background-color: #fff;
+	cursor: ns-resize;
+}
+
+#posts-order-table ul li:nth-child(2n+1){
+	background-color: #f9f9f9;
+}
+
+#post-order-author,
+#post-order-product,
+#post-order-section,
+#post-order-votes,
+#post-order-score,
+#post-order-views,
+#post-order-date,
+.post-order-author,
+.post-order-product,
+.post-order-section,
+.post-order-votes,
+.post-order-views,
+.post-order-score,
+.post-order-date{
+	display: table-cell;
+	width: 10%;
+}
+
+#post-order-title,
+.post-order-title{
+	display: table-cell;
+}
+
+.post-order-votes .dashicons-yes{
+	color: #37d237;
+}
+
+.post-order-votes .dashicons-no-alt{
+	color: #ff0000;
+}
+
+/* Ajax Loader */
+
+#ajax-loader{
+	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 99999;
+}
+
+#ajax-loader:before{
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 50px;
+	height: 50px;
+	border: 3px solid #888;
+	border-top-color: #fff;
+	border-radius: 50%;
+	content:'';
+	transform: translateX(-50%) translateY(-50%);
+	animation: bs-loader 0.6s infinite linear;
+}
+
+@keyframes bs-loader{
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* Settings Screen */
+
+.toplevel_page_basepress #wpfooter,
+.toplevel_page_basepress .update-nag{
+	display: none;
+}
+
+.basepress-tabs{
+	position: relative;
+	margin: 20px 0;
+}
+
+.basepress-tab{
+	width: 200px;
+	margin-bottom: 5px;
+}
+
+.basepress-tab-switch{
+	display: none;
+}
+
+.basepress-tab-label{
+	position: relative;
+	display: block;
+	min-height: 35px;
+	padding: 0 10px 0 12px;
+	border-left: 2px solid #bdc3c7;
+	line-height: 35px;
+	background: #fff;
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+	cursor: pointer;
+}
+
+.basepress-tab-label:hover{
+	padding-left: 10px;
+	border-left: 4px solid #df3a3a;
+}
+
+.settings-title{
+	margin: 0 0 1em;
+	font-size: 2em;
+	line-height: 1;
+}
+
+.basepress-tab-content{
+	position: absolute;
+	top: 0;
+	left: 205px;
+	width: calc(100% - 265px);
+	min-height: 100%;
+	margin-bottom: 50px;
+	padding: 30px;
+	background: #fff;  
+	z-index: 1;
+	opacity: 0;
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+	transition: opacity 0.5s;
+}
+
+input.basepress-tab-switch{
+	display: none !important;	
+}
+
+.basepress-tab-switch:checked + .basepress-tab-label{
+	padding-left: 10px;
+	border-left: 4px solid #df3a3a;
+	font-weight: bold;
+	font-size: 1.1em;
+	background: #fff;
+	z-index: 2;
+}
+
+.basepress-tab-switch:checked + .basepress-tab-label + .basepress-tab-content{
+	opacity: 1;
+	transition: all 0.5s;
+	z-index: 3;
+}
+
+.basepress-tabs input[type="number"]{
+	width: 60px;	
+}
+
+.basepress-tabs input[type="text"],
+.basepress-tabs textarea{
+	width: 27em;	
+}
+
+/* Icons selector in admin settings */
+
+#icon-sets label > input{ /* HIDE RADIO */
+	visibility: hidden; /* Makes input not-clickable */
+	position: absolute; /* Remove input from document flow */
+}
+
+#icon-sets .icons-content{
+	display: inline-block;
+	margin-right: 10px;
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background-color: #ddd;
+	font-size: 20px;
+	line-height: 20px;
+	color: #aaa;
+	cursor: pointer;
+}
+
+#icon-sets label > input:checked + .icons-content{ /* (RADIO CHECKED) IMAGE STYLES */
+	color: #fff;
+	background-color: #10a5e0;
+}
+
+.icons-content span:first-child{
+	margin-right: 10px;	
+}
+
+/* Post editor Shortcodes */
+
+#basepress-modal{
+	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba( 0,0,0,0.5);
+	z-index: 9999;
+}
+
+#basepress-modal *{
+	box-sizing: border-box;
+}
+
+#basepress-modal > div{
+	position: relative;
+	width: 600px;
+	top: 70px;
+	margin: 0 auto;
+	border-radius: 3px;
+	background-color: #fff;
+}
+
+#basepress-modal > div h2{
+	margin: 0;
+	padding: 10px 15px;
+	border-radius: 3px 3px 0 0;
+	background-color: #ddd;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+#basepress-modal-close{
+	position: absolute;
+	top: 5px;
+	right: 15px;
+	font-size: 30px;
+}
+
+#basepress-sc-content{
+	table-layout: fixed;
+	width: 100%;
+	max-width: 800px;
+	margin: 2em 0 0;
+}
+
+#basepress-sc-leftcol{
+	width: 200px;
+	padding-right: 15px;
+}
+
+#basepress-sc-content td{
+	vertical-align: top;
+}
+
+#basepress-sc-content select{
+	display: block;
+	width: 100%;
+}
+
+#basepress-sc-content select,
+#basepress-sc-content input{
+	margin-bottom: 5px;
+	background-color: white;
+	color: black;
+}
+
+#basepress-sc-content .spinner{
+	float: none;
+}
+
+#basepress-sc-test-wrap{
+	margin-top: 1em;
+}
+
+#basepress-sc-code{
+padding-top: 15px;	
+}
+
+#basepress-sc-code,
+#basepress-sc-codetext{
+	width: 100%;
+}
+
+#basepress-sc-results{
+	height: 270px;
+	margin-top: 10px;
+	padding: 0 10px;
+	border: 1px solid #ddd;
+	background-color: white;
+	overflow: auto;
+}
+
+#basepress-sc-results ul{
+	padding-left: 1.5em;
+	list-style-type: disc;
+}
+
+#basepress-sc-results .bpress-article-list-item a{
+	text-decoration: none;
+}
+
+
+/* Icons Manager */
+.manager-icon{
+	position: relative;
+	float: left;
+	width: 45px;
+	height: 45px;
+	margin: 4px;
+	padding: 6px;
+	border: 2px solid #cccccc;
+	border-radius: 4px;
+	background-color: #dadada;
+	font-size: 25px;
+	text-align: center;
+}
+
+.manager-icon:hover,
+.manager-icon.selected{
+	border: 2px solid #3ec0f4;
+	background-color: #5ac9f5;
+	color: #fff;
+}
+
+.manager-icon.default{
+	border: 2px solid #f43e66;
+	background-color: #f55679;
+	color: #fff;
+}
+
+.manager-icon-index{
+	position:absolute;
+	bottom:2px;
+	left:2px;
+	font-size:0.35em;
+	line-height:1;
+	color:#fff;
+}
+
+.basepress-card{
+	margin-bottom: 10px;
+	padding: 25px;
+	background-color: #fff;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.basepress-card:after{
+	content: '';
+	display: table;
+	clear: both;
+}
+
+#basepress-icons-advanced{
+	margin: 0 0 15px;
+	padding: 10px;
+	background-color: #eee;
+}
+
+#css-uri,
+#load-icons{
+	margin-right: 15px;
+}
+
+#icons-context-title{
+	margin-bottom: 1em;
+	font-size: 2em;
+}
+
+/* Feedbacks page */
+
+#basepress-feedbacks-header{
+	margin: 1em 0;
+}
+
+#basepress-feedbacks-header:after{
+	display: table;
+	content: '';
+	clear: both;
+}
+
+.basepress-feedback-status{
+	display: inline-block;
+}
+
+.basepress-feedback-status li{
+	display: inline-block;
+	margin: 0 0.5em;
+}
+
+.basepress-feedback-status li:first-child{
+	margin-left: 0;
+}
+
+.basepress-feedback-status li.current a{
+	color: inherit;
+	font-weight: bold;
+}
+
+.basepress-feedback-status li a{
+	text-decoration: none;
+}
+
+.basepress-feedbacks-search{
+	float: right;
+}
+
+.basepress-feedbacks-search:after{
+	display: table;
+	content: '';
+}
+
+.basepress-feedback{
+	position: relative;
+	margin: 0 0 10px;
+	padding: 10px 40px 10px 10px;
+	background-color: #fff;
+	border-radius: 5px;
+	border: 1px solid #e6e6e6;
+	border-left: 5px solid #df3a3a;
+}
+
+.basepress-feedback.trash{
+	border-left: 5px solid #53c653;
+}
+
+.basepress-feedback-post-title{
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+.basepress-feddback-date{
+	margin: 5px 0;
+	color: #999;
+}
+
+.basepress-feddback-date .dashicons{
+	font-size: inherit;
+	line-height: inherit;
+	height: inherit;
+	width: inherit;
+}
+
+.basepress-feedback p{
+	margin-bottom: 0;
+	font-size: 1.1em;
+}
+
+.basepress-feedback .dashicons-trash{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	color: #999;
+}
+
+.basepress-feedback .dashicons-hidden,
+.basepress-feedback .dashicons-visibility{
+	position: absolute;
+	right: 10px;
+	top: calc( 1em + 20px );
+	color: #999;
+}
+
+.basepress-feedback .dashicons-trash:hover,
+.basepress-feedback .dashicons-hidden:hover,
+.basepress-feedback .dashicons-visibility:hover{
+	color: #444;
+}
+
+.basepress-feedbacks-nav .page-numbers{
+	padding: 5px 10px;
+	border-radius: 4px;
+	border: 1px solid #e6e6e6;
+	background-color: #fff;
+	text-decoration: none;
+}
+
+.basepress-feedbacks-nav .page-numbers.current{
+	font-weight: bold;
+}

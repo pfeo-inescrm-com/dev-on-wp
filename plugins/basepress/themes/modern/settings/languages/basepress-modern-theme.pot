@@ -1,0 +1,79 @@
+# Translation of BasePress Modern theme
+# This file is distributed under the same license as the plugin package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 15/06/2017\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: 15/06/2017\n"
+"Last-Translator: 8bitsinarow.com\n"
+"Language-Team: \n"
+"Language: en\n"
+"X-Generator: \n"
+
+#: theme-settings.php
+msgid "Modern Theme Settings"
+msgstr ""
+
+#: theme-settings.php
+msgid "Enable Settings"
+msgstr ""
+
+#: theme-settings.php
+msgid "Google Font @import"
+msgstr ""
+
+#: theme-settings.php
+msgid "Go to fonts.google.com, choose the font you like with a regular and bold size. Paste here the @import code for the font you chose.<br>Leave empty to inherit the font family from the website theme."
+msgstr ""
+
+#: theme-settings.php
+msgid "Font Size"
+msgstr ""
+
+#: theme-settings.php
+msgid "Insert the size in pixels for the knowledge base font.<br>Leave empty to inherit size from the website theme."
+msgstr ""
+
+#: theme-settings.php
+msgid "Force Full Width Header"
+msgstr ""
+
+#: theme-settings.php
+msgid "This will force the header to stretch over website container and take full window width.<br> Will also set the body overflow-x to hidden."
+msgstr ""
+
+#: theme-settings.php
+msgid "Header top offset"
+msgstr ""
+
+#: theme-settings.php
+msgid "Insert the top offset value including unit( px, %, em etc.) to properly distance the header from the top of the page.<br>You can use positive and negative values."
+msgstr ""
+
+#: theme-settings.php
+msgid "Header Background Image"
+msgstr ""
+
+#: theme-settings.php
+msgid "Make Sidebar Sticky"
+msgstr ""
+
+#: theme-settings.php
+msgid "If activated the sidebar will remain fixed in the page while scrolling."
+msgstr ""
+
+#: theme-settings.php
+msgid "Sticky Sidebar Threshold"
+msgstr ""
+
+#: theme-settings.php
+msgid "Distance from top of screen including unit( px, %, em etc.) before sidebar becomes sticky."
+msgstr ""
+
+#: theme-settings.php
+msgid "Custom Css"
+msgstr ""

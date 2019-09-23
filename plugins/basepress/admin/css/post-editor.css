@@ -1,0 +1,117 @@
+/*
+Theme Name: BasePress post editor styles
+Theme URI:
+Author: 8bitsinarow.com
+Author URI: 8bitsinarow.com
+Version: 2.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* Custom Post type screen */
+
+.column-basepress-votes,
+.column-basepress-score,
+.column-basepress-views{
+	width: 90px;
+}
+
+.column-basepress-product,
+.column-basepress-section{
+	width: 100px;
+}
+
+.basepress-votes .dashicons-yes{
+	color: #37d237;
+}
+
+.basepress-votes .dashicons-no-alt{
+	color: #ff0000;
+}
+
+th.manage-column.column-comments,
+td.comments.column-comments{
+	padding: 8px;
+}
+
+/*Hides the category list in Quick edit */
+.inline-edit-categories{
+	display: none;
+}
+
+@media (max-width:1160px){
+	.edit-php.post-type-knowledgebase .column-author,
+	.edit-php.post-type-knowledgebase .column-date{
+		display: none;
+	}
+}
+
+@media (max-width:825px){
+	.column-basepress-score{
+		display: none;
+	}
+}
+
+/* Icons selector in post editor */
+
+#basepress-post-icons{
+	height: 190px;
+	overflow: auto;
+}
+
+#basepress-post-icons label {
+	vertical-align: top;
+}
+
+#basepress-post-icons label > input{ /* HIDE RADIO */
+	visibility: hidden; /* Makes input not-clickable */
+	position: absolute; /* Remove input from document flow */
+}
+
+#basepress-post-icons span{
+	display: inline-block;
+	height: 22px;
+	width: 22px;
+	margin: 2px;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background-color: #ddd;
+	font-size: 20px;
+	line-height: 19px;
+	color: #444;
+	cursor: pointer;
+	text-align: center;
+}
+
+#basepress-post-icons label > input:checked + span{ /* (RADIO CHECKED) IMAGE STYLES */
+	color: #fff;
+	background-color: #10a5e0;
+}
+
+.basepress-empty-post-icon:before{
+	display: inline-block;
+	content: 'DEF';
+	font-size: 12px;
+}
+
+#basepress-post-restriction-meta{
+	height: 230px;
+	overflow: auto;
+}
+
+#basepress-restrictions-toggle{
+	margin: 10px 0;
+}
+
+#basepress-select-restrictions{
+	margin-right: 5px;
+}
+
+#basepress-post-restriction-meta{
+	margin-top: 1em;
+}
+
+#basepress-post-restriction-meta p{
+	margin: 0.5em 0;
+}

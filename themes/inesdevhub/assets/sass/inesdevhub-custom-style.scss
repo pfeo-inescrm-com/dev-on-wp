@@ -1,0 +1,628 @@
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+// $font-family-base: 'Raleway', Helvetica, sans-serif;
+// $font-size-base: 16px;
+
+$primary: #0066AC;
+$secondary: #B5D6FA;
+$transparent: rgba(0, 0, 0, 0);
+$white: #FFF;
+$black: #000;
+$darkGray: lighten($black, 15%);
+$lightGray: lighten($black, 75%);
+$orange: #FF9800;
+$orange-secondary: #F4813A;
+$text-primary: #707070;
+$linkedInColor: #1985bc;
+$twitterColor: #00baff;
+$facebookColor: #516ca4;
+
+/*--------------------------------------------------------------
+# General Elements
+--------------------------------------------------------------*/
+.btn {
+  padding: 0 0.7rem;
+}
+
+.callto-action-btn {
+  margin-top: 2rem;
+}
+
+.purchase-button>.btn {
+  background-color: #f48134;
+  //$orange;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+.top-menu-area {
+  .logo img.custom-logo {
+    width: 150px;
+    height: auto;
+  }
+
+  .site-name {
+    color: $primary;
+  }
+}
+
+
+  .navbar-expand-md .navbar-collapse {
+    justify-content: flex-end;
+    ul li {
+      margin: 15px 0;
+      padding: 0 15px;
+      &:last-child {
+        border: 1px solid transparent;
+        border-radius: 5px;
+        background-color: $orange-secondary;
+        a {
+          color: $white;
+        }
+        &:hover {
+          background-color: $orange;
+          > a {
+              color: $primary;
+          }
+      }
+      }
+    }
+  }
+
+
+
+.search__title p {
+  color: $white;
+}
+
+.section--padding {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.content_block3 {
+  padding: 50px 0;
+
+  .area_image.offset-image-bottom {
+    margin-bottom: -50px;
+  }
+}
+
+
+.card-area {
+  background: linear-gradient(transparent 30%, #28324E 0%);
+  padding-bottom: 50px;
+}
+
+.news .news__content {
+  min-height: auto !important;
+  height: unset;
+  padding: 30px;
+  overflow: hidden;
+
+  h4 {
+    height: 60px;
+  }
+
+  p {
+    margin: 0 0 10px 0;
+  }
+}
+
+.intro,
+.card-area,
+.intro-features,
+.call-to-action {
+  margin-top: 100px;
+}
+
+.intro-features {
+  .row {
+    margin-top: 80px;
+  }
+}
+
+
+
+
+.footer-area {
+  a {
+    color: $white;
+  }
+
+  .widget_custom_html:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Woocommerce
+--------------------------------------------------------------*/
+.dropdowns.dropdown--cart .cart_area .cart_product {
+  display: flex;
+  align-content: flex-start;
+}
+
+.dropdowns.dropdown--cart .cart_area .empty-cart-info {
+  margin: 0;
+  padding: 1rem;
+  text-align: right;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.dropdowns.dropdown--cart .cart_area .product__info {
+  flex-basis: 2;
+
+  .thumbn a img {
+    height: auto;
+  }
+}
+
+.dropdowns.dropdown--cart .cart_area .product__action {
+  flex-basis: 1;
+}
+
+.breadcrumb-wrapper {
+  justify-content: center;
+}
+
+.woocommerce-breadcrumb {
+  padding: 0;
+  background: none;
+  margin-bottom: 0 !important;
+  color: #bfcad7 !important;
+
+  li {
+    display: inline-block;
+
+    a {
+      font-size: 15px;
+      line-height: 70px;
+      color: #fff !important;
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+
+    &.active a {
+      color: #bfcad7 !important;
+    }
+  }
+}
+
+// .woocommerce #content div.product div.images,
+.woocommerce div.product div.images,
+// .woocommerce-page #content div.product div.images,
+.woocommerce-page div.product div.images {
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 4px 4px 0 0;
+}
+
+.woocommerce div.product div.images img,
+.woocommerce-page div.product div.images img {
+  border-radius: 4px 4px 0 0;
+}
+
+.flex-control-thumbs {
+  li {
+    width: 80px !important;
+    float: left !important;
+    margin: 5px !important;
+  }
+}
+
+.woocommerce div.product .woocommerce-product-gallery--columns-3 .flex-control-thumbs li:nth-child(3n+1) {
+  clear: unset !important;
+}
+
+.woocommerce div.product .woocommerce-product-gallery--columns-4 .flex-control-thumbs li:nth-child(4n+1) {
+  clear: unset !important;
+}
+
+.woocommerce div.product .woocommerce-product-gallery--columns-5 .flex-control-thumbs li:nth-child(5n+1) {
+  clear: unset !important
+}
+
+.woocommerce .product .images {
+  margin-bottom: 4em !important;
+}
+
+.woocommerce div.product .woocommerce-tabs,
+.woocommerce-page div.product .woocommerce-tab {
+  padding: 0 30px 30px;
+  // text-align: center;
+  // border-bottom: 1px solid rgb(236, 236, 236);
+}
+
+
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+  &::before {
+    // position: unset;
+    // content: unset;
+    // width: unset;
+    // bottom: unset;
+    // left: unset;
+    // border-bottom: unset;
+    // z-index: unset;
+    all: unset;
+  }
+
+  border: 0;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0px;
+  margin-bottom: 2rem;
+  list-style: none;
+  border-bottom: 1px solid rgb(236, 236, 236);
+
+  li {
+    background: unset;
+    z-index: unset;
+    border: unset;
+    border-bottom-color: unset;
+    border-radius: unset;
+    position: relative;
+    display: inline-block;
+    margin-right: -1px;
+    border-bottom: 1px solid rgb(236, 236, 236);
+
+    &::before,
+    &::after {
+      all: unset;
+    }
+
+    a {
+      color: rgb(0, 0, 0);
+      font-size: 17px;
+      text-transform: capitalize;
+      display: block;
+      margin-right: 0px;
+      line-height: 70px;
+      padding: 0px 28px;
+      border-width: initial;
+      border-style: none;
+      border-color: initial;
+      border-image: initial;
+      transition: all 0.3s ease 0s;
+    }
+
+    a::before {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      opacity: 0;
+      left: 0px;
+      visibility: hidden;
+      background: rgb(0, 102, 172);
+      transition: all 0.3s ease 0s;
+    }
+
+    &.active>a {
+      color: rgb(0, 102, 172);
+      border-width: 0px;
+      border-style: initial;
+      border-color: initial;
+      border-image: initial;
+      background: none;
+    }
+
+    &.active>a::before {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &:last-child>a {
+      padding-right: 60px;
+    }
+  }
+
+
+}
+
+.woocommerce div.product .woocommerce-tabs .panel {
+
+  h2,
+  .h2 {
+    margin-bottom: 1rem;
+  }
+
+  ul,
+  ol {
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+
+    li {
+      font-size: 1rem;
+      line-height: 2rem;
+    }
+  }
+
+}
+
+.sidebar--single-product {
+
+  .sidebar-card.card-pricing,
+  .card-pricing.item-preview {
+    .price * {
+      color: $primary;
+    }
+
+    // .card-pricing.item-preview {
+    //     .price * {
+    //         color: $darkGray;
+    //     }
+    // }
+  }
+}
+
+
+/* product single card */
+.product--card-small {
+  .product-desc {
+    .product_title h4 {
+      height: 50px !important;
+    }
+
+    ul.titlebtm {
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+      height: 50px !important;
+    }
+  }
+
+  .product-purchase a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+  }
+
+  @media (min-width: 576px) and (max-width: 767px) {
+    .product-purchase a {
+      max-width: 80px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    .product-purchase a {
+      max-width: 150px;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1200px) {
+    .product-purchase a {
+      max-width: 40px;
+    }
+  }
+
+  @media (min-width: 1201px) {
+    .product-purchase a {
+      max-width: 90px;
+    }
+  }
+
+}
+
+
+
+.product-purchase {
+  .price_love>span {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+
+  .first-category {
+    float: right;
+    text-align: right;
+  }
+
+  span.lnr,
+  a {
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  a {
+    padding-left: 5px;
+  }
+
+}
+
+.product-desc ul.titlebtm>li a,
+.product-desc ul.titlebtm>li p {
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+
+/* shop page */
+/* shop sidebar widgets */
+// span.item-count {
+//   float: right;
+// }
+
+.filter-bar {
+  .woocommerce-ordering {
+    margin: 0;
+  }
+}
+
+.products {
+  .product--card {
+    margin-bottom: 30px !important;
+  }
+}
+
+
+/* cart */
+#add_payment_method .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-checkout .wc-proceed-to-checkout a.checkout-button {
+  font-size: 1.25em;
+  padding: 0.5rem;
+}
+
+.woocommerce #content table.cart td.actions .input-text,
+.woocommerce table.cart td.actions .input-text,
+.woocommerce-page #content table.cart td.actions .input-text,
+.woocommerce-page table.cart td.actions .input-text {
+  width: 160px;
+  line-height: unset;
+  height: unset;
+}
+
+.woocommerce .quantity .qty {
+  width: 4rem;
+  padding: 0 !important;
+}
+
+/* messages - alerts */
+.woocommerce-error::before,
+.woocommerce-info::before,
+.woocommerce-message::before {
+  content: unset !important;
+}
+
+
+
+
+/**
+ * search results page
+ * search.php
+ *
+ */
+body.search {
+  text-align: unset;
+}
+
+.search-results-wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  .product__thumbnail {
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+  }
+}
+
+
+
+
+/*--------------------------------------------------------------
+# Ninja Forms
+--------------------------------------------------------------*/
+.nf-before-form-content {
+  margin-bottom: 20px !important;
+}
+
+.nf-error-msg,
+.ninja-forms-req-symbol {
+  color: $primary !important;
+}
+
+.nf-form-content {
+
+  label span,
+  .form-group p.label span {
+    font-size: 1.5rem !important;
+  }
+}
+
+
+.nf-form-content .list-select-wrap .nf-field-element>div,
+.nf-form-content input:not([type=button]),
+.nf-form-content textarea {
+  margin: 0 !important;
+  padding: 0 20px !important;
+  width: 100% !important;
+  height: 48px !important;
+  background-color: white !important;
+  border: 1px solid #e7e7e7 !important;
+  border-radius: 4px !important;
+  box-sizing: border-box !important;
+  box-shadow: none !important;
+  outline: none !important;
+  font-size: 16px !important;
+  line-height: 48px !important;
+  color: #9e9e9e !important;
+}
+
+.nf-form-content button,
+.nf-form-content input[type=button],
+.nf-form-content input[type=submit] {
+  display: inline-block !important;
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 0.7rem !important;
+  min-width: 170px !important;
+  background: #0066ac !important;
+  text-transform: capitalize !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  line-height: 50px !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #fff !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+  transition: 0.3s ease !important;
+  border: none !important;
+  border-radius: 100px !important;
+  user-select: none !important;
+}
+
+.nf-error.field-wrap .nf-field-element:after {
+  background: $primary !important;
+  font-size: 1rem !important;
+  height: 45px !important;
+  width: 45px !important;
+  line-height: 45px !important;
+}
+
+
+.label-right .nf-field-element {
+  width: 95% !important;
+}
+
+.label-right .nf-field-label {
+  width: 5% !important;
+}
+
+
+
+
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}

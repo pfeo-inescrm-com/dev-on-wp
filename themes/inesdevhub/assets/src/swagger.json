@@ -1,0 +1,5021 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "v1",
+    "title": "INES API",
+    "description": "With these functions you can create, edit and consult companies, contacts, opportunities, sales, purchases, budgets, invoices, tickets, articles\r\n\r\n##  Introduction \r\n\r\nintroduction text",
+    "contact": {
+      "name": "INES CRM",
+      "url": "https://inescrm.fr",
+      "email": "contact@inescrm.com"
+    }
+  },
+  "basePath": "/api",
+  "paths": {
+    "/Admin/Tva": {
+      "get": {
+        "tags": ["Admin"],
+        "summary": "TVA",
+        "description": "Return a list of tva in the base account",
+        "operationId": "Tva",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/IdValue"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when list of tva is empty"
+          }
+        }
+      }
+    },
+    "/Admin/Terms": {
+      "get": {
+        "tags": ["Admin"],
+        "summary": "Terms",
+        "description": "Return a list of terms in the base account",
+        "operationId": "Terms",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/IdValue"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when list of terms is empty"
+          }
+        }
+      }
+    },
+    "/Admin/Banks": {
+      "get": {
+        "tags": ["Admin"],
+        "summary": "Banks",
+        "description": "Return a list of banks in the base account",
+        "operationId": "Banks",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/IdValue"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when list of banks is empty"
+          }
+        }
+      }
+    },
+    "/Admin/Incoterm": {
+      "get": {
+        "tags": ["Admin"],
+        "summary": "Incoterm",
+        "description": "Return a list of incoterm in the base account",
+        "operationId": "Incoterm",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/IdValue"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when list of incoterm is empty"
+          }
+        }
+      }
+    },
+    "/Admin/Origin": {
+      "get": {
+        "tags": ["Admin"],
+        "summary": "Origin",
+        "description": "Return a list of origins in the base account",
+        "operationId": "Origin",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/IdValue"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when list of origins is empty"
+          }
+        }
+      }
+    },
+    "/Admin/Folders": {
+      "get": {
+        "tags": ["Admin"],
+        "summary": "Folders",
+        "description": "Return a list of folders in the base account",
+        "operationId": "Folders",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/IdValue"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when list of folders is empty"
+          }
+        }
+      }
+    },
+    "/Admin/Shipment": {
+      "get": {
+        "tags": ["Admin"],
+        "summary": "Shipment",
+        "description": "Return a list of shipment in the base account",
+        "operationId": "Shipment",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/IdValue"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when list of shipment is empty"
+          }
+        }
+      }
+    },
+    "/Admin/Currency": {
+      "get": {
+        "tags": ["Admin"],
+        "summary": "Currency",
+        "description": "Return a list of currency in the base account",
+        "operationId": "Currency",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/IdValue"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when list of currency is empty"
+          }
+        }
+      }
+    },
+    "/Admin/RespCommercial/{module}": {
+      "get": {
+        "tags": ["Admin"],
+        "operationId": "RespCommercial",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "module",
+          "in": "path",
+          "required": true,
+          "type": "string",
+          "enum": ["None", "Contact", "Agenda", "Visite", "Journal", "Affaire", "Dossier", "Diffusion", "CommunicationTemplate", "Contract", "Marketing", "Sales", "Purchases", "Files", "Mail", "ToDo", "Calls"]
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/IdValue"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Article": {
+      "get": {
+        "tags": ["Article"],
+        "operationId": "All",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "family",
+          "in": "query",
+          "required": false,
+          "type": "integer",
+          "format": "int32",
+          "default": 0
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ArticleInfo"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": ["Article"],
+        "summary": "update",
+        "description": "Update a article",
+        "operationId": "update",
+        "consumes": ["application/json-patch+json", "application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "info",
+          "in": "body",
+          "description": "Object that contains all fields of article",
+          "required": false,
+          "schema": {
+            "$ref": "#/definitions/ArticleInfo"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "406": {
+            "description": "Throw exception when a mandatory field of article is null or empty"
+          },
+          "407": {
+            "description": "Throw exception when the value of field not exist in the option list"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Article"],
+        "summary": "add",
+        "description": "Add a new article",
+        "operationId": "add",
+        "consumes": ["application/json-patch+json", "application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "article",
+          "in": "body",
+          "description": "Object that contains all fields of article",
+          "required": false,
+          "schema": {
+            "$ref": "#/definitions/ArticleInfo"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          "406": {
+            "description": "Throw exception when a mandatory field of article is null or empty"
+          },
+          "407": {
+            "description": "Throw exception when the value of field not exist in the option list"
+          }
+        }
+      }
+    },
+    "/Article/{id}": {
+      "get": {
+        "tags": ["Article"],
+        "summary": "Get",
+        "description": "Return all information of a article",
+        "operationId": "Get",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "id = article id (art_nb)",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/ArticleInfo"
+            }
+          },
+          "405": {
+            "description": "Throw exception when article not exists"
+          }
+        }
+      }
+    },
+    "/Article/{art_nb}/Perso/{chdef_ref}": {
+      "get": {
+        "tags": ["Article"],
+        "summary": "PersoField",
+        "description": "Get a definition of a perso field in a article",
+        "operationId": "GetPerso",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "art_nb",
+          "in": "path",
+          "description": "id of a article",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }, {
+          "name": "chdef_ref",
+          "in": "path",
+          "description": "id of a perso field",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/PersoField"
+            }
+          },
+          "405": {
+            "description": "Throw exception when the the perso field is empty"
+          }
+        }
+      }
+    },
+    "/Article/CreationInfo": {
+      "get": {
+        "tags": ["Article"],
+        "summary": "CreationInfo",
+        "description": "",
+        "operationId": "CreationInfo",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/ArticleCreationInfo"
+            }
+          }
+        }
+      }
+    },
+    "/Client/{id}": {
+      "get": {
+        "tags": ["Client"],
+        "summary": "Get",
+        "description": "Returns a client with id = id",
+        "operationId": "Get",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "the id of the client",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/ClientInfo2"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access client"
+          },
+          "405": {
+            "description": "Throw exception when client is empty"
+          }
+        }
+      }
+    },
+    "/Client/{id}/contacts": {
+      "get": {
+        "tags": ["Client"],
+        "summary": "contacts",
+        "description": "return list contact from company where cl_ref = id",
+        "operationId": "contacts",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "required": true,
+          "type": "integer",
+          "format": "int32",
+          "default": -2147483648
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ContactInfo2"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when the list of contacts is empty"
+          }
+        }
+      }
+    },
+    "/Client/{id}/notes": {
+      "get": {
+        "tags": ["Client"],
+        "summary": "notes",
+        "description": "Return a list of notes of a company",
+        "operationId": "notes",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "id = cl_ref",
+          "required": true,
+          "type": "integer",
+          "format": "int32",
+          "default": -2147483648
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ActivityInfo"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when the list of notes is empty"
+          }
+        }
+      }
+    },
+    "/Client/{id}/appointments": {
+      "get": {
+        "tags": ["Client"],
+        "summary": "appointments",
+        "description": "Return a list of appointmenta of a company",
+        "operationId": "appointments",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "id = cl_ref",
+          "required": true,
+          "type": "integer",
+          "format": "int32",
+          "default": -2147483648
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ActivityInfo"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when the list of appointments is empty"
+          }
+        }
+      }
+    },
+    "/Client/{id}/calls": {
+      "get": {
+        "tags": ["Client"],
+        "summary": "calls",
+        "description": "Return a list of calls of a company",
+        "operationId": "calls",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "id = cl_ref",
+          "required": true,
+          "type": "integer",
+          "format": "int32",
+          "default": -2147483648
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ActivityInfo"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when the list of calls is empty"
+          }
+        }
+      }
+    },
+    "/Client/{id}/task": {
+      "get": {
+        "tags": ["Client"],
+        "summary": "task",
+        "description": "Return a list of task of a company",
+        "operationId": "task",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "id = cl_ref",
+          "required": true,
+          "type": "integer",
+          "format": "int32",
+          "default": -2147483648
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ActivityInfo"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when the list of tasks is empty"
+          }
+        }
+      }
+    },
+    "/Client/{id}/activities": {
+      "get": {
+        "tags": ["Client"],
+        "summary": "activities",
+        "description": "Return a list of activities of a company",
+        "operationId": "activities",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "id = cl_ref",
+          "required": true,
+          "type": "integer",
+          "format": "int32",
+          "default": -2147483648
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ActivityInfo"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when the list of all activities is empty"
+          }
+        }
+      }
+    },
+    "/Client/{id}/files": {
+      "get": {
+        "tags": ["Client"],
+        "summary": "files",
+        "description": "Return a list of files of a company",
+        "operationId": "files",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "id = cl_ref",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/FileInfo2"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when the list of files is empty"
+          }
+        }
+      }
+    },
+    "/Client/{id}/business": {
+      "get": {
+        "tags": ["Client"],
+        "summary": "bussiness",
+        "description": "Return a list of bussines of a compnay",
+        "operationId": "business",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "id = cl_ref",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }, {
+          "name": "status",
+          "in": "query",
+          "description": "status = status of a opportunity",
+          "required": false,
+          "type": "integer",
+          "format": "int32",
+          "default": -1
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/BusinessInfo2"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when the list of opportunities is empty"
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access to opportunities of the client"
+          }
+        }
+      }
+    },
+    "/Client/{id}/tickets": {
+      "get": {
+        "tags": ["Client"],
+        "summary": "tickets",
+        "description": "Return a list of tickets of a company",
+        "operationId": "tickets",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "id = cl_ref",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }, {
+          "name": "status",
+          "in": "query",
+          "description": "status = status of a ticket",
+          "required": false,
+          "type": "integer",
+          "format": "int32",
+          "default": 4
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TicketInfo2"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when the list of tickets is empty"
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access to tickets of the client"
+          }
+        }
+      }
+    },
+    "/Client/{id}/sales": {
+      "get": {
+        "tags": ["Client"],
+        "summary": "sales",
+        "description": "Return a list of sales of a company",
+        "operationId": "sales",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "id = cl_ref",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/SaleInfo"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when the list of sales is empty"
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access to sales of the client"
+          }
+        }
+      }
+    },
+    "/Client/{id}/Quotes": {
+      "get": {
+        "tags": ["Client"],
+        "summary": "Quotes",
+        "description": "Return a list of quotes of a company",
+        "operationId": "Quotes",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "id = cl_ref",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/QuoteInfo"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when the list of quotes is empty"
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access to quotes of the client"
+          }
+        }
+      }
+    },
+    "/Client/{id}/invoices": {
+      "get": {
+        "tags": ["Client"],
+        "summary": "invoices",
+        "description": "Return a list of invoices of a company",
+        "operationId": "invoices",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "id = cl_ref",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/InvoiceInfo"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when the list of invoices is empty"
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access to invoices of the client"
+          }
+        }
+      }
+    },
+    "/Client/{id}/purchases": {
+      "get": {
+        "tags": ["Client"],
+        "summary": "purcharses",
+        "description": "Return a list of purcharses of a company",
+        "operationId": "purchases",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "id = cl_ref",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/PurchaseInfo"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when the list of purchases is empty"
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access to purchases of the client"
+          }
+        }
+      }
+    },
+    "/Client/{id}/Leads": {
+      "get": {
+        "tags": ["Client"],
+        "summary": "Leads",
+        "description": "Return a list of leads of a company",
+        "operationId": "Leads",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "id = cl_ref",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }, {
+          "name": "status",
+          "in": "query",
+          "description": "status = status of a lead",
+          "required": false,
+          "type": "integer",
+          "format": "int32",
+          "default": 4
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/LeadInfo2"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when the list of leads is empty"
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access to leads of the client"
+          }
+        }
+      }
+    },
+    "/Client/{cl_ref}/Perso/{chdef_ref}": {
+      "get": {
+        "tags": ["Client"],
+        "summary": "PersoField",
+        "description": "Get a definition of a perso field in a company",
+        "operationId": "GetPerso",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "cl_ref",
+          "in": "path",
+          "description": "id of a company",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }, {
+          "name": "chdef_ref",
+          "in": "path",
+          "description": "id of a perso field",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/PersoField"
+            }
+          },
+          "405": {
+            "description": "Throw exception when the perso field is empty"
+          }
+        }
+      }
+    },
+    "/Client/CreationInfo": {
+      "get": {
+        "tags": ["Client"],
+        "summary": "CreationInfo",
+        "description": "",
+        "operationId": "CreationInfo",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "moralType",
+          "in": "query",
+          "description": "",
+          "required": false,
+          "type": "integer",
+          "format": "int32",
+          "default": 0
+        }, {
+          "name": "clientType",
+          "in": "query",
+          "description": "",
+          "required": false,
+          "type": "integer",
+          "format": "int32",
+          "default": 0
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/ClientCreationInfo2"
+            }
+          }
+        }
+      }
+    },
+    "/Client/SearchClient/{searchText}": {
+      "get": {
+        "tags": ["Client"],
+        "summary": "SearchClient",
+        "description": "",
+        "operationId": "SearchClient",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "searchText",
+          "in": "path",
+          "description": "text to search",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "limit",
+          "in": "query",
+          "description": "max number of result",
+          "required": false,
+          "type": "integer",
+          "format": "int32",
+          "default": 50
+        }, {
+          "name": "skip",
+          "in": "query",
+          "description": "number to skip result",
+          "required": false,
+          "type": "integer",
+          "format": "int32",
+          "default": 0
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/ClientSearchResult"
+            }
+          },
+          "405": {
+            "description": "Throw exception when the list of clients is empty"
+          }
+        }
+      }
+    },
+    "/Client": {
+      "put": {
+        "tags": ["Client"],
+        "summary": "update",
+        "description": "Update a client",
+        "operationId": "update",
+        "consumes": ["application/json-patch+json", "application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "info",
+          "in": "body",
+          "description": "Object that contains all fields of client",
+          "required": false,
+          "schema": {
+            "$ref": "#/definitions/ClientInfo2"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "406": {
+            "description": "Throw exception when a mandatory field of client is null or empty"
+          },
+          "407": {
+            "description": "Throw exception when the value of field not exist in the option list"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Client"],
+        "summary": "add",
+        "description": "Add a new client",
+        "operationId": "add",
+        "consumes": ["application/json-patch+json", "application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "client",
+          "in": "body",
+          "description": "Object that contains all fields of client",
+          "required": false,
+          "schema": {
+            "$ref": "#/definitions/ClientInfo2"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          "406": {
+            "description": "Throw exception when a mandatory field of client is null or empty"
+          },
+          "407": {
+            "description": "Throw exception when the value of field not exist in the option list"
+          }
+        }
+      }
+    },
+    "/Contact/{id}": {
+      "get": {
+        "tags": ["Contact"],
+        "summary": "Get",
+        "description": "Get all information of a contact",
+        "operationId": "Get",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "id is a contact id (ct_ref)",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/ContactInfo2"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access contact"
+          },
+          "405": {
+            "description": "Throw exception when the contact is empty"
+          }
+        }
+      }
+    },
+    "/Contact/{id}/notes": {
+      "get": {
+        "tags": ["Contact"],
+        "summary": "notes",
+        "description": "Return a list of notes of a contact",
+        "operationId": "notes",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "id is a contact id (ct_ref)",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ActivityInfo"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when the list of notes is empty"
+          }
+        }
+      }
+    },
+    "/Contact/{id}/appointments": {
+      "get": {
+        "tags": ["Contact"],
+        "summary": "appointments",
+        "description": "Return a list of appontments of a contact",
+        "operationId": "appointments",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "id is a contact id (ct_ref)",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ActivityInfo"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when the list of appoimnet is empty"
+          }
+        }
+      }
+    },
+    "/Contact/{id}/calls": {
+      "get": {
+        "tags": ["Contact"],
+        "summary": "calls",
+        "description": "Return a list of calls of a contact",
+        "operationId": "calls",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "id is a contact id (ct_ref)",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ActivityInfo"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when the list of calls is empty"
+          }
+        }
+      }
+    },
+    "/Contact/{id}/task": {
+      "get": {
+        "tags": ["Contact"],
+        "summary": "task",
+        "description": "Return a list of task of a contact",
+        "operationId": "task",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "id is a contact id (ct_ref)",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ActivityInfo"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when the list of task is empty"
+          }
+        }
+      }
+    },
+    "/Contact/{id}/activities": {
+      "get": {
+        "tags": ["Contact"],
+        "summary": "activities",
+        "description": "Return a list of a activities of a contact",
+        "operationId": "activities",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "id is a contact id (ct_ref)",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ActivityInfo"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when the list of all activities is empty"
+          }
+        }
+      }
+    },
+    "/Contact/{ct_ref}/Perso/{chdef_ref}": {
+      "get": {
+        "tags": ["Contact"],
+        "summary": "PersoField",
+        "description": "Get a definition of a perso field in a contact",
+        "operationId": "GetPerso",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "ct_ref",
+          "in": "path",
+          "description": "id of a contact",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }, {
+          "name": "chdef_ref",
+          "in": "path",
+          "description": "id of a perso field",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/PersoField"
+            }
+          },
+          "405": {
+            "description": "Throw exception when the perso field is empty"
+          }
+        }
+      }
+    },
+    "/Contact/CreationInfo": {
+      "get": {
+        "tags": ["Contact"],
+        "summary": "CreationInfo",
+        "description": "",
+        "operationId": "CreationInfo",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "clRef",
+          "in": "query",
+          "description": "",
+          "required": false,
+          "type": "integer",
+          "format": "int32",
+          "default": 0
+        }, {
+          "name": "contactType",
+          "in": "query",
+          "description": "",
+          "required": false,
+          "type": "integer",
+          "format": "int32",
+          "default": 0
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/ContactCreationInfo2"
+            }
+          }
+        }
+      }
+    },
+    "/Contact": {
+      "put": {
+        "tags": ["Contact"],
+        "summary": "update",
+        "description": "Update info of a contact",
+        "operationId": "update",
+        "consumes": ["application/json-patch+json", "application/json", "text/json", "application/*+json"],
+        "produces": [],
+        "parameters": [{
+          "name": "contactInfo",
+          "in": "body",
+          "description": "Object that contains all fields of contact",
+          "required": false,
+          "schema": {
+            "$ref": "#/definitions/ContactInfo2"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "406": {
+            "description": "Throw exception when a mandatory field of contact is null or empty"
+          },
+          "407": {
+            "description": "Throw exception when the value of field not exist in the option list"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Contact"],
+        "summary": "add",
+        "description": "Add new contact",
+        "operationId": "add",
+        "consumes": ["application/json-patch+json", "application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "contactInfo",
+          "in": "body",
+          "description": "Object that contains all fields of contact",
+          "required": false,
+          "schema": {
+            "$ref": "#/definitions/ContactInfo2"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          "406": {
+            "description": "Throw exception when a mandatory field of contact is null or empty"
+          },
+          "407": {
+            "description": "Throw exception when the value of field not exist in the option list"
+          }
+        }
+      }
+    },
+    "/Disconnect": {
+      "get": {
+        "tags": ["Disconnect"],
+        "operationId": "Disconnect",
+        "consumes": [],
+        "produces": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Invoice/{id}": {
+      "get": {
+        "tags": ["Invoice"],
+        "summary": "Get",
+        "description": "Returns all info of a invoice",
+        "operationId": "Get",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "the id of the invoice (fa_ref)",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/InvoiceInfo"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access invoice"
+          },
+          "405": {
+            "description": "Throw exception when the invoice is empty"
+          }
+        }
+      }
+    },
+    "/Invoice/{fa_ref}/Perso/{chdef_ref}": {
+      "get": {
+        "tags": ["Invoice"],
+        "summary": "PersoField",
+        "description": "Get a definition of a perso field in a invoice",
+        "operationId": "GetPerso",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "fa_ref",
+          "in": "path",
+          "description": "id of a invoice",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }, {
+          "name": "chdef_ref",
+          "in": "path",
+          "description": "id of a perso field",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/PersoField"
+            }
+          },
+          "405": {
+            "description": "Throw exception when the perso field is empty"
+          }
+        }
+      }
+    },
+    "/Invoice/creationInfo": {
+      "get": {
+        "tags": ["Invoice"],
+        "summary": "creationInfo",
+        "description": "",
+        "operationId": "creationInfo",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/InvoiceCreationInfo"
+            }
+          }
+        }
+      }
+    },
+    "/Invoice": {
+      "put": {
+        "tags": ["Invoice"],
+        "summary": "update",
+        "description": "Update info of a invoice",
+        "operationId": "update",
+        "consumes": ["application/json-patch+json", "application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "invoiceInfo",
+          "in": "body",
+          "description": "Object that contains all fields of invoice",
+          "required": false,
+          "schema": {
+            "$ref": "#/definitions/InvoiceInfo"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access invoice"
+          },
+          "406": {
+            "description": "Throw exception when a mandatory field of invoice is null or empty"
+          },
+          "407": {
+            "description": "Throw exception when the value of field not exist in the option list"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Invoice"],
+        "summary": "add",
+        "description": "Add new invoice",
+        "operationId": "add",
+        "consumes": ["application/json-patch+json", "application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "invoiceInfo",
+          "in": "body",
+          "description": "Object that contains all fields of invoice",
+          "required": false,
+          "schema": {
+            "$ref": "#/definitions/InvoiceInfo"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access invoice"
+          },
+          "406": {
+            "description": "Throw exception when a mandatory field of invoice is null or empty"
+          },
+          "407": {
+            "description": "Throw exception when the value of field not exist in the option list"
+          }
+        }
+      }
+    },
+    "/Lead/{leadRef}": {
+      "get": {
+        "tags": ["Lead"],
+        "summary": "Get",
+        "description": "Get all information of a lead",
+        "operationId": "Get",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "leadRef",
+          "in": "path",
+          "description": "id is a lead id (recla_ref)",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/LeadInfo2"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access lead"
+          },
+          "405": {
+            "description": "Throw exception when the lead is empty"
+          }
+        }
+      }
+    },
+    "/Lead/creationInfo": {
+      "get": {
+        "tags": ["Lead"],
+        "summary": "creationInfo",
+        "description": "",
+        "operationId": "creationInfo",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "rfi_ref",
+          "in": "query",
+          "description": "",
+          "required": false,
+          "type": "integer",
+          "format": "int32",
+          "default": 0
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/LeadCreationInfo2"
+            }
+          }
+        }
+      }
+    },
+    "/Lead/{recla_ref}/Perso/{chdef_ref}": {
+      "get": {
+        "tags": ["Lead"],
+        "summary": "PersoField",
+        "description": "Get a definition of a perso field in a company",
+        "operationId": "GetPerso",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "recla_ref",
+          "in": "path",
+          "description": "id of a lead",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }, {
+          "name": "chdef_ref",
+          "in": "path",
+          "description": "id of a perso field",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/PersoField"
+            }
+          },
+          "405": {
+            "description": "Throw exception when the perso field is empty"
+          }
+        }
+      }
+    },
+    "/Lead": {
+      "put": {
+        "tags": ["Lead"],
+        "summary": "update",
+        "description": "Update info of a lead",
+        "operationId": "update",
+        "consumes": ["application/json-patch+json", "application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "lead",
+          "in": "body",
+          "description": "Object that contains all fields of lead",
+          "required": false,
+          "schema": {
+            "$ref": "#/definitions/LeadInfo2"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access lead"
+          },
+          "406": {
+            "description": "Throw exception when a mandatory field of lead is null or empty"
+          },
+          "407": {
+            "description": "Throw exception when the value of field not exist in the option list"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Lead"],
+        "summary": "add",
+        "description": "Add new lead",
+        "operationId": "add",
+        "consumes": ["application/json-patch+json", "application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "lead",
+          "in": "body",
+          "description": "Object that contains all fields of lead",
+          "required": false,
+          "schema": {
+            "$ref": "#/definitions/LeadInfo2"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access lead"
+          },
+          "406": {
+            "description": "Throw exception when a mandatory field of lead is null or empty"
+          },
+          "407": {
+            "description": "Throw exception when the value of field not exist in the option list"
+          }
+        }
+      }
+    },
+    "/Opportunity/{id}": {
+      "get": {
+        "tags": ["Opportunity"],
+        "summary": "Get",
+        "description": "Get all information of a business",
+        "operationId": "Get",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "id is a business id (op_ref)",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/BusinessInfo2"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access opportunity"
+          },
+          "405": {
+            "description": "Throw exception when the opportunity is empty"
+          }
+        }
+      }
+    },
+    "/Opportunity/{op_ref}/Perso/{chdef_ref}": {
+      "get": {
+        "tags": ["Opportunity"],
+        "summary": "PersoField",
+        "description": "Get a definition of a perso field in a opportunity",
+        "operationId": "GetPerso",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "op_ref",
+          "in": "path",
+          "description": "id of a opportunity",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }, {
+          "name": "chdef_ref",
+          "in": "path",
+          "description": "id of a perso field",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/PersoField"
+            }
+          },
+          "405": {
+            "description": "Throw exception when the perso field is empty"
+          }
+        }
+      }
+    },
+    "/Opportunity/CreationInfo": {
+      "get": {
+        "tags": ["Opportunity"],
+        "summary": "CreationInfo",
+        "description": "",
+        "operationId": "CreationInfo",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "opportType",
+          "in": "query",
+          "description": "",
+          "required": false,
+          "type": "integer",
+          "format": "int32",
+          "default": 0
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/BusinessCreationInfo2"
+            }
+          }
+        }
+      }
+    },
+    "/Opportunity": {
+      "put": {
+        "tags": ["Opportunity"],
+        "summary": "update",
+        "description": "Update info of a opportunity",
+        "operationId": "update",
+        "consumes": ["application/json-patch+json", "application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "businessInfo",
+          "in": "body",
+          "description": "Object that contains all fields of opportunity",
+          "required": false,
+          "schema": {
+            "$ref": "#/definitions/BusinessInfo2"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access opportunity"
+          },
+          "406": {
+            "description": "Throw exception when a mandatory field of opportuny is null or empty"
+          },
+          "407": {
+            "description": "Throw exception when the value of field not exist in the option list"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Opportunity"],
+        "summary": "add",
+        "description": "Add new opportunity",
+        "operationId": "add",
+        "consumes": ["application/json-patch+json", "application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "businessInfo",
+          "in": "body",
+          "description": "Object that contains all fields of opportunity",
+          "required": false,
+          "schema": {
+            "$ref": "#/definitions/BusinessInfo2"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access opportunity"
+          },
+          "406": {
+            "description": "Throw exception when a mandatory field of opportuny is null or empty"
+          },
+          "407": {
+            "description": "Throw exception when the value of field not exist in the option list"
+          }
+        }
+      }
+    },
+    "/PersoFields/{table}": {
+      "get": {
+        "tags": ["PersoFields"],
+        "summary": "get",
+        "description": "Return list of perso field of a table (client, contact, etc)",
+        "operationId": "get",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "table",
+          "in": "path",
+          "description": "table is a entity (client = 1, contact = 2, business = 3, etc)",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "uniqueItems": false,
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/PersoField"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when the list of perso field is empty"
+          }
+        }
+      }
+    },
+    "/Purchase/{id}": {
+      "get": {
+        "tags": ["Purchase"],
+        "summary": "Get",
+        "description": "Returns all info of a purchase",
+        "operationId": "Get",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "the id of the purchase (cf_ref)",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/PurchaseInfo"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access purchase"
+          },
+          "405": {
+            "description": "Throw exception when the purchase is empty"
+          }
+        }
+      }
+    },
+    "/Purchase/{cf_ref}/Perso/{chdef_ref}": {
+      "get": {
+        "tags": ["Purchase"],
+        "summary": "PersoField",
+        "description": "Get a definition of a perso field in a purchase",
+        "operationId": "GetPerso",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "cf_ref",
+          "in": "path",
+          "description": "id of a purcharse",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }, {
+          "name": "chdef_ref",
+          "in": "path",
+          "description": "id of a perso field",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/PersoField"
+            }
+          },
+          "405": {
+            "description": "Throw exception when the perso field is empty"
+          }
+        }
+      }
+    },
+    "/Purchase/creationInfo": {
+      "get": {
+        "tags": ["Purchase"],
+        "summary": "creationInfo",
+        "description": "",
+        "operationId": "creationInfo",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/PurchaseCreationInfo"
+            }
+          }
+        }
+      }
+    },
+    "/Purchase": {
+      "put": {
+        "tags": ["Purchase"],
+        "summary": "update",
+        "description": "Update info of a purchase",
+        "operationId": "update",
+        "consumes": ["application/json-patch+json", "application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "purchaseInfo",
+          "in": "body",
+          "description": "Object that contains all fields of purchase",
+          "required": false,
+          "schema": {
+            "$ref": "#/definitions/PurchaseInfo"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access purchase"
+          },
+          "406": {
+            "description": "Throw exception when a mandatory field of purchase is null or empty"
+          },
+          "407": {
+            "description": "Throw exception when the value of field not exist in the option list"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Purchase"],
+        "summary": "add",
+        "description": "Add new purchase",
+        "operationId": "add",
+        "consumes": ["application/json-patch+json", "application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "purchaseInfo",
+          "in": "body",
+          "description": "Object that contains all fields of purchase",
+          "required": false,
+          "schema": {
+            "$ref": "#/definitions/PurchaseInfo"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access purchase"
+          },
+          "406": {
+            "description": "Throw exception when a mandatory field of purchase is null or empty"
+          },
+          "407": {
+            "description": "Throw exception when the value of field not exist in the option list"
+          }
+        }
+      }
+    },
+    "/Quote/{id}": {
+      "get": {
+        "tags": ["Quote"],
+        "summary": "Get",
+        "description": "Returns all info of a quote",
+        "operationId": "Get",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "the id of the quote (dev_ref)",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/QuoteInfo"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access quotes"
+          },
+          "405": {
+            "description": "Throw exception when the quote is empty"
+          }
+        }
+      }
+    },
+    "/Quote/{dev_ref}/Perso/{chdef_ref}": {
+      "get": {
+        "tags": ["Quote"],
+        "summary": "PersoField",
+        "description": "Get a definition of a perso field in a quote",
+        "operationId": "GetPerso",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "dev_ref",
+          "in": "path",
+          "description": "id of a quote",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }, {
+          "name": "chdef_ref",
+          "in": "path",
+          "description": "id of a perso field",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/PersoField"
+            }
+          },
+          "405": {
+            "description": "Throw exception when the perso field is empty"
+          }
+        }
+      }
+    },
+    "/Quote/creationInfo": {
+      "get": {
+        "tags": ["Quote"],
+        "summary": "creationInfo",
+        "description": "",
+        "operationId": "creationInfo",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/QuoteCreationInfo"
+            }
+          }
+        }
+      }
+    },
+    "/Quote": {
+      "put": {
+        "tags": ["Quote"],
+        "summary": "update",
+        "description": "Update info of a quote",
+        "operationId": "update",
+        "consumes": ["application/json-patch+json", "application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "quoteInfo",
+          "in": "body",
+          "description": "Object that contains all fields of quote",
+          "required": false,
+          "schema": {
+            "$ref": "#/definitions/QuoteInfo"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access quote"
+          },
+          "406": {
+            "description": "Throw exception when a mandatory field of quote is null or empty"
+          },
+          "407": {
+            "description": "Throw exception when the value of field not exist in the option list"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Quote"],
+        "summary": "add",
+        "description": "Add new quote",
+        "operationId": "add",
+        "consumes": ["application/json-patch+json", "application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "quoteInfo",
+          "in": "body",
+          "description": "Object that contains all fields of quote",
+          "required": false,
+          "schema": {
+            "$ref": "#/definitions/QuoteInfo"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access quote"
+          },
+          "406": {
+            "description": "Throw exception when a mandatory field of quote is null or empty"
+          },
+          "407": {
+            "description": "Throw exception when the value of field not exist in the option list"
+          }
+        }
+      }
+    },
+    "/Sale/{id}": {
+      "get": {
+        "tags": ["Sale"],
+        "summary": "Get",
+        "description": "Get all information of a sale",
+        "operationId": "Get",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "id is a sale id (ble_ref)",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/SaleInfo"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access sales"
+          },
+          "405": {
+            "description": "Throw exception when the sale is empty"
+          }
+        }
+      }
+    },
+    "/Sale/{ble_ref}/Perso/{chdef_ref}": {
+      "get": {
+        "tags": ["Sale"],
+        "summary": "PersoField",
+        "description": "Get a definition of a perso field in a sale",
+        "operationId": "GetPerso",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "ble_ref",
+          "in": "path",
+          "description": "id of a sale",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }, {
+          "name": "chdef_ref",
+          "in": "path",
+          "description": "id of a perso field",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/PersoField"
+            }
+          },
+          "405": {
+            "description": "Throw exception when the perso field is empty"
+          }
+        }
+      }
+    },
+    "/Sale/creationInfo": {
+      "get": {
+        "tags": ["Sale"],
+        "summary": "creationInfo",
+        "description": "",
+        "operationId": "creationInfo",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/SaleCreationInfo"
+            }
+          }
+        }
+      }
+    },
+    "/Sale": {
+      "put": {
+        "tags": ["Sale"],
+        "summary": "update",
+        "description": "Update info of a sale",
+        "operationId": "update",
+        "consumes": ["application/json-patch+json", "application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "saleInfo",
+          "in": "body",
+          "description": "Object that contains all fields of sale",
+          "required": false,
+          "schema": {
+            "$ref": "#/definitions/SaleInfo"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access sale"
+          },
+          "406": {
+            "description": "Throw exception when a mandatory field of sale is null or empty"
+          },
+          "407": {
+            "description": "Throw exception when the value of field not exist in the option list"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Sale"],
+        "summary": "add",
+        "description": "Add new sale",
+        "operationId": "add",
+        "consumes": ["application/json-patch+json", "application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "saleInfo",
+          "in": "body",
+          "description": "Object that contains all fields of sale",
+          "required": false,
+          "schema": {
+            "$ref": "#/definitions/SaleInfo"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access sale"
+          },
+          "406": {
+            "description": "Throw exception when a mandatory field of sale is null or empty"
+          },
+          "407": {
+            "description": "Throw exception when the value of field not exist in the option list"
+          }
+        }
+      }
+    },
+    "/Ticket/{reclaRef}": {
+      "get": {
+        "tags": ["Ticket"],
+        "summary": "Get",
+        "description": "Get all information of a ticket",
+        "operationId": "Get",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "reclaRef",
+          "in": "path",
+          "description": "id is a ticket id (recla_ref)",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/TicketInfo2"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access tickets"
+          },
+          "405": {
+            "description": "Throw exception when the ticket is empty"
+          }
+        }
+      }
+    },
+    "/Ticket/{recla_ref}/Perso/{chdef_ref}": {
+      "get": {
+        "tags": ["Ticket"],
+        "summary": "PersoField",
+        "description": "Get a definition of a perso field in a ticket",
+        "operationId": "GetPerso",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "recla_ref",
+          "in": "path",
+          "description": "id of a ticket",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }, {
+          "name": "chdef_ref",
+          "in": "path",
+          "description": "id of a perso field",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/PersoField"
+            }
+          },
+          "405": {
+            "description": "Throw exception when the perso field is empty"
+          }
+        }
+      }
+    },
+    "/Ticket/creationInfo": {
+      "get": {
+        "tags": ["Ticket"],
+        "summary": "creationInfo",
+        "description": "",
+        "operationId": "creationInfo",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "rfi_ref",
+          "in": "query",
+          "description": "",
+          "required": false,
+          "type": "integer",
+          "format": "int32",
+          "default": 0
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/TicketCreationInfo2"
+            }
+          }
+        }
+      }
+    },
+    "/Ticket": {
+      "put": {
+        "tags": ["Ticket"],
+        "summary": "update",
+        "description": "Update info of a ticket",
+        "operationId": "update",
+        "consumes": ["application/json-patch+json", "application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "ticket",
+          "in": "body",
+          "description": "Object that contains all fields of ticket",
+          "required": false,
+          "schema": {
+            "$ref": "#/definitions/TicketInfo2"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access ticket"
+          },
+          "406": {
+            "description": "Throw exception when a mandatory field of ticket is null or empty"
+          },
+          "407": {
+            "description": "Throw exception when the value of field not exist in the option list"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Ticket"],
+        "summary": "add",
+        "description": "Add new ticket",
+        "operationId": "add",
+        "consumes": ["application/json-patch+json", "application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "ticket",
+          "in": "body",
+          "description": "Object that contains all fields of ticket",
+          "required": false,
+          "schema": {
+            "$ref": "#/definitions/TicketInfo2"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          "403": {
+            "description": "Throw exception when user not has permission for access ticket"
+          },
+          "406": {
+            "description": "Throw exception when a mandatory field of ticket is null or empty"
+          },
+          "407": {
+            "description": "Throw exception when the value of field not exist in the option list"
+          }
+        }
+      }
+    },
+    "/Token": {
+      "get": {
+        "tags": ["Token"],
+        "summary": "Get",
+        "description": "get a token",
+        "operationId": "Get",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "account",
+          "in": "query",
+          "description": "account of client in ines",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "user",
+          "in": "query",
+          "description": "user of ines",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "pass",
+          "in": "query",
+          "description": "password of the user",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/TokenResult"
+            }
+          }
+        }
+      }
+    },
+    "/Token/extendToken": {
+      "get": {
+        "tags": ["Token"],
+        "summary": "extendToken",
+        "description": "get token of a extend account",
+        "operationId": "extendToken",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "account",
+          "in": "query",
+          "description": "",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "user",
+          "in": "query",
+          "description": "",
+          "required": false,
+          "type": "string"
+        }, {
+          "name": "pass",
+          "in": "query",
+          "description": "",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/TokenResult"
+            }
+          }
+        }
+      }
+    },
+    "/User/{id}": {
+      "get": {
+        "tags": ["User"],
+        "summary": "Get",
+        "description": "Return info of a user",
+        "operationId": "Get",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "Id is a user id (user_ref)",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/UserInfo"
+            }
+          },
+          "405": {
+            "description": "Throw exception when the user is empty"
+          }
+        }
+      }
+    },
+    "/User": {
+      "get": {
+        "tags": ["User"],
+        "summary": "Get",
+        "description": "Return a list of a user",
+        "operationId": "Get",
+        "consumes": [],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/UserInfo"
+              }
+            }
+          },
+          "405": {
+            "description": "Throw exception when the list of user is empty"
+          }
+        }
+      },
+      "put": {
+        "tags": ["User"],
+        "summary": "update",
+        "description": "update fields of a user",
+        "operationId": "update",
+        "consumes": ["application/json-patch+json", "application/json", "text/json", "application/*+json"],
+        "produces": [],
+        "parameters": [{
+          "name": "user",
+          "in": "body",
+          "description": "Object that contain all fields of a user",
+          "required": false,
+          "schema": {
+            "$ref": "#/definitions/UserInfo"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "406": {
+            "description": "Throw exception when a mandatory field of user is null or empty"
+          },
+          "407": {
+            "description": "Throw exception when the value of field not exist in the option list"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "IdValue": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "ArticleInfo": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "category": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "business": {
+          "type": "string"
+        },
+        "active": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "stockUnit": {
+          "type": "string"
+        },
+        "sellingPrice_2": {
+          "type": "string"
+        },
+        "measurementUnit": {
+          "type": "string"
+        },
+        "supplier": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "vat": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "type": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "sellingPrice_1": {
+          "type": "string"
+        },
+        "sP_1_Currency": {
+          "type": "string"
+        },
+        "coefficientStock": {
+          "type": "string"
+        },
+        "website": {
+          "type": "string"
+        },
+        "width": {
+          "type": "string"
+        },
+        "purchasingPrice": {
+          "type": "string"
+        },
+        "pP_Currency": {
+          "type": "string"
+        },
+        "sP_2_Currency": {
+          "type": "string"
+        },
+        "purchasingPriceSetBy": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "barcode": {
+          "type": "string"
+        },
+        "quality": {
+          "type": "string"
+        },
+        "productSameCategory": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "techinicalDescription": {
+          "type": "string"
+        },
+        "supplierName": {
+          "type": "string"
+        },
+        "weight": {
+          "type": "string"
+        },
+        "weigthUnit": {
+          "type": "string"
+        },
+        "secundarySupplier": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "commission": {
+          "type": "string"
+        },
+        "minStock": {
+          "type": "string"
+        },
+        "maxStock": {
+          "type": "string"
+        },
+        "economicPurchaseQuantity": {
+          "type": "string"
+        },
+        "stockLevelFile": {
+          "type": "string"
+        },
+        "stocktakingDate": {
+          "type": "string"
+        },
+        "lastEntryDate": {
+          "type": "string"
+        },
+        "lastLeavingDate": {
+          "type": "string"
+        },
+        "supplyingDeadline": {
+          "type": "string"
+        },
+        "deliveryDeadline": {
+          "type": "string"
+        },
+        "warehouse": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "barcodeType": {
+          "type": "string"
+        },
+        "creationDate": {
+          "type": "string"
+        },
+        "accountingPurchaseCode": {
+          "type": "string"
+        },
+        "accountingSaleCode": {
+          "type": "string"
+        },
+        "modificationDate": {
+          "type": "string"
+        },
+        "availableStock": {
+          "type": "string"
+        },
+        "persoFields": {
+          "type": "object",
+          "additionalProperties": {
+            "uniqueItems": false,
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PersoFieldBasic"
+            }
+          }
+        }
+      }
+    },
+    "PersoFieldBasic": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "value": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/IdValue"
+          }
+        },
+        "type": {
+          "enum": ["Text", "Number", "Switch", "Date", "List", "Memo", "Url", "User"],
+          "type": "string"
+        }
+      }
+    },
+    "PersoField": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "enum": ["Text", "Number", "Switch", "Date", "List", "Memo", "Url", "User"],
+          "type": "string"
+        },
+        "required": {
+          "type": "string"
+        },
+        "defaultValue": {
+          "type": "string"
+        },
+        "multiple": {
+          "type": "string"
+        },
+        "showAtCreation": {
+          "type": "string"
+        },
+        "options": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/IdValue"
+          }
+        },
+        "value": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/IdValue"
+          }
+        },
+        "group": {
+          "type": "string"
+        }
+      }
+    },
+    "ArticleCreationInfo": {
+      "type": "object",
+      "properties": {
+        "fields": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FieldInfo"
+          }
+        },
+        "persoFields": {
+          "type": "object",
+          "additionalProperties": {
+            "uniqueItems": false,
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PersoField"
+            }
+          }
+        }
+      }
+    },
+    "FieldInfo": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "mandatory": {
+          "type": "boolean"
+        },
+        "type": {
+          "enum": ["Text", "List", "Number", "Date", "Blob"],
+          "type": "string"
+        },
+        "options": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/IdValue"
+          }
+        }
+      }
+    },
+    "ClientInfo2": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "address1": {
+          "type": "string"
+        },
+        "address2": {
+          "type": "string"
+        },
+        "address3": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "website": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "salesResponsable": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "owner": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "zip": {
+          "type": "string"
+        },
+        "scoring": {
+          "type": "string"
+        },
+        "longitude": {
+          "type": "string"
+        },
+        "latitude": {
+          "type": "string"
+        },
+        "fax": {
+          "type": "string"
+        },
+        "departament": {
+          "type": "string"
+        },
+        "activity": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "origin": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "corporationType": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "language": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "accessSetings": {
+          "type": "string"
+        },
+        "clShowRem": {
+          "type": "string"
+        },
+        "mobile": {
+          "type": "string"
+        },
+        "comments": {
+          "type": "string"
+        },
+        "accountingCode": {
+          "type": "string"
+        },
+        "bank": {
+          "type": "string"
+        },
+        "mabank": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "type": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "typeTVA": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "iban": {
+          "type": "string"
+        },
+        "taxId": {
+          "type": "string"
+        },
+        "taxPayerId": {
+          "type": "string"
+        },
+        "paymentConditions": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "invoicedTax": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "transport": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "customerNo": {
+          "type": "string"
+        },
+        "autoDiscountOfInvoice": {
+          "type": "string"
+        },
+        "maxOutstandingDebt": {
+          "type": "string"
+        },
+        "createdOn": {
+          "type": "string"
+        },
+        "technicalMan": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "deliveryAddress": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "modificatedOn": {
+          "type": "string"
+        },
+        "customerSince": {
+          "type": "string"
+        },
+        "invoicingAddress": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "headOffice": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "dateLastActivity": {
+          "type": "string"
+        },
+        "contacts": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactInfo2"
+          }
+        },
+        "fichiers": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FileInfo2"
+          }
+        },
+        "isFavorite": {
+          "type": "string"
+        },
+        "color": {
+          "type": "string"
+        },
+        "foundationDate": {
+          "type": "string"
+        },
+        "effectif": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "ca": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "creditScore": {
+          "type": "string"
+        },
+        "userContact": {
+          "type": "string"
+        },
+        "userCommercial": {
+          "type": "string"
+        },
+        "editable": {
+          "type": "string"
+        },
+        "deletable": {
+          "type": "string"
+        },
+        "service": {
+          "type": "string"
+        },
+        "author": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "persoFields": {
+          "type": "object",
+          "additionalProperties": {
+            "uniqueItems": false,
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PersoFieldBasic"
+            }
+          }
+        }
+      }
+    },
+    "ContactInfo2": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "client": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "businessTelephone": {
+          "type": "string"
+        },
+        "mobilePhone": {
+          "type": "string"
+        },
+        "primaryMailAddress": {
+          "type": "string"
+        },
+        "gender": {
+          "type": "string"
+        },
+        "langue": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "position": {
+          "type": "string"
+        },
+        "department": {
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "address1": {
+          "type": "string"
+        },
+        "address2": {
+          "type": "string"
+        },
+        "fax": {
+          "type": "string"
+        },
+        "homeTelephone": {
+          "type": "string"
+        },
+        "icq": {
+          "type": "string"
+        },
+        "comments": {
+          "type": "string"
+        },
+        "zip": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "mail2": {
+          "type": "string"
+        },
+        "ipPhone": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "extrenalReference": {
+          "type": "string"
+        },
+        "hierarchicalResp": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "status": {
+          "type": "string"
+        },
+        "birthday": {
+          "type": "string"
+        },
+        "owner": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "dateModif": {
+          "type": "string"
+        },
+        "showPortal": {
+          "type": "string"
+        },
+        "receiveInvoices": {
+          "type": "string"
+        },
+        "dateArchive": {
+          "type": "string"
+        },
+        "accessSettings": {
+          "type": "string"
+        },
+        "emailOptOut": {
+          "type": "string"
+        },
+        "invoiceAddress": {
+          "type": "string"
+        },
+        "incorrectMailingAddress": {
+          "type": "string"
+        },
+        "isFavorite": {
+          "type": "string"
+        },
+        "archived": {
+          "type": "string"
+        },
+        "origin": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "dateCreation": {
+          "type": "string"
+        },
+        "persoFields": {
+          "type": "object",
+          "additionalProperties": {
+            "uniqueItems": false,
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PersoFieldBasic"
+            }
+          }
+        }
+      }
+    },
+    "FileInfo2": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "ficSize": {
+          "type": "string"
+        },
+        "ficLink": {
+          "type": "string"
+        },
+        "fileType": {
+          "type": "string"
+        },
+        "user": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "creationDate": {
+          "type": "string"
+        }
+      }
+    },
+    "ActivityInfo": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "subject": {
+          "type": "string"
+        },
+        "client": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "comment": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string"
+        },
+        "creationDate": {
+          "type": "string"
+        },
+        "dateFin": {
+          "type": "string"
+        },
+        "contact": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "author": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "type": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "visitePublic": {
+          "type": "string"
+        },
+        "writePermission": {
+          "type": "string"
+        },
+        "deletePermission": {
+          "type": "string"
+        },
+        "assistant": {
+          "type": "string"
+        },
+        "files": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FileInfo2"
+          }
+        },
+        "priority": {
+          "type": "string"
+        },
+        "ticket": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "lead": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "category": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "folder": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "business": {
+          "$ref": "#/definitions/IdValue"
+        }
+      }
+    },
+    "BusinessInfo2": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "client": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "name": {
+          "type": "string"
+        },
+        "origin": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "margin": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "string"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "lead": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "stage": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "result": {
+          "type": "string"
+        },
+        "resp_Comercial": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "date_Creation": {
+          "type": "string"
+        },
+        "date_Fin": {
+          "type": "string"
+        },
+        "duration_Days": {
+          "type": "string"
+        },
+        "probability": {
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "consolidation": {
+          "type": "string"
+        },
+        "date_Depart": {
+          "type": "string"
+        },
+        "date_Modification": {
+          "type": "string"
+        },
+        "date_Next_Step": {
+          "type": "string"
+        },
+        "folder": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "scheduledHours": {
+          "type": "string"
+        },
+        "margin_Coef": {
+          "type": "string"
+        },
+        "timeSpent": {
+          "type": "string"
+        },
+        "diffusion": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "nextStage": {
+          "type": "string"
+        },
+        "synchro": {
+          "type": "string"
+        },
+        "author": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "campaign": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "comments": {
+          "type": "string"
+        },
+        "contract": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "mainOppoirtunityIndex": {
+          "type": "string"
+        },
+        "closureReason": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "externalReference": {
+          "type": "string"
+        },
+        "linkedOpport": {
+          "type": "string"
+        },
+        "canEdit": {
+          "type": "string"
+        },
+        "activities": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ActivityInfo"
+          }
+        },
+        "files": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FileInfo2"
+          }
+        },
+        "persoFields": {
+          "type": "object",
+          "additionalProperties": {
+            "uniqueItems": false,
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PersoFieldBasic"
+            }
+          }
+        }
+      }
+    },
+    "TicketInfo2": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "reference": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "client": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "contact": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "status": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "file": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "daysSinceCreated": {
+          "type": "string"
+        },
+        "daysSinceModified": {
+          "type": "string"
+        },
+        "origin": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "importance": {
+          "type": "string"
+        },
+        "criticality": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "owner": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "manager": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "author": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "type": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "activities": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ActivityInfo"
+          }
+        },
+        "flux": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ReclaFluxInfo"
+          }
+        },
+        "business": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "text": {
+          "type": "string"
+        },
+        "creationDate": {
+          "type": "string"
+        },
+        "modificationDate": {
+          "type": "string"
+        },
+        "closingDate": {
+          "type": "string"
+        },
+        "active": {
+          "type": "string"
+        },
+        "folder": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "daysModificationString": {
+          "type": "string"
+        },
+        "daysCreationString": {
+          "type": "string"
+        },
+        "reclaMere": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "canEdit": {
+          "type": "string"
+        },
+        "persoFields": {
+          "type": "object",
+          "additionalProperties": {
+            "uniqueItems": false,
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PersoFieldBasic"
+            }
+          }
+        }
+      }
+    },
+    "ReclaFluxInfo": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "author": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "state": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "criticality": {
+          "$ref": "#/definitions/IdValue"
+        }
+      }
+    },
+    "SaleInfo": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "client": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "reference": {
+          "type": "string"
+        },
+        "accountingInformation": {
+          "type": "string"
+        },
+        "dateCreation": {
+          "type": "string"
+        },
+        "responsable": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "contact": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "dateModification": {
+          "type": "string"
+        },
+        "dateEdition": {
+          "type": "string"
+        },
+        "folder": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "origin": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "incoterm": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "invoiceAddress": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "deliveryAddress": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "bank": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "author": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "margin": {
+          "type": "string"
+        },
+        "balance": {
+          "type": "string"
+        },
+        "vat": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "taxFreeAmount": {
+          "type": "string"
+        },
+        "total": {
+          "type": "string"
+        },
+        "advancedPayment": {
+          "type": "string"
+        },
+        "terms": {
+          "type": "string"
+        },
+        "productionComments": {
+          "type": "string"
+        },
+        "commercialComments": {
+          "type": "string"
+        },
+        "lines": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SaleLinesInfo"
+          }
+        },
+        "business": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "persoFields": {
+          "type": "object",
+          "additionalProperties": {
+            "uniqueItems": false,
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PersoFieldBasic"
+            }
+          }
+        }
+      }
+    },
+    "SaleLinesInfo": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "dateCreation": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "invoice": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "discount": {
+          "type": "string"
+        },
+        "budget": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "article": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "description": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "string"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "sellingPrice": {
+          "type": "string"
+        },
+        "purchasingPrice": {
+          "type": "string"
+        },
+        "vat": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "commercialComment": {
+          "type": "string"
+        },
+        "customerOrder": {
+          "type": "string"
+        },
+        "supplierOrder": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "shipment": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "requestedTerm": {
+          "type": "string"
+        },
+        "confirmedTerm": {
+          "type": "string"
+        },
+        "productionComments": {
+          "type": "string"
+        }
+      }
+    },
+    "QuoteInfo": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "reference": {
+          "type": "string"
+        },
+        "responsable": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "contact": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "client": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "dateModification": {
+          "type": "string"
+        },
+        "dateCreation": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "business": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "validity": {
+          "type": "string"
+        },
+        "folder": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "invoicingAddress": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "delivery": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "origin": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "bank": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "terms": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "vat": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "incoterm": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "commercialComments": {
+          "type": "string"
+        },
+        "productionComments": {
+          "type": "string"
+        },
+        "author": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "marge": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "string"
+        },
+        "lines": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/QuoteLineInfo"
+          }
+        },
+        "persoFields": {
+          "type": "object",
+          "additionalProperties": {
+            "uniqueItems": false,
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PersoFieldBasic"
+            }
+          }
+        }
+      }
+    },
+    "QuoteLineInfo": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "product": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "string"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "sellingPrice": {
+          "type": "string"
+        },
+        "discount": {
+          "type": "string"
+        },
+        "vat": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "success": {
+          "type": "string"
+        },
+        "confirmedTerm": {
+          "type": "string"
+        },
+        "purchasingPrice": {
+          "type": "string"
+        },
+        "showSellingPrice": {
+          "type": "string"
+        },
+        "article": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "taxFree": {
+          "type": "string"
+        },
+        "total": {
+          "type": "string"
+        },
+        "vatPrice": {
+          "type": "string"
+        },
+        "invoice": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "sale": {
+          "$ref": "#/definitions/IdValue"
+        }
+      }
+    },
+    "InvoiceInfo": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "reference": {
+          "type": "string"
+        },
+        "client": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "dateCreation": {
+          "type": "string"
+        },
+        "dueDate": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/IdValue"
+          }
+        },
+        "contact": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "dateModification": {
+          "type": "string"
+        },
+        "exported": {
+          "type": "string"
+        },
+        "responsable": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "scoring": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "business": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "incoterm": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "invoicingAddress": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "deliveryAddress": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "folder": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "origin": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "bank": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "dueDateExpected": {
+          "type": "string"
+        },
+        "dateRecurrence": {
+          "type": "string"
+        },
+        "terms": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "vat": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "accountingInformation": {
+          "type": "string"
+        },
+        "commercialComments": {
+          "type": "string"
+        },
+        "productionComments": {
+          "type": "string"
+        },
+        "balance": {
+          "type": "string"
+        },
+        "dateCancellation": {
+          "type": "string"
+        },
+        "marge": {
+          "type": "string"
+        },
+        "paid": {
+          "type": "string"
+        },
+        "paymentMethod": {
+          "type": "string"
+        },
+        "taxFree": {
+          "type": "string"
+        },
+        "author": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "lines": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/InvoiceLineInfo"
+          }
+        },
+        "persoFields": {
+          "type": "object",
+          "additionalProperties": {
+            "uniqueItems": false,
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PersoFieldBasic"
+            }
+          }
+        }
+      }
+    },
+    "InvoiceLineInfo": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "product": {
+          "type": "string"
+        },
+        "article": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "description": {
+          "type": "string"
+        },
+        "dateCreation": {
+          "type": "string"
+        },
+        "success": {
+          "type": "string"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "discount": {
+          "type": "string"
+        },
+        "vat": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "quantity": {
+          "type": "string"
+        },
+        "sellingPrice": {
+          "type": "string"
+        },
+        "purchasingPrice": {
+          "type": "string"
+        },
+        "sale": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "showSellingPrice": {
+          "type": "string"
+        },
+        "validationDate": {
+          "type": "string"
+        },
+        "parc": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "quote": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "dateParcDebut": {
+          "type": "string"
+        },
+        "dateParcEnd": {
+          "type": "string"
+        },
+        "taxFree": {
+          "type": "string"
+        },
+        "discountPrice": {
+          "type": "string"
+        },
+        "total": {
+          "type": "string"
+        }
+      }
+    },
+    "PurchaseInfo": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "reference": {
+          "type": "string"
+        },
+        "responsable": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "contract": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "shipment": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "dateModification": {
+          "type": "string"
+        },
+        "supplierOrder": {
+          "type": "string"
+        },
+        "folder": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "origin": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "incoterm": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "client": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "delivery": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "deliveryAddress": {
+          "type": "string"
+        },
+        "bank": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "dateCreation": {
+          "type": "string"
+        },
+        "terms": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "vat": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "exchangeRate": {
+          "type": "string"
+        },
+        "commercialComments": {
+          "type": "string"
+        },
+        "productionComments": {
+          "type": "string"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "paid": {
+          "type": "string"
+        },
+        "taxFree": {
+          "type": "string"
+        },
+        "total": {
+          "type": "string"
+        },
+        "author": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "balance": {
+          "type": "string"
+        },
+        "lines": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PurchaseLineInfo"
+          }
+        },
+        "persoFields": {
+          "type": "object",
+          "additionalProperties": {
+            "uniqueItems": false,
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PersoFieldBasic"
+            }
+          }
+        }
+      }
+    },
+    "PurchaseLineInfo": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "product": {
+          "type": "string"
+        },
+        "article": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "description": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "string"
+        },
+        "delivered": {
+          "type": "string"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "purcharsingPrice": {
+          "type": "string"
+        },
+        "vat": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "discount": {
+          "type": "string"
+        },
+        "customerOrder": {
+          "type": "string"
+        },
+        "requestedTerm": {
+          "type": "string"
+        },
+        "confirmedTerm": {
+          "type": "string"
+        },
+        "balance": {
+          "type": "string"
+        },
+        "totalBalance": {
+          "type": "string"
+        },
+        "taxFree": {
+          "type": "string"
+        },
+        "totalDelivered": {
+          "type": "string"
+        },
+        "invoicePurchase": {
+          "$ref": "#/definitions/IdValue"
+        }
+      }
+    },
+    "LeadInfo2": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "reference": {
+          "type": "string"
+        },
+        "client": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "contact": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "channel": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "owner": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "manager": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "status": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "clientScoring": {
+          "type": "string"
+        },
+        "leadScoring": {
+          "type": "string"
+        },
+        "creationDate": {
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "origin": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "business": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "salesAmount": {
+          "type": "string"
+        },
+        "modificationDate": {
+          "type": "string"
+        },
+        "closingDate": {
+          "type": "string"
+        },
+        "folder": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "headCount": {
+          "type": "string"
+        },
+        "campagne": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "author": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "persoFields": {
+          "type": "object",
+          "additionalProperties": {
+            "uniqueItems": false,
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PersoFieldBasic"
+            }
+          }
+        },
+        "persoField": {
+          "type": "object",
+          "additionalProperties": {
+            "uniqueItems": false,
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PersoFieldBasic"
+            }
+          }
+        }
+      }
+    },
+    "ClientCreationInfo2": {
+      "type": "object",
+      "properties": {
+        "fields": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FieldInfo"
+          }
+        },
+        "groups": {
+          "$ref": "#/definitions/FieldInfo"
+        },
+        "persoFields": {
+          "type": "object",
+          "additionalProperties": {
+            "uniqueItems": false,
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PersoField"
+            }
+          }
+        }
+      }
+    },
+    "ClientSearchResult": {
+      "type": "object",
+      "properties": {
+        "clients": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/IdValue"
+          }
+        },
+        "totalResult": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "ContactCreationInfo2": {
+      "type": "object",
+      "properties": {
+        "fields": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FieldInfo"
+          }
+        },
+        "persoFields": {
+          "type": "object",
+          "additionalProperties": {
+            "uniqueItems": false,
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PersoField"
+            }
+          }
+        }
+      }
+    },
+    "InvoiceCreationInfo": {
+      "type": "object",
+      "properties": {
+        "fields": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FieldInfo"
+          }
+        },
+        "persoFields": {
+          "type": "object",
+          "additionalProperties": {
+            "uniqueItems": false,
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PersoField"
+            }
+          }
+        }
+      }
+    },
+    "LeadCreationInfo2": {
+      "type": "object",
+      "properties": {
+        "fields": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FieldInfo"
+          }
+        },
+        "persoFields": {
+          "type": "object",
+          "additionalProperties": {
+            "uniqueItems": false,
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PersoField"
+            }
+          }
+        }
+      }
+    },
+    "BusinessCreationInfo2": {
+      "type": "object",
+      "properties": {
+        "fields": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FieldInfo"
+          }
+        },
+        "persoFields": {
+          "type": "object",
+          "additionalProperties": {
+            "uniqueItems": false,
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PersoField"
+            }
+          }
+        }
+      }
+    },
+    "PurchaseCreationInfo": {
+      "type": "object",
+      "properties": {
+        "fields": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FieldInfo"
+          }
+        },
+        "persoFields": {
+          "type": "object",
+          "additionalProperties": {
+            "uniqueItems": false,
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PersoField"
+            }
+          }
+        }
+      }
+    },
+    "QuoteCreationInfo": {
+      "type": "object",
+      "properties": {
+        "fields": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FieldInfo"
+          }
+        },
+        "persoFields": {
+          "type": "object",
+          "additionalProperties": {
+            "uniqueItems": false,
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PersoField"
+            }
+          }
+        }
+      }
+    },
+    "SaleCreationInfo": {
+      "type": "object",
+      "properties": {
+        "fields": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FieldInfo"
+          }
+        },
+        "persoFields": {
+          "type": "object",
+          "additionalProperties": {
+            "uniqueItems": false,
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PersoField"
+            }
+          }
+        }
+      }
+    },
+    "TicketCreationInfo2": {
+      "type": "object",
+      "properties": {
+        "fields": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FieldInfo"
+          }
+        },
+        "persoFields": {
+          "type": "object",
+          "additionalProperties": {
+            "uniqueItems": false,
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PersoField"
+            }
+          }
+        }
+      }
+    },
+    "TokenResult": {
+      "type": "object",
+      "properties": {
+        "token": {
+          "type": "string"
+        },
+        "authenticated": {
+          "type": "boolean"
+        },
+        "failReason": {
+          "type": "string"
+        },
+        "failCode": {
+          "type": "string"
+        },
+        "alias": {
+          "type": "string"
+        },
+        "userRef": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "UserInfo": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "rhRef": {
+          "type": "string"
+        },
+        "userName": {
+          "type": "string"
+        },
+        "langue": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "timeZone": {
+          "type": "string"
+        },
+        "userType": {
+          "type": "string"
+        },
+        "dateCreation": {
+          "type": "string"
+        },
+        "dateExpiration": {
+          "type": "string"
+        },
+        "defaultGroup": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "defaultBIGroup": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "groups": {
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/IdValue"
+          }
+        },
+        "status": {
+          "type": "string"
+        },
+        "genre": {
+          "type": "string"
+        },
+        "firstname": {
+          "type": "string"
+        },
+        "lastname": {
+          "type": "string"
+        },
+        "initials": {
+          "type": "string"
+        },
+        "function": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "address1": {
+          "type": "string"
+        },
+        "address2": {
+          "type": "string"
+        },
+        "zipCode": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "cardNumberId": {
+          "type": "string"
+        },
+        "dateBirthday": {
+          "type": "string"
+        },
+        "dateEntry": {
+          "type": "string"
+        },
+        "dateUnavailable": {
+          "type": "string"
+        },
+        "diploma": {
+          "type": "string"
+        },
+        "vehicleTax": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "telephone": {
+          "type": "string"
+        },
+        "mobil": {
+          "type": "string"
+        },
+        "fax": {
+          "type": "string"
+        },
+        "hierarchicalResp": {
+          "$ref": "#/definitions/IdValue"
+        },
+        "numberSS": {
+          "type": "string"
+        },
+        "coefficient": {
+          "type": "string"
+        },
+        "employmentContract": {
+          "type": "string"
+        },
+        "dateRelease": {
+          "type": "string"
+        },
+        "hourlyCost": {
+          "type": "string"
+        },
+        "driverLicenseNumber": {
+          "type": "string"
+        },
+        "mileageReimbursement": {
+          "type": "string"
+        },
+        "workTime": {
+          "type": "string"
+        },
+        "rib": {
+          "type": "string"
+        },
+        "connectionNumber": {
+          "type": "string"
+        },
+        "dateLastConnection": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "Authorization": {
+      "name": "Authorization",
+      "in": "header",
+      "type": "apiKey",
+      "description": "Standard Authorization header using the Bearer scheme. Example: \"bearer {token}\""
+    }
+  },
+  "security": [{
+    "Authorization": []
+  }],
+  "tags": [{
+    "name": "Admin",
+    "description": "get the client info and be able to add and update them"
+  }, {
+    "name": "Article",
+    "description": "get the article info"
+  }, {
+    "name": "Client",
+    "description": "get the client info and be able to add and update them"
+  }, {
+    "name": "Contact",
+    "description": "get the user info and be able to add and update them"
+  }, {
+    "name": "Disconnect",
+    "description": "Disconnect user from api"
+  }, {
+    "name": "Invoice",
+    "description": "get the invoice info"
+  }, {
+    "name": "Lead",
+    "description": "get the lead info"
+  }, {
+    "name": "Opportunity",
+    "description": "get the business info and be able to add and update them"
+  }, {
+    "name": "PersoFields",
+    "description": "get the info of perso fields"
+  }, {
+    "name": "Purchase",
+    "description": "get the client info and be able to add and update them"
+  }, {
+    "name": "Quote",
+    "description": "get the quote info"
+  }, {
+    "name": "Sale",
+    "description": "get the sale info and be able to add and update them"
+  }, {
+    "name": "Ticket",
+    "description": "get the sale info and be able to add and update them"
+  }, {
+    "name": "Token",
+    "description": "get the token info"
+  }, {
+    "name": "User",
+    "description": "get the user info and be able to update them"
+  }]
+}
