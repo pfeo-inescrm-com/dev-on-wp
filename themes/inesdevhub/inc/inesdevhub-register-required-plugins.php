@@ -13,6 +13,11 @@ function inesdevhub_register_required_plugins()
             'slug'      => 'ninja-forms',
             'required'      => true
         ],
+        [
+            'name'      => 'DocsPress',
+            'slug'      => 'docspress',
+            'required'      => true
+        ],
     ];
 
     $config = [
