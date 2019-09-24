@@ -1,8 +1,8 @@
-index.php
+#index.php
 backups/
 #languages/
 #plugins/
-themes/index.php
+#themes/index.php
 themes/twentynineteen/
 updraft/
 upgrade/
