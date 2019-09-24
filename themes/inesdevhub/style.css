@@ -11424,10 +11424,6 @@ span.counter {
     color: #555;
     text-transform: none;
     line-height: 26px; }
-  .docspress-nav-list li.page_item_has_children:not(:first) a {
-    color: #F4813A !important; }
-    .docspress-nav-list li.page_item_has_children:not(:first) a:after {
-      content: "\e873"; }
 
 .docspress-single-breadcrumbs {
   display: none; }
@@ -11450,10 +11446,11 @@ span.counter {
   font-size: 16px;
   vertical-align: middle;
   color: #333; }
-.docspress-single-content footer.entry-footer {
+.docspress-single-content .entry-footer {
   display: none !important; }
 
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
+
 /*# sourceMappingURL=style.css.map */

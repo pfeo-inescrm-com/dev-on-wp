@@ -318,14 +318,14 @@ $facebookColor: #516ca4;
       line-height: 26px;
     }
     /*revisar porque no funciona */
-    &.page_item_has_children:not(:first) {
-      a {
-        color: #F4813A !important;
-        &:after {
-          content: "\e873";
-        } 
-      }
-    }
+    // &.page_item_has_children:not(:first) {
+    //   a {
+    //     color: #F4813A !important;
+    //     &:after {
+    //       content: "\e873";
+    //     } 
+    //   }
+    // }
   }
 
 }
@@ -364,7 +364,7 @@ $facebookColor: #516ca4;
     color: #333;
   }
 
-  footer.entry-footer {
+  .entry-footer {
     display: none !important;
   }
 }
