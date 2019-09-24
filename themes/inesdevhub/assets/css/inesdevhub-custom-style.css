@@ -248,6 +248,8 @@
   font-size: 16px;
   vertical-align: middle;
   color: #333; }
+.docspress-single-content footer.entry-footer {
+  display: none !important; }
 
 /*--------------------------------------------------------------
 # Media Queries
