@@ -12,10 +12,10 @@
                     <img src="<?php echo get_template_directory_uri() . '/assets/images/ohno404.png';  ?>" alt="404 page">
                     <div class="not_found">
                         <h3>
-                            <?php _e('Oops! Page Not Found', 'inesmktplc') ?>
+                            <?php _e('Oops! Page Not Found', 'inesdevhub') ?>
                         </h3>
                         <a href="<?php echo get_home_url() ?>" class="btn btn--round btn--default">
-                            <?php _e('Back to Home', 'inesmktplc') ?> 
+                            <?php _e('Back to Home', 'inesdevhub') ?> 
                         </a>
                     </div>
                 </div>

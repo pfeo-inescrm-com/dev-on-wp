@@ -21,7 +21,7 @@ $result_count = $wp_query->found_posts;
                                 <div class="search__title">
                                     <h3>
                                         <?php echo $result_count ?>
-                                        <?php _e('results found based on keyword(s):', 'inesmktplc'); ?>
+                                        <?php _e('results found based on keyword(s):', 'inesdevhub'); ?>
                                         <?php echo get_search_query(); ?>
                                 </div>
                                 <?php
@@ -66,7 +66,7 @@ $result_count = $wp_query->found_posts;
                 } else {
                     ?>
                 <div class="col-12" style="padding-top: 100px; padding-bottom: 100px; text-align: center;">
-                    <?php _e('Nothing found. Please try a different search', 'inesmktplc'); ?>
+                    <?php _e('Nothing found. Please try a different search', 'inesdevhub'); ?>
                 </div>
                 <?php
             }

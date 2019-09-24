@@ -3,7 +3,7 @@
  * Template Name: Presentation
  *
  * @package Ines CRM Marketplace
- * @subpackage inesmktplc
+ * @subpackage inesdevhub
  * @since version 0.1.0
  */
 
@@ -28,7 +28,7 @@
 
                 <div class="row">
 
-                    <?php if (is_active_sidebar('inesmktplc-sidebar-main')) : ?>
+                    <?php if (is_active_sidebar('inesdevhub-sidebar-main')) : ?>
                         <!-- start col-lg-9 -->
                         <div class="col-lg-9 col-12">
                         <?php else : ?>
@@ -96,12 +96,12 @@
                         <!-- end /.col if -->
 
 
-                        <?php if (is_active_sidebar('inesmktplc-sidebar-main')) : ?>
+                        <?php if (is_active_sidebar('inesdevhub-sidebar-main')) : ?>
                             <!-- start .col-lg-3 -->
                             <div class="col-lg-3 col-12 mt-5 mt-lg-0">
                                 <!-- start aside -->
                                 <aside class="sidebar product--sidebar">
-                                    <?php dynamic_sidebar('inesmktplc-sidebar-main'); ?>
+                                    <?php dynamic_sidebar('inesdevhub-sidebar-main'); ?>
                                 </aside>
                                 <!-- end aside -->
                             </div>
