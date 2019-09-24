@@ -8,7 +8,9 @@
  */
 ?>
 
-
+<?php
+$home_url = home_url('/'); 
+?>
 
 <?php
 //get the shop page url to use it in link below
@@ -195,8 +197,8 @@
             <p>L'API INES CRM vous permet de connecter votre CRM à votre système d'information. Flux de données entrant et sortant, workflows et automatismes, vous pouvez intégrez les API's INES REST et SOAP dans n'importe quelle application, site Web ou système embarqué. Découvrez notre documentation et développez en totale autonomie vos interfaces.</p>
             <br>
             <div class="cta-group text-left">
-              <button class="btn btn-lg btn--round">REST API</button>
-              <button class="btn btn-lg btn--round">SOAP API</button>
+            <a href="<?php echo $home_url . 'api-rest' ?>"><button class="btn btn-lg btn--round">REST API</button></a>
+            <a href="<?php echo $home_url . 'docs/api-soap' ?>"><button class="btn btn-lg btn--round">SOAP API</button></a>
             </div>
           </div>
           <div class="col-md-6">
@@ -241,9 +243,7 @@
 <!--================================
     START CALL TO ACTION AREA
     =================================-->
-    <?php
-$home_url = home_url('/'); 
-?>
+
     <section class="call-to-action bgimage" style="height:300px;">
     <div class="bg_image_holder">
         <!-- <img src="images/calltobg.jpg" alt=""> -->
@@ -253,16 +253,16 @@ $home_url = home_url('/');
             <div class="col-md-12">
                 <div class="call-to-wrap">
                     <p class="h1 text--white">
-                        <?php _e('Do you want to join our Marketplace?', 'inesmktplc'); ?>
+                        <?php _e('Do you want to join our Marketplace?', 'inesdevhub'); ?>
                     <!-- Vous souhaitez rejoindre notre Marketplace ? -->
                     </p>                    
                     <!-- <h4 class="text--white"> -->
-                        <?php //_e('Increase efficiency. Get the most out of your tools in a few clicks.', 'inesmktplc'); ?>
+                        <?php //_e('Increase efficiency. Get the most out of your tools in a few clicks.', 'inesdevhub'); ?>
                     <!-- Gagnez en efficacité. Tirez le meilleur de vos outils en quelques clics. -->
                     <!-- </h4> -->
-                    <a href="<?php echo $home_url . _x('contact-us', 'url', 'inesmktplc');  ?>" class="btn btn--lg btn--round btn--white callto-action-btn">
+                    <a href="<?php echo $home_url . _x('contact-us', 'url', 'inesdevhub');  ?>" class="btn btn--lg btn--round btn--white callto-action-btn">
                     <strong>
-                        <?php _e('Contact us', 'inesmktplc'); ?>
+                        <?php _e('Contact us', 'inesdevhub'); ?>
                     </strong>
                     <!-- Contactez-nous -->
                     </a>

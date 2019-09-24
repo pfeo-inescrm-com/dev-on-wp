@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: INES CRM Marketplace\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-23 19:10+0000\n"
-"PO-Revision-Date: 2019-09-23 19:10+0000\n"
+"POT-Creation-Date: 2019-07-09 14:26+0000\n"
+"PO-Revision-Date: 2019-09-23 19:19+0000\n"
 "Language-Team: French (France)\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
@@ -13,6 +13,35 @@ msgstr ""
 "X-Loco-Version: 2.3.0; wp-5.2.3\n"
 "Last-Translator: p.feo <p.feo@inescrm.com>\n"
 "Language: fr_FR"
+
+#: 404.php:15
+msgid "Oops! Page Not Found"
+msgstr ""
+
+#: 404.php:18
+msgid "Back to Home"
+msgstr ""
+
+#: BK_20190517_home.php:38 page-home.php:34
+msgid "home background image"
+msgstr ""
+
+#: BK_20190517_home.php:47 page-home.php:43
+msgid "Welcome to INES Marketplace!"
+msgstr "Bienvenue sur la Marketplace INES !"
+
+#: BK_20190517_home.php:54 page-home.php:50
+#: template-parts/header-search-fullwidth.php:39
+msgid "Simply connect your <span>CRM</span> to your Tools"
+msgstr "Connectez simplement votre <span>CRM</span> à vos applications"
+
+#: BK_20190517_home.php:66 page-home.php:62
+msgid "Integration catalogue"
+msgstr ""
+
+#: footer.php:184
+msgid "All rights reserved"
+msgstr ""
 
 #. Name of the template
 msgid "Contact"
@@ -46,30 +75,22 @@ msgstr "Laissez-nous votre message"
 msgid "Home"
 msgstr "Accueil"
 
-#: page-home.php:72
-msgid "Welcome to INES Marketplace!"
-msgstr "Bienvenue sur la Marketplace INES !"
-
-#: page-home.php:75
-msgid "Simply connect your <span>CRM</span> to your Tools"
-msgstr "Connectez simplement votre <span>CRM</span> à vos applications"
-
 #. Name of the template
 msgid "Login"
 msgstr ""
 
-#: page-login.php:39
+#: page-login.php:42
 msgid "<strong>Oh snap!</strong> Invalid username and/or password."
 msgstr ""
 "<strong>Oh oh!</strong> Nom d'utilisateur et / ou mot de passe incorrect."
 
-#: page-login.php:41
+#: page-login.php:44
 msgid "<strong>Oh snap!</strong> Username and/or Password is empty."
 msgstr ""
 "<strong>Oh oh!</strong> Le nom d'utilisateur et / ou le mot de passe est "
 "vide."
 
-#: page-login.php:43
+#: page-login.php:46
 msgid "<strong>Oh snap!</strong> You are logged out."
 msgstr "<strong>Oh oh!</strong> Vous êtes déconnecté."
 
@@ -77,62 +98,219 @@ msgstr "<strong>Oh oh!</strong> Vous êtes déconnecté."
 msgid "Presentation"
 msgstr "Présentation"
 
+#: search.php:24
+msgid "results found based on keyword(s):"
+msgstr ""
+
+#: search.php:69
+msgid "Nothing found. Please try a different search"
+msgstr ""
+
+#: inc/inesmktplc-wc-template-functions.php:59
+msgid "free"
+msgstr ""
+
+#: inc/inesmktplc-wc-template-functions.php:62
+msgid "on demand"
+msgstr ""
+
+#: inc/inesmktplc-wc-template-functions.php:207
+msgid "Items per page"
+msgstr ""
+
+#: inc/inesmktplc-wc-template-functions.php:214
+msgid "items per page"
+msgstr ""
+
 #: inc/setup.php:11
 msgid "Primary Menu"
 msgstr ""
 
+#: inc/setup.php:12
+msgid "Woocommerce #1 Menu"
+msgstr ""
+
 #: inc/sidebars.php:9
-msgid "Sidebar Dev Hub - General"
+msgid "Sidebar Marketplace - General"
 msgstr ""
 
 #: inc/sidebars.php:11
-msgid "INES Dev Hub general sidebar"
+msgid "INES Marketplace general sidebar"
 msgstr ""
 
 #: inc/sidebars.php:31
-msgid "Sidebar Dev Hub - Footer 1st column"
+msgid "Sidebar Marketplace - Footer 1st column"
 msgstr ""
 
 #: inc/sidebars.php:33
-msgid "INES Dev Hub sidebar for footer 1st column"
+msgid "INES Marketplace sidebar for footer 1st column"
 msgstr ""
 
 #: inc/sidebars.php:50
-msgid "Sidebar Dev Hub - Footer 2nd column"
+msgid "Sidebar Marketplace - Footer 2nd column"
 msgstr ""
 
 #: inc/sidebars.php:52
-msgid "INES Dev Hub sidebar for footer 2nd column"
+msgid "INES Marketplace sidebar for footer 2nd column"
 msgstr ""
 
 #: inc/sidebars.php:69
-msgid "Sidebar Dev Hub - Footer 3rd column"
+msgid "Sidebar Marketplace - Footer 3rd column"
 msgstr ""
 
 #: inc/sidebars.php:71
-msgid "INES Dev Hub sidebar for footer 3rd column"
+msgid "INES Marketplace sidebar for footer 3rd column"
 msgstr ""
 
 #: inc/sidebars.php:88
-msgid "Sidebar Dev Hub - Footer 4th column"
+msgid "Sidebar Marketplace - Footer 4th column"
 msgstr ""
 
 #: inc/sidebars.php:90
-msgid "INES Dev Hub sidebar for footer 4th column"
+msgid "INES Marketplace sidebar for footer 4th column"
+msgstr ""
+
+#: inc/sidebars.php:127
+msgid "Sidebar Marketplace - Shop page"
+msgstr ""
+
+#: inc/sidebars.php:129
+msgid "INES Marketplace sidebar for product filtering in shop page"
+msgstr ""
+
+#: template-parts/author-area-cart.php:99
+msgid "Sub-total :"
+msgstr ""
+
+#: template-parts/author-area-cart.php:107
+msgid "View Cart"
+msgstr ""
+
+#: template-parts/author-area-cart.php:110
+msgid "Checkout"
+msgstr ""
+
+#: template-parts/author-area-cart.php:119
+msgid "Your cart is empty"
+msgstr ""
+
+#: template-parts/author-area-not-loggedin.php:11
+msgid "Members Area Login"
+msgstr ""
+
+#: template-parts/call-to-action-fullwidth.php:16
+msgid "Do you want to join our Marketplace?"
+msgstr "Vous souhaitez rejoindre notre Marketplace ?"
+
+#: template-parts/call-to-action-fullwidth.php:20
+msgid "Increase efficiency. Get the most out of your tools in a few clicks."
+msgstr ""
+
+#: template-parts/call-to-action-fullwidth.php:23
+msgctxt "url"
+msgid "contact-us"
+msgstr "contactez-nous"
+
+#: template-parts/call-to-action-fullwidth.php:24
+msgid "Contact us"
+msgstr "Contactez-nous"
+
+#: template-parts/content-page.php:25
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/header-search-fullwidth.php:35
+msgid "Integrate <span>INES</span> with all your tools"
+msgstr ""
+
+#: template-parts/search-form-large.php:10
+#: template-parts/search-form-large.php:13
+msgid "Find your tools..."
+msgstr ""
+
+#: template-parts/search-form-large.php:18
+msgid "Search..."
+msgstr ""
+
+#: template-parts/search-form-small.php:12
+msgid "Search for:"
+msgstr ""
+
+#: woocommerce/content-product.php:63 woocommerce/single-product/related.php:72
+msgid "More info"
+msgstr ""
+
+#: inc/widgets/class-inesmktplc-widget-categories.php:103
+#: inc/widgets/class-inesmktplc-widget-product-modules.php:101
+msgid "Categories"
+msgstr ""
+
+#: inc/widgets/class-inesmktplc-widget-categories.php:113
+#: inc/widgets/class-inesmktplc-widget-filter-products-checkbox.php:114
+#: inc/widgets/class-inesmktplc-widget-product-modules.php:108
+#: inc/widgets/class-inesmktplc-widget-product-pricing.php:142
+msgid "Title:"
+msgstr ""
+
+#: inc/widgets/class-inesmktplc-widget-categories.php:146
+#: inc/widgets/class-inesmktplc-widget-product-modules.php:116
+#: inc/widgets/class-inesmktplc-widget-product-pricing.php:153
+msgid "Show post counts"
+msgstr ""
+
+#: inc/widgets/class-inesmktplc-widget-filter-products-checkbox.php:48
+#: inc/widgets/class-inesmktplc-widget-filter-products-checkbox.php:107
+msgid "Filter Products"
+msgstr ""
+
+#: inc/widgets/class-inesmktplc-widget-product-pricing.php:102
+msgid "Free"
+msgstr ""
+
+#: inc/widgets/class-inesmktplc-widget-product-pricing.php:111
+msgid "On Demand"
+msgstr ""
+
+#: inc/widgets/class-inesmktplc-widget-product-pricing.php:135
+msgid "Pricing"
+msgstr ""
+
+#: woocommerce/single-product/sidebar-single-product.php:28
+msgid "Install"
+msgstr ""
+
+#: woocommerce/single-product/sidebar-single-product.php:32
+msgid "Quotation"
+msgstr ""
+
+#: woocommerce/single-product/sidebar-single-product.php:42
+msgid "Product Information"
+msgstr ""
+
+#: woocommerce/single-product/sidebar-single-product.php:49
+msgid "Category"
+msgstr ""
+
+#: woocommerce/single-product/sidebar-single-product.php:60
+msgid "No attributes"
+msgstr ""
+
+#: woocommerce/single-product/sidebar-single-product.php:310
+msgid "Submit"
 msgstr ""
 
 #. Name of the theme
-msgid "INES CRM Developer Hub"
+msgid "INES CRM Marketplace"
 msgstr ""
 
 #. Description of the theme
 msgid ""
-"This is a custom developer's hub theme intended to hold technical "
-"documentation built for INES CRM based on MartPlace html template"
+"This is a custom marketplace theme built for INES CRM based on MartPlace "
+"html template"
 msgstr ""
 
 #. URI of the theme
-msgid "https://github.com/pfeo-inescrm-com/dev-on-wp.git"
+msgid "https://github.com/pfeo-inescrm-com/marketplace"
 msgstr ""
 
 #. Author of the theme

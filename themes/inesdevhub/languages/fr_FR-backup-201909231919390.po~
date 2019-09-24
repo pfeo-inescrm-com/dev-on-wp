@@ -3,28 +3,28 @@ msgstr ""
 "Project-Id-Version: INES CRM Marketplace\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-09 14:26+0000\n"
-"PO-Revision-Date: 2019-07-16 15:18+0000\n"
+"PO-Revision-Date: 2019-09-23 19:19+0000\n"
 "Language-Team: French (France)\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.3.0; wp-5.2.2\n"
+"X-Loco-Version: 2.3.0; wp-5.2.3\n"
 "Last-Translator: p.feo <p.feo@inescrm.com>\n"
 "Language: fr_FR"
 
 #: 404.php:15
 msgid "Oops! Page Not Found"
-msgstr "Oops ! Page non trouvée"
+msgstr ""
 
 #: 404.php:18
 msgid "Back to Home"
-msgstr "Retour à l'accueil"
+msgstr ""
 
 #: BK_20190517_home.php:38 page-home.php:34
 msgid "home background image"
-msgstr "accueil image de fond"
+msgstr ""
 
 #: BK_20190517_home.php:47 page-home.php:43
 msgid "Welcome to INES Marketplace!"
@@ -37,11 +37,11 @@ msgstr "Connectez simplement votre <span>CRM</span> à vos applications"
 
 #: BK_20190517_home.php:66 page-home.php:62
 msgid "Integration catalogue"
-msgstr "Catalogue d'intégrations"
+msgstr ""
 
 #: footer.php:184
 msgid "All rights reserved"
-msgstr "Tous droits réservés"
+msgstr ""
 
 #. Name of the template
 msgid "Contact"
@@ -100,28 +100,27 @@ msgstr "Présentation"
 
 #: search.php:24
 msgid "results found based on keyword(s):"
-msgstr "résultats trouvés en fonction des mots-clés:"
+msgstr ""
 
 #: search.php:69
-#, fuzzy
 msgid "Nothing found. Please try a different search"
-msgstr "Rien n'a été trouvé. S'il vous plaît, essayez une recherche différente"
+msgstr ""
 
 #: inc/inesmktplc-wc-template-functions.php:59
 msgid "free"
-msgstr "gratuit"
+msgstr ""
 
 #: inc/inesmktplc-wc-template-functions.php:62
 msgid "on demand"
-msgstr "sur devis"
+msgstr ""
 
 #: inc/inesmktplc-wc-template-functions.php:207
 msgid "Items per page"
-msgstr "Résultats par page"
+msgstr ""
 
 #: inc/inesmktplc-wc-template-functions.php:214
 msgid "items per page"
-msgstr "résultats par page"
+msgstr ""
 
 #: inc/setup.php:11
 msgid "Primary Menu"
@@ -185,19 +184,19 @@ msgstr ""
 
 #: template-parts/author-area-cart.php:107
 msgid "View Cart"
-msgstr "Voir le panier"
+msgstr ""
 
 #: template-parts/author-area-cart.php:110
 msgid "Checkout"
-msgstr "Valider mon panier"
+msgstr ""
 
 #: template-parts/author-area-cart.php:119
 msgid "Your cart is empty"
-msgstr "Votre panier est vide"
+msgstr ""
 
 #: template-parts/author-area-not-loggedin.php:11
 msgid "Members Area Login"
-msgstr "Connexion membres"
+msgstr ""
 
 #: template-parts/call-to-action-fullwidth.php:16
 msgid "Do you want to join our Marketplace?"
@@ -206,103 +205,99 @@ msgstr "Vous souhaitez rejoindre notre Marketplace ?"
 #: template-parts/call-to-action-fullwidth.php:20
 msgid "Increase efficiency. Get the most out of your tools in a few clicks."
 msgstr ""
-"Gagnez en efficacité. Tirez le meilleur de vos outils en quelques clics."
 
 #: template-parts/call-to-action-fullwidth.php:23
 msgctxt "url"
 msgid "contact-us"
-msgstr "contactez-nous"
+msgstr ""
 
 #: template-parts/call-to-action-fullwidth.php:24
 msgid "Contact us"
-msgstr "Contactez-nous"
+msgstr ""
 
 #: template-parts/content-page.php:25
 msgid "Pages:"
-msgstr "Pages :"
+msgstr ""
 
 #: template-parts/header-search-fullwidth.php:35
 msgid "Integrate <span>INES</span> with all your tools"
-msgstr "Intégrez <span>INES</span> avec tous vos outils"
+msgstr ""
 
 #: template-parts/search-form-large.php:10
 #: template-parts/search-form-large.php:13
 msgid "Find your tools..."
-msgstr "Trouvez vos outils ..."
+msgstr ""
 
 #: template-parts/search-form-large.php:18
 msgid "Search..."
-msgstr "Chercher ..."
+msgstr ""
 
 #: template-parts/search-form-small.php:12
 msgid "Search for:"
-msgstr "Chercher ..."
+msgstr ""
 
 #: woocommerce/content-product.php:63 woocommerce/single-product/related.php:72
 msgid "More info"
-msgstr "Plus d'info"
+msgstr ""
 
 #: inc/widgets/class-inesmktplc-widget-categories.php:103
 #: inc/widgets/class-inesmktplc-widget-product-modules.php:101
 msgid "Categories"
-msgstr "Catégories"
+msgstr ""
 
 #: inc/widgets/class-inesmktplc-widget-categories.php:113
 #: inc/widgets/class-inesmktplc-widget-filter-products-checkbox.php:114
 #: inc/widgets/class-inesmktplc-widget-product-modules.php:108
 #: inc/widgets/class-inesmktplc-widget-product-pricing.php:142
 msgid "Title:"
-msgstr "Titre :"
+msgstr ""
 
 #: inc/widgets/class-inesmktplc-widget-categories.php:146
 #: inc/widgets/class-inesmktplc-widget-product-modules.php:116
 #: inc/widgets/class-inesmktplc-widget-product-pricing.php:153
-#, fuzzy
 msgid "Show post counts"
-msgstr "Afficher les posts"
+msgstr ""
 
 #: inc/widgets/class-inesmktplc-widget-filter-products-checkbox.php:48
 #: inc/widgets/class-inesmktplc-widget-filter-products-checkbox.php:107
 msgid "Filter Products"
-msgstr "Filtrer les produits"
+msgstr ""
 
 #: inc/widgets/class-inesmktplc-widget-product-pricing.php:102
 msgid "Free"
-msgstr "Gratuit"
+msgstr ""
 
 #: inc/widgets/class-inesmktplc-widget-product-pricing.php:111
 msgid "On Demand"
-msgstr "Sur Devis"
+msgstr ""
 
 #: inc/widgets/class-inesmktplc-widget-product-pricing.php:135
 msgid "Pricing"
-msgstr "Prix"
+msgstr ""
 
 #: woocommerce/single-product/sidebar-single-product.php:28
 msgid "Install"
-msgstr "Installer"
+msgstr ""
 
 #: woocommerce/single-product/sidebar-single-product.php:32
 msgid "Quotation"
-msgstr "Demande de devis"
+msgstr ""
 
 #: woocommerce/single-product/sidebar-single-product.php:42
 msgid "Product Information"
-msgstr "Information Produit"
+msgstr ""
 
 #: woocommerce/single-product/sidebar-single-product.php:49
 msgid "Category"
-msgstr "Catégorie"
+msgstr ""
 
 #: woocommerce/single-product/sidebar-single-product.php:60
 msgid "No attributes"
 msgstr ""
-"\n"
-"Aucun attribut"
 
 #: woocommerce/single-product/sidebar-single-product.php:310
 msgid "Submit"
-msgstr "Envoyer"
+msgstr ""
 
 #. Name of the theme
 msgid "INES CRM Marketplace"
