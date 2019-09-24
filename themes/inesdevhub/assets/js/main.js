@@ -4,6 +4,22 @@
     var windowWidth = $(window).width();
     var windowHeight = $(window).height();
 
+    
+/*DocsPress custom sidebar*/
+console.log('maneco');
+var $litem = $('.page_item_has_children:not(:first)');
+console.log($litem);
+var $litemChild =  $('.page_item_has_children:not(:first) > ul.children');
+
+    $litem.attr("data-toggle","collapse");
+    $litem.attr("href", function(index){
+        return "#collapse" + index
+    });
+
+    // $litem.prepend('<span class="lnr lnr-plus-circle"></span>');
+    
+
+
     // custom nav trigger function for owl casousel
     function customTrigger(slideNext, slidePrev, targetSlider) {
         $(slideNext).on('click', function () {
@@ -391,4 +407,7 @@
 
         }, 'xml');
     });
+
+
+
 })(jQuery);

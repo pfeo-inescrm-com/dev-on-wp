@@ -209,11 +209,11 @@ msgstr ""
 #: template-parts/call-to-action-fullwidth.php:23
 msgctxt "url"
 msgid "contact-us"
-msgstr ""
+msgstr "contactez-nous"
 
 #: template-parts/call-to-action-fullwidth.php:24
 msgid "Contact us"
-msgstr ""
+msgstr "Contactez-nous"
 
 #: template-parts/content-page.php:25
 msgid "Pages:"

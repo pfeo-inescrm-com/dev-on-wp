@@ -307,9 +307,7 @@ $facebookColor: #516ca4;
     display: block;
     vertical-align: middle;
     width: auto;
-
-    // &.current_page_ancestor.current_page_parent.page_item.page_item_has_children {}
-
+        // &.current_page_ancestor.current_page_parent.page_item.page_item_has_children {}
     a {
       font-family: Montserrat, sans-serif;
       text-overflow: ellipsis;
@@ -319,7 +317,17 @@ $facebookColor: #516ca4;
       text-transform: none;
       line-height: 26px;
     }
+    /*revisar porque no funciona */
+    &.page_item_has_children:not(:first) {
+      a {
+        color: #F4813A !important;
+        &:after {
+          content: "\e873";
+        } 
+      }
+    }
   }
+
 }
 
 

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: INES CRM Marketplace\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-09 14:26+0000\n"
-"PO-Revision-Date: 2019-09-23 19:19+0000\n"
+"PO-Revision-Date: 2019-09-24 18:14+0000\n"
 "Language-Team: French (France)\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
@@ -16,11 +16,11 @@ msgstr ""
 
 #: 404.php:15
 msgid "Oops! Page Not Found"
-msgstr ""
+msgstr "Oops ! Page non trouvée"
 
 #: 404.php:18
 msgid "Back to Home"
-msgstr ""
+msgstr "Retour à l'accueil"
 
 #: BK_20190517_home.php:38 page-home.php:34
 msgid "home background image"

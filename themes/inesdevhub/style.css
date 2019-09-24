@@ -11414,7 +11414,8 @@ span.counter {
 .docspress-nav-list li {
   display: block;
   vertical-align: middle;
-  width: auto; }
+  width: auto;
+  /*revisar porque no funciona */ }
   .docspress-nav-list li a {
     font-family: Montserrat, sans-serif;
     text-overflow: ellipsis;
@@ -11423,6 +11424,10 @@ span.counter {
     color: #555;
     text-transform: none;
     line-height: 26px; }
+  .docspress-nav-list li.page_item_has_children:not(:first) a {
+    color: #F4813A !important; }
+    .docspress-nav-list li.page_item_has_children:not(:first) a:after {
+      content: "\e873"; }
 
 .docspress-single-breadcrumbs {
   display: none; }
