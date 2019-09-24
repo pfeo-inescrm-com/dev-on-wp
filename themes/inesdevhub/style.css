@@ -11419,7 +11419,8 @@ span.counter {
   display: none; }
 
 .docspress-single-content * {
-  font-family: Montserrat, sans-serif; }
+  font-family: Montserrat, sans-serif;
+  font-weight: normal; }
 .docspress-single-content h1 {
   margin-bottom: 50px;
   font-weight: 400;
@@ -11434,4 +11435,5 @@ span.counter {
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
+
 /*# sourceMappingURL=style.css.map */
