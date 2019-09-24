@@ -11431,6 +11431,11 @@ span.counter {
   margin-bottom: 10px; }
 .docspress-single-content .entry-content table th:first-child {
   min-width: 200px; }
+.docspress-single-content .entry-content table th[scope="row"] {
+  padding: 20px 0 20px 28px;
+  font-size: 16px;
+  vertical-align: middle;
+  color: #333; }
 
 /*--------------------------------------------------------------
 # Media Queries
