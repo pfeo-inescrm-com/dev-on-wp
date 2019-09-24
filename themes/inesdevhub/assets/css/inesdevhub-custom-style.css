@@ -206,7 +206,7 @@
     outline: none; }
 
 .docspress-nav-list li {
-  display: inline-block;
+  display: block;
   vertical-align: middle;
   width: auto; }
   .docspress-nav-list li a {
