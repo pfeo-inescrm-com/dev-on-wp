@@ -71,11 +71,12 @@ $home_url = home_url('/');
                         <div class="hero__content__title">
                             <h1></h1>
                             <h1>
-                                <span class="light"><?php _e('Welcome to INES Marketplace!', 'inesdevhub') ?></span>
+                                <!-- <span class="light"><?php //_e('Welcome to INES Marketplace!', 'inesdevhub') ?></span> -->
                                 <!-- Bienvenue sur la Marketplace INES ! -->
-                                <span
-                                    class="bold"><?php _e('Simply connect your <span>CRM</span> to your Tools', 'inesdevhub') ?></span>
+                                <span class="light">Intégrez votre solution</span>                                                                 
+                                <!-- <span class="bold"><?php //_e('Simply connect your <span>CRM</span> to your Tools', 'inesdevhub') ?></span> -->
                                 <!-- Connectez simplement votre CRM à vos Outils -->
+                                <span class="bold">à l'écosystème INES CRM</span>                                
                             </h1>
                             <!-- <p class="tagline">MartPlace is the most powerful, &amp; customizable template for Easy Digital
                     Downloads Products</p> -->
