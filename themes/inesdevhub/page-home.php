@@ -62,8 +62,8 @@ $home_url = home_url('/');
     </div>
 </section> -->
 
-<section class="hero-area">
-    <div class="hero-content content_above search-area2">
+<section class="hero-area" style="height: 287px;">
+    <div class="hero-content search-area2" style="padding: 0;">
         <div class="content-wrapper">
             <div class="container">
                 <div class="row">
@@ -137,7 +137,7 @@ $home_url = home_url('/');
                             </div>
                             <div class="news__content text-center">
                                 <a href="#">
-                                    <h4>Créez votre identifiant</h4>
+                                    <h4>Créez<br>votre identifiant</h4>
                                 </a>
                                 <p>Demandez vos identifiants et recevez simplement votre token d'authentification</p>
                                 <a href="#">
@@ -155,7 +155,7 @@ $home_url = home_url('/');
                             </div>
                             <div class="news__content text-center">
                                 <a href="#">
-                                    <h4>Développez votre intégration</h4>
+                                    <h4>Développez<br>votre intégration</h4>
                                 </a>
                                 <p>Accédez à une base de démo dédiée et développez votre intégration en environnement
                                     réel.</p>
@@ -174,7 +174,7 @@ $home_url = home_url('/');
                             </div>
                             <div class="news__content text-center">
                                 <a href="#">
-                                    <h4>Intégrez notre marketplace</h4>
+                                    <h4>Intégrez<br>notre marketplace</h4>
                                 </a>
                                 <p>Vous souhaitez référencer votre intégration sur la Marketplace INES ? Contactez nos
                                     équipes</p>
@@ -198,17 +198,17 @@ $home_url = home_url('/');
             <p>L'API INES CRM vous permet de connecter votre CRM à votre système d'information. Flux de données entrant et sortant, workflows et automatismes, vous pouvez intégrez les API's INES REST et SOAP dans n'importe quelle application, site Web ou système embarqué. Découvrez notre documentation et développez en totale autonomie vos interfaces.</p>
             <br>
             <div class="cta-group text-left">
-            <a href="<?php echo $home_url . 'api-rest' ?>"><button class="btn btn-lg btn--round">REST API</button></a>
-            <a href="<?php echo $home_url . 'docs/api-soap' ?>"><button class="btn btn-lg btn--round">SOAP API</button></a>
+            <a href="<?php echo $home_url . 'api-rest' ?>"><button class="btn btn-md btn--round mr-3">REST API</button></a>
+            <a href="<?php echo $home_url . 'docs/api-soap' ?>"><button class="btn btn-md btn--round">SOAP API</button></a>
             </div>
           </div>
           <div class="col-md-6">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/disponible-en-rest.jpg';  ?>" alt="">
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/rest-347x260.png';  ?>" alt="" style="width: 300px;">
           </div>
         </div>
         <div class="row">
           <div class="col-md-6">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/flexible-api.jpg';  ?>" alt="">
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/soap-347x260.png';  ?>" alt="" style="width: 300px;">
           </div>
           <div class="col-md-6">
             <h3>Flexible et évolutive</h3>
