@@ -12,8 +12,8 @@
                             <!-- <p class="info--text">Nunc placerat mi id nisi interdum they mollis. Praesent
                                 pharetra, justo ut scel erisque the mattis, leo quam.</p> -->
                             <?php
-                            if (is_active_sidebar('inesmktplc-sidebar-footer-1')) {
-                                dynamic_sidebar('inesmktplc-sidebar-footer-1');
+                            if (is_active_sidebar('inesdevhub-sidebar-footer-1')) {
+                                dynamic_sidebar('inesdevhub-sidebar-footer-1');
                             }
                             ?>
                             <!-- <div class="info-footer">
@@ -44,8 +44,8 @@
 
                     <div class="col-lg-3 col-md-6 col-12 mt-5 mt-md-0">
                         <?php
-                        if (is_active_sidebar('inesmktplc-sidebar-footer-2')) {
-                            dynamic_sidebar('inesmktplc-sidebar-footer-2');
+                        if (is_active_sidebar('inesdevhub-sidebar-footer-2')) {
+                            dynamic_sidebar('inesdevhub-sidebar-footer-2');
                         }
                         ?>
                     </div>
@@ -53,8 +53,8 @@
 
                     <div class="col-lg-3 col-md-6 col-12 mt-5 mt-lg-0">
                         <?php
-                        if (is_active_sidebar('inesmktplc-sidebar-footer-3')) {
-                            dynamic_sidebar('inesmktplc-sidebar-footer-3');
+                        if (is_active_sidebar('inesdevhub-sidebar-footer-3')) {
+                            dynamic_sidebar('inesdevhub-sidebar-footer-3');
                         }
                         ?>
                         <!-- <div class="footer-menu">
@@ -120,8 +120,8 @@
                                 <img src="<?php echo get_template_directory_uri() . '/assets/images/logo-inescrm-white-166x35.png';  ?>" alt="footer logo">
                             </div>
                         <?php
-                        if (is_active_sidebar('inesmktplc-sidebar-footer-4')) {
-                            dynamic_sidebar('inesmktplc-sidebar-footer-4');
+                        if (is_active_sidebar('inesdevhub-sidebar-footer-4')) {
+                            dynamic_sidebar('inesdevhub-sidebar-footer-4');
                         }
                         ?>
                         <!-- <div class="newsletter">
@@ -181,7 +181,7 @@
                         <div class="copyright-text">
                             <p>&copy; 1998-2019
                                 <a href="https://www.inescrm.fr">INES CRM</a>
-                                | <?php _e('All rights reserved', 'inesmktplc'); ?>
+                                | <?php _e('All rights reserved', 'inesdevhub'); ?>
                             </p>
                         </div>
 
