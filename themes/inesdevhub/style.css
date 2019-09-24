@@ -11418,19 +11418,20 @@ span.counter {
 .docspress-single-breadcrumbs {
   display: none; }
 
-header.entry-header h1 {
+.docspress-single-content * {
+  font-family: Montserrat, sans-serif; }
+.docspress-single-content h1 {
   margin-bottom: 50px;
-  font-family: Montserrat, sans-serif;
   font-weight: 400;
   font-size: 1.85714em;
   line-height: 1.6em;
   color: #32329f; }
-
-.entry-content table th:first-child {
+.docspress-single-content h5 {
+  margin-bottom: 10px; }
+.docspress-single-content .entry-content table th:first-child {
   min-width: 200px; }
 
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
-
 /*# sourceMappingURL=style.css.map */

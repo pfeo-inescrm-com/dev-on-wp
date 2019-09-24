@@ -311,17 +311,27 @@ $facebookColor: #516ca4;
   display: none;
 }
 
-header.entry-header h1 {
-  margin-bottom: 50px;
-  font-family: Montserrat, sans-serif;
-  font-weight: 400;
-  font-size: 1.85714em;
-  line-height: 1.6em;
-  color: rgb(50, 50, 159);
-}
+.docspress-single-content {
+  * {
+    font-family: Montserrat, sans-serif;
+  }
 
-.entry-content table th:first-child {
-  min-width: 200px;
+  h1 {
+    margin-bottom: 50px;
+    font-weight: 400;
+    font-size: 1.85714em;
+    line-height: 1.6em;
+    color: rgb(50, 50, 159);
+  }
+
+  h5 {
+    margin-bottom: 10px;
+  }
+
+  .entry-content table th:first-child {
+    min-width: 200px;
+  }
+
 }
 
 
