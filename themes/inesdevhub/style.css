@@ -11428,9 +11428,17 @@ span.counter {
 .docspress-single-breadcrumbs {
   display: none; }
 
-.docspress-single-content * {
+.docspress-single-content h1, .docspress-single-content h2, .docspress-single-content h3, .docspress-single-content h4, .docspress-single-content h5, .docspress-single-content h6, .docspress-single-content p, .docspress-single-content span {
   font-family: Montserrat, sans-serif;
   font-weight: normal; }
+.docspress-single-content pre {
+  font-family: monospace;
+  white-space: pre; }
+  .docspress-single-content pre code {
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    font-size: inherit;
+    color: inherit;
+    word-break: normal; }
 .docspress-single-content h1 {
   margin-bottom: 50px;
   font-weight: 400;

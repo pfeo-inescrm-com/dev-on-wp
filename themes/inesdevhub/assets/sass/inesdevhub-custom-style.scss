@@ -336,9 +336,20 @@ $facebookColor: #516ca4;
 }
 
 .docspress-single-content {
-  * {
+  h1, h2, h3, h4, h5, h6, p, span {
     font-family: Montserrat, sans-serif;
     font-weight: normal;
+  }
+
+  pre {
+    font-family: monospace;
+    white-space: pre;
+    code {
+      font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      font-size: inherit;
+    color: inherit;
+    word-break: normal;
+    }
   }
 
   h1 {
