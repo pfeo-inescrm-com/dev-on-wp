@@ -26,19 +26,25 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end; }
-  .navbar-expand-md .navbar-collapse ul li {
+  .navbar-expand-md .navbar-collapse ul.navbar-nav li {
     margin: 15px 0;
     padding: 0 15px; }
-    .navbar-expand-md .navbar-collapse ul li:last-child {
-      border: 1px solid transparent;
-      border-radius: 5px;
-      background-color: #F4813A; }
-      .navbar-expand-md .navbar-collapse ul li:last-child a {
-        color: #FFF; }
-      .navbar-expand-md .navbar-collapse ul li:last-child:hover {
-        background-color: #FF9800; }
-        .navbar-expand-md .navbar-collapse ul li:last-child:hover > a {
-          color: #0066AC; }
+    .navbar-expand-md .navbar-collapse ul.navbar-nav li.menu-item-has-children.dropdown:hover > ul.dropdown-menu {
+      display: block; }
+    .navbar-expand-md .navbar-collapse ul.navbar-nav li a {
+      color: #333333; }
+    .navbar-expand-md .navbar-collapse ul.navbar-nav li:hover > a {
+      color: #0066AC; }
+  .navbar-expand-md .navbar-collapse ul.navbar-nav:not(.dropdown-menu) > li:last-child {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: #F4813A; }
+    .navbar-expand-md .navbar-collapse ul.navbar-nav:not(.dropdown-menu) > li:last-child a {
+      color: #FFF; }
+    .navbar-expand-md .navbar-collapse ul.navbar-nav:not(.dropdown-menu) > li:last-child:hover {
+      background-color: #FF9800; }
+      .navbar-expand-md .navbar-collapse ul.navbar-nav:not(.dropdown-menu) > li:last-child:hover > a {
+        color: #0066AC; }
 
 .search__title p {
   color: #FFF; }
@@ -231,14 +237,21 @@
 .docspress-single-breadcrumbs {
   display: none; }
 
-.docspress-single-content h1, .docspress-single-content h2, .docspress-single-content h3, .docspress-single-content h4, .docspress-single-content h5, .docspress-single-content h6, .docspress-single-content p, .docspress-single-content span {
+.docspress-single-content h1,
+.docspress-single-content h2,
+.docspress-single-content h3,
+.docspress-single-content h4,
+.docspress-single-content h5,
+.docspress-single-content h6,
+.docspress-single-content p,
+.docspress-single-content span {
   font-family: Montserrat, sans-serif;
   font-weight: normal; }
 .docspress-single-content pre {
-  font-family: monospace;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   white-space: pre; }
   .docspress-single-content pre code {
-    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    font-family: inherit;
     font-size: inherit;
     color: inherit;
     word-break: normal; }

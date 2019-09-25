@@ -49,15 +49,28 @@ $facebookColor: #516ca4;
   }
 }
 
-
 .navbar-expand-md .navbar-collapse {
   justify-content: flex-end;
 
-  ul li {
-    margin: 15px 0;
-    padding: 0 15px;
+  ul.navbar-nav {
+    li {
+      margin: 15px 0;
+      padding: 0 15px;
 
-    &:last-child {
+      &.menu-item-has-children.dropdown:hover>ul.dropdown-menu {
+        display: block;
+      }
+
+      a {
+        color: #333333;
+      }
+
+      &:hover>a {
+        color: $primary;
+      }
+    }
+
+    &:not(.dropdown-menu)>li:last-child {
       border: 1px solid transparent;
       border-radius: 5px;
       background-color: $orange-secondary;
@@ -74,8 +87,14 @@ $facebookColor: #516ca4;
         }
       }
     }
+
   }
+
+
 }
+
+
+
 
 
 
@@ -145,9 +164,6 @@ $facebookColor: #516ca4;
     margin-top: 80px;
   }
 }
-
-
-
 
 .footer-area {
   a {
@@ -307,7 +323,8 @@ $facebookColor: #516ca4;
     display: block;
     vertical-align: middle;
     width: auto;
-        // &.current_page_ancestor.current_page_parent.page_item.page_item_has_children {}
+
+    // &.current_page_ancestor.current_page_parent.page_item.page_item_has_children {}
     a {
       font-family: Montserrat, sans-serif;
       text-overflow: ellipsis;
@@ -317,6 +334,7 @@ $facebookColor: #516ca4;
       text-transform: none;
       line-height: 26px;
     }
+
     /*revisar porque no funciona */
     // &.page_item_has_children:not(:first) {
     //   a {
@@ -336,19 +354,28 @@ $facebookColor: #516ca4;
 }
 
 .docspress-single-content {
-  h1, h2, h3, h4, h5, h6, p, span {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span {
     font-family: Montserrat, sans-serif;
     font-weight: normal;
   }
 
   pre {
-    font-family: monospace;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     white-space: pre;
+
     code {
-      font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      font-family: inherit;
       font-size: inherit;
-    color: inherit;
-    word-break: normal;
+      color: inherit;
+      word-break: normal;
     }
   }
 

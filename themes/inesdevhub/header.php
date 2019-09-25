@@ -107,7 +107,7 @@
                             if (has_nav_menu('primary')) {
                                 wp_nav_menu(array(
                                     'theme_location' => 'primary',
-                                    'depth' => 1,
+                                    'depth' => 0,
                                     'container' => 'div',
                                     'container_class' => 'collapse navbar-collapse',
                                     'container_id' => 'navbarNav',
