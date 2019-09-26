@@ -1,10 +1,10 @@
 <?php
 /**
- * Template Name: Contact
+ * Template Name: Contact #2
  * 
  * @package Ines CRM Developer Hub
  * @subpackage inesdevhub
- * @since version 0.1.0
+ * @since version 0.1.1
  */
 
 ?>
@@ -98,7 +98,7 @@
                                          * Ninja Forms plugin
                                          * required
                                          */
-                                        echo do_shortcode('[ninja_form id=2]');
+                                        echo do_shortcode('[ninja_form id=3]');
                                         ?>
                                     </div>
                                 </div>

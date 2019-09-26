@@ -261,7 +261,7 @@ $home_url = home_url('/');
                         <?php //_e('Increase efficiency. Get the most out of your tools in a few clicks.', 'inesdevhub'); ?>
                     <!-- Gagnez en efficacité. Tirez le meilleur de vos outils en quelques clics. -->
                     <!-- </h4> -->
-                    <a href="<?php echo $home_url . _x('contact-us', 'url', 'inesdevhub');  ?>" class="btn btn--lg btn--round btn--white callto-action-btn">
+                    <a href="<?php //echo $home_url . _x('contact-us', 'url', 'inesdevhub');?>https://marketplace.inescrm.com/contactez-nous/" class="btn btn--lg btn--round btn--white callto-action-btn">
                     <strong>
                         <?php _e('Contact us', 'inesdevhub'); ?>
                     </strong>

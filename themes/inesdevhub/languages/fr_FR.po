@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: INES CRM Marketplace\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-09 14:26+0000\n"
-"PO-Revision-Date: 2019-09-24 18:14+0000\n"
+"PO-Revision-Date: 2019-09-26 14:48+0000\n"
 "Language-Team: French (France)\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
@@ -49,7 +49,7 @@ msgstr ""
 
 #: page-contact.php:30
 msgid "How can We <span class=\"highlighted\">Help?</span>"
-msgstr "Vous souhaitez rejoindre la Marketplace INES CRM ?"
+msgstr "Vous souhaitez plus d'informations sur nos API ?"
 
 #: page-contact.php:46
 msgid "Office Address"
