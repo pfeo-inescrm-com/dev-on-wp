@@ -27,11 +27,14 @@
                     <div class="col-md-12">
                         <div class="section-title">
                             <h1>
-                                <?php _e('How can We <span class="highlighted">Help?</span>', 'inesdevhub'); ?>
+                                <?php //_e('How can We <span class="highlighted">Help?</span>', 'inesdevhub'); ?>
+                                <?php the_title(); ?>
                             </h1>
-                            <p>
-                                <?php //_e('Subtitle here', 'inesdevhub'); ?>
-                            </p>
+                            <?php if (function_exists('the_subtitle')) : ?>
+                        <!-- WP Subtitle Plugin needed for this to work
+                                        https://wordpress.org/plugins/wp-subtitle/ -->
+                        <h2 style="color:#0066ac;"><?php the_subtitle(); ?></h2>
+                    <?php endif; ?>
                         </div>
                     </div>
                 </div>
