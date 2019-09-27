@@ -23,6 +23,17 @@ $home_url = home_url('/');
 // while (have_posts()) {
 //     the_post();
 // }
+
+
+// the_title(
+//     '<h1>' . __( 'title text', 'textdomain' ),
+//     ' ',
+//     '</h1>'
+// );
+
+
+
+
 ?>
 
 
@@ -69,17 +80,19 @@ $home_url = home_url('/');
                 <div class="row">
                     <div class="col-md-12">
                         <div class="hero__content__title">
-                            <h1></h1>
-                            <h1>
+                            <h1 style="font-size: 50px;">
                                 <!-- <span class="light"><?php //_e('Welcome to INES Marketplace!', 'inesdevhub') ?></span> -->
                                 <!-- Bienvenue sur la Marketplace INES ! -->
-                                <span class="light">Intégrez votre solution</span>                                                                 
+                                <span class="light">Intégrez la solution INES</span>                                                                 
                                 <!-- <span class="bold"><?php //_e('Simply connect your <span>CRM</span> to your Tools', 'inesdevhub') ?></span> -->
                                 <!-- Connectez simplement votre CRM à vos Outils -->
-                                <span class="bold">à l'écosystème INES CRM</span>                                
+                                <span class="bold">à votre écosystème</span>                                
                             </h1>
-                            <!-- <p class="tagline">MartPlace is the most powerful, &amp; customizable template for Easy Digital
-                    Downloads Products</p> -->
+                    <?php if ( function_exists('the_subtitle') && !empty(the_subtitle()) ) : ?>
+                        <!-- WP Subtitle Plugin needed for this to work
+                                        https://wordpress.org/plugins/wp-subtitle/ -->
+                                        <p class="tagline"><?php the_subtitle(); ?></p>
+                    <?php endif; ?>
                         </div>
                         <!-- <div class="hero__btn-area">
                   <a href="all-products.html" class="btn btn--round btn--lg">View All Products</a>
