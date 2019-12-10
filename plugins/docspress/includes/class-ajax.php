@@ -30,6 +30,10 @@ class DocsPress_Ajax {
         // feedback.
         add_action( 'wp_ajax_docspress_ajax_feedback', array( $this, 'handle_feedback' ) );
         add_action( 'wp_ajax_nopriv_docspress_ajax_feedback', array( $this, 'handle_feedback' ) );
+
+        // feedback suggestion.
+        add_action( 'wp_ajax_docspress_ajax_feedback_suggestion', array( $this, 'handle_feedback_suggestion' ) );
+        add_action( 'wp_ajax_nopriv_docspress_ajax_feedback_suggestion', array( $this, 'handle_feedback_suggestion' ) );
     }
 
     /**
@@ -42,6 +46,40 @@ class DocsPress_Ajax {
             $this->post_type_object = get_post_type_object( 'docs' );
         }
         return $this->post_type_object;
+    }
+
+    /**
+     * Get post data to use in Vue.
+     *
+     * @param object $post - post data.
+     *
+     * @return array
+     */
+    public function get_post_data( $post ) {
+        $cat_id = 0;
+        $cat_name = '';
+
+        // get category.
+        $terms = wp_get_post_terms( $post->ID, 'docs_category' );
+        if ( ! empty( $terms ) && isset( $terms[0] ) ) {
+            $cat_id = $terms[0]->term_id;
+            $cat_name = $terms[0]->name;
+        }
+
+        return array(
+            'id'       => $post->ID,
+            'title'    => $post->post_title,
+            'name'     => $post->post_name,
+            'status'   => $post->post_status,
+            'thumb'    => get_the_post_thumbnail_url( $post, 'docspress_archive_sm' ),
+            'order'    => $post->menu_order,
+            'cat_id'   => $cat_id,
+            'cat_name' => $cat_name,
+            'caps'     => array(
+                'edit'   => current_user_can( $this->get_post_type_object()->cap->edit_post, $post->ID ),
+                'delete' => current_user_can( $this->get_post_type_object()->cap->delete_post, $post->ID ),
+            ),
+        );
     }
 
     /**
@@ -79,17 +117,7 @@ class DocsPress_Ajax {
         $post = get_post( $post_id );
         wp_send_json_success(
             array(
-                'post' => array(
-                    'id'     => $post_id,
-                    'title'  => stripslashes( $title ),
-                    'name'   => $post->post_name,
-                    'thumb'  => get_the_post_thumbnail_url( $post, 'docspress_archive_sm' ),
-                    'status' => $status,
-                    'caps'   => array(
-                        'edit'   => current_user_can( $this->get_post_type_object()->cap->edit_post, $post_id ),
-                        'delete' => current_user_can( $this->get_post_type_object()->cap->delete_post, $post_id ),
-                    ),
-                ),
+                'post' => $this->get_post_data( $post ),
                 'child' => array(),
             )
         );
@@ -138,23 +166,19 @@ class DocsPress_Ajax {
 
             // Copy post metadata.
             foreach ( $clone_post_meta as $key => $values ) {
+                if ( 'positive' === $key || 'negative' === $key ) {
+                    continue;
+                }
+
                 foreach ( $values as $value ) {
                     add_post_meta( $new_post_id, $key, $value );
                 }
             }
 
+            $new_post = get_post( $new_post_id );
+
             $result = array(
-                'post' => array(
-                    'id'     => $new_post_id,
-                    'title'  => $title,
-                    'name'   => $clone_from_post->post_name,
-                    'thumb'  => get_the_post_thumbnail_url( $new_post_id, 'docspress_archive_sm' ),
-                    'status' => 'publish',
-                    'caps'   => array(
-                        'edit'   => current_user_can( $this->get_post_type_object()->cap->edit_post, $new_post_id ),
-                        'delete' => current_user_can( $this->get_post_type_object()->cap->delete_post, $new_post_id ),
-                    ),
-                ),
+                'post' => $this->get_post_data( $new_post ),
                 'child' => $this->clone_child_docs( $clone_from_post->ID, $new_post_id ),
             );
         }
@@ -217,24 +241,20 @@ class DocsPress_Ajax {
 
             // Copy post metadata.
             foreach ( $clone_post_meta as $key => $values ) {
+                if ( 'positive' === $key || 'negative' === $key ) {
+                    continue;
+                }
+
                 foreach ( $values as $value ) {
                     add_post_meta( $new_post_id, $key, $value );
                 }
             }
 
+            $new_post = get_post( $new_post_id );
+
             // add new subitems.
             $result[] = array(
-                'post' => array(
-                    'id'     => $new_post_id,
-                    'title'  => $clone_from_post->post_title,
-                    'name'   => $clone_from_post->post_name,
-                    'thumb'  => get_the_post_thumbnail_url( $new_post_id, 'docspress_archive_sm' ),
-                    'status' => $clone_from_post->post_status,
-                    'caps'   => array(
-                        'edit'   => current_user_can( $this->get_post_type_object()->cap->edit_post, $new_post_id ),
-                        'delete' => current_user_can( $this->get_post_type_object()->cap->delete_post, $new_post_id ),
-                    ),
-                ),
+                'post' => $this->get_post_data( $new_post ),
                 'child' => $this->clone_child_docs( $clone_from_post->ID, $new_post_id ),
             );
         endwhile;
@@ -326,7 +346,7 @@ class DocsPress_Ajax {
         );
 
         $arranged = $this->build_tree( $docs->posts );
-        // usort( $arranged, array( $this, 'sort_callback' ) );.
+
         wp_send_json_success( $arranged );
     }
 
@@ -338,8 +358,21 @@ class DocsPress_Ajax {
     public function handle_feedback() {
         check_ajax_referer( 'docspress-ajax' );
 
-        $previous = isset( $_COOKIE['docspress_response'] ) ? explode( ',', sanitize_text_field( wp_unslash( $_COOKIE['docspress_response'] ) ) ) : array();
-        $post_id  = isset( $_POST['post_id'] ) ? absint( $_POST['post_id'] ) : 0;
+        $previous = array();
+
+        if ( isset( $_COOKIE['docspress_response'] ) ) {
+            $cookies_data = explode( ',', sanitize_text_field( wp_unslash( $_COOKIE['docspress_response'] ) ) );
+
+            foreach ( $cookies_data as $data ) {
+                $id = explode( '|', $data );
+
+                if ( isset( $id[0] ) ) {
+                    $previous[ (string) $id[0] ] = isset( $id[1] ) ? $id[1] : 'unknown';
+                }
+            }
+        }
+
+        $post_id  = isset( $_POST['post_id'] ) ? (string) sanitize_text_field( wp_unslash( $_POST['post_id'] ) ) : 0;
         $type     = isset( $_POST['type'] ) ? sanitize_text_field( wp_unslash( $_POST['type'] ) ) : false;
 
         if ( $type && ! in_array( $type, array( 'positive', 'negative' ) ) ) {
@@ -347,7 +380,13 @@ class DocsPress_Ajax {
         }
 
         // check previous response.
-        if ( in_array( $post_id, $previous ) ) {
+        if (
+            isset( $previous[ $post_id ] ) &&
+            (
+                'unknown' === $previous[ $post_id ] ||
+                $type === $previous[ $post_id ]
+            )
+        ) {
             $message = __( 'Sorry, you\'ve already recorded your feedback!', 'docspress' );
             wp_send_json_error( $message );
         }
@@ -357,14 +396,157 @@ class DocsPress_Ajax {
             $count = (int) get_post_meta( $post_id, $type, true );
             update_post_meta( $post_id, $type, $count + 1 );
 
-            array_push( $previous, $post_id );
+            // remove previous feedback.
+            if ( isset( $previous[ $post_id ] ) && 'unknown' !== $previous[ $post_id ] ) {
+                $count = (int) get_post_meta( $post_id, $previous[ $post_id ], true );
+                update_post_meta( $post_id, $previous[ $post_id ], $count - 1 );
+            }
+
+            $previous[ $post_id ] = $post_id . '|' . $type;
             $cookie_val = implode( ',', $previous );
 
             setcookie( 'docspress_response', $cookie_val, time() + WEEK_IN_SECONDS, COOKIEPATH, COOKIE_DOMAIN );
         }
 
-        $message = __( 'Thanks for your feedback!', 'docspress' );
+        $message = __( 'Thank you for feedback!', 'docspress' );
         wp_send_json_success( $message );
+    }
+
+    /**
+     * Prepare feedback suggestion to email.
+     */
+    public function handle_feedback_suggestion() {
+        check_ajax_referer( 'docspress-ajax' );
+
+        $email = docspress()->get_option( 'show_feedback_suggestion_email', 'docspress_single', '' );
+
+        if ( ! $email ) {
+            $email = get_option( 'admin_email' );
+        }
+
+        if ( ! $email ) {
+            $response = __( 'Sorry, something went wrong on the server side!', 'docspress' );
+            wp_send_json_error( $response );
+            return;
+        }
+
+        $post_id = isset( $_POST['post_id'] ) ? absint( $_POST['post_id'] ) : 0;
+        $post = $post_id ? get_post( $post_id ) : false;
+        $feedback_type = isset( $_POST['feedback_type'] ) ? sanitize_text_field( wp_unslash( $_POST['feedback_type'] ) ) : '';
+        $suggestion = isset( $_POST['suggestion'] ) ? sanitize_text_field( wp_unslash( $_POST['suggestion'] ) ) : '';
+        $from = isset( $_POST['from'] ) && ! empty( $_POST['from'] ) ? sanitize_text_field( wp_unslash( $_POST['from'] ) ) : '';
+
+        if ( $post && $feedback_type && $suggestion ) {
+            $is_sent = $this->send_feedback_suggestion( array(
+                'post' => $post,
+                'from' => $from,
+                'feedback_type' => $feedback_type,
+                'suggestion' => $suggestion,
+            ) );
+
+            if ( ! $is_sent ) {
+                $response = __( 'Sorry, something went wrong with the mail server, your suggestions were not sent!', 'docspress' );
+                wp_send_json_error( $response );
+                return;
+            }
+        }
+
+        $response = __( 'Thank you for suggestions!', 'docspress' );
+        wp_send_json_success( $response );
+    }
+
+    /**
+     * Send feedback suggestion email.
+     *
+     * @param array $data - suggestion data for email.
+     */
+    public function send_feedback_suggestion( $data ) {
+        if ( isset( $data['from'] ) && ! empty( $data['from'] ) ) {
+            $from = $data['from'];
+        } elseif ( is_user_logged_in() ) {
+            $from = '';
+
+            $user = wp_get_current_user();
+
+            if ( $user->display_name ) {
+                $from = $user->display_name;
+            }
+
+            if ( $user->user_email ) {
+                $from .= ( $from ? ' <' : '' ) . $user->user_email . ( $from ? '>' : '' );
+            }
+        } else {
+            $from = esc_html__( 'Anonymous', 'docspress' );
+        }
+
+        // phpcs:ignore
+        $wp_email = 'wordpress@' . preg_replace( '#^www\.#', '', strtolower( $_SERVER['SERVER_NAME'] ) );
+
+        $blogname = wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES );
+
+        $email_to = docspress()->get_option( 'show_feedback_suggestion_email', 'docspress_single', '' ) ? : get_option( 'admin_email' );
+
+        // translators: %s - blog name.
+        $subject = sprintf( esc_html__( '[%s] New Doc Suggestion', 'docspress' ), $blogname );
+
+        // translators: %s - doc title.
+        $body = sprintf( esc_html__( 'New suggestion on your doc `%s`', 'docspress' ), get_the_title( $data['post'] ) ) . "\r\n\r\n";
+
+        // translators: %1$s - user name.
+        // translators: %2$s - user IP address.
+        $body .= sprintf( esc_html__( 'From: %1$s (IP: %2$s)', 'docspress' ), $from, $this->get_ip_address() ) . "\r\n";
+
+        // translators: %s - feedback type (Positive/Negative).
+        $body .= sprintf( esc_html__( 'Type: %s', 'docspress' ), $data['feedback_type'] ) . "\r\n\r\n";
+
+        // translators: %s - suggestion.
+        $body .= sprintf( esc_html__( 'Suggestion: %s', 'docspress' ), "\r\n" . $data['suggestion'] ) . "\r\n\r\n";
+
+        // translators: %s - doc permalink.
+        $body .= sprintf( esc_html__( 'Doc Permalink: %s', 'docspress' ), get_permalink( $data['post'] ) ) . "\r\n";
+
+        // translators: %s - doc edit url.
+        $body .= sprintf( esc_html__( 'Edit Doc: %s', 'docspress' ), admin_url( 'post.php?action=edit&post=' . $data['post']->ID ) ) . "\r\n";
+
+        $from = 'From: "' . esc_html( $from ) . "\" <$wp_email>";
+        $reply_to = "Reply-To: \"$wp_email\" <$wp_email>";
+
+        $headers = array(
+            "$from\n",
+            'Content-Type: text/plain; charset="' . get_option( 'blog_charset' ) . "\"\n",
+            $reply_to . "\n",
+        );
+
+        return wp_mail( $email_to, wp_specialchars_decode( $subject ), $body, $headers );
+    }
+
+    /**
+     * Get a clients IP address
+     *
+     * @return string
+     */
+    public function get_ip_address() {
+        $ipaddress = '';
+
+        // phpcs:disable
+        if ( isset( $_SERVER['HTTP_CLIENT_IP'] ) ) {
+            $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
+        } elseif ( isset( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
+            $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        } elseif ( isset( $_SERVER['HTTP_X_FORWARDED'] ) ) {
+            $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
+        } elseif ( isset( $_SERVER['HTTP_FORWARDED_FOR'] ) ) {
+            $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
+        } elseif ( isset( $_SERVER['HTTP_FORWARDED'] ) ) {
+            $ipaddress = $_SERVER['HTTP_FORWARDED'];
+        } elseif ( isset( $_SERVER['REMOTE_ADDR'] ) ) {
+            $ipaddress = $_SERVER['REMOTE_ADDR'];
+        } else {
+            $ipaddress = 'UNKNOWN';
+        }
+        // phpcs:enable
+
+        return $ipaddress;
     }
 
     /**
@@ -410,22 +592,21 @@ class DocsPress_Ajax {
             if ( $doc->post_parent == $parent ) {
                 unset( $docs[ $key ] );
 
+                $cat_id = 0;
+                $cat_name = '';
+
+                // get category.
+                $terms = wp_get_post_terms( $doc->ID, 'docs_category' );
+                if ( ! empty( $terms ) && isset( $terms[0] ) ) {
+                    $cat_id = $terms[0]->term_id;
+                    $cat_name = $terms[0]->name;
+                }
+
                 // build tree and sort.
                 $child = $this->build_tree( $docs, $doc->ID );
-                // usort( $child, array( $this, 'sort_callback' ) );.
+
                 $result[] = array(
-                    'post' => array(
-                        'id'     => $doc->ID,
-                        'title'  => $doc->post_title,
-                        'name'   => $doc->post_name,
-                        'status' => $doc->post_status,
-                        'thumb'  => get_the_post_thumbnail_url( $doc, 'docspress_archive_sm' ),
-                        'order'  => $doc->menu_order,
-                        'caps'   => array(
-                            'edit'   => current_user_can( $this->get_post_type_object()->cap->edit_post, $doc->ID ),
-                            'delete' => current_user_can( $this->get_post_type_object()->cap->delete_post, $doc->ID ),
-                        ),
-                    ),
+                    'post' => $this->get_post_data( $doc ),
                     'child' => $child,
                 );
             }

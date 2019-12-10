@@ -213,6 +213,19 @@ final class NF_Actions_Email extends NF_Abstracts_Action
 
         if( ! isset( $settings[ 'id' ] ) ) $settings[ 'id' ] = '';
 
+        // Allow admins to attach files from media library
+        if (isset($settings['file_attachment']) && 0 < strlen($settings['file_attachment'])) {
+            $file_path = '';
+            $media_id = attachment_url_to_postid($settings['file_attachment']);
+
+            if($media_id !== 0) {
+                $file_path = get_attached_file($media_id);
+                if (0 < strlen($file_path)) {
+                    $attachments[] = $file_path;
+                }
+            }
+        }
+
         $attachments = apply_filters( 'ninja_forms_action_email_attachments', $attachments, $data, $settings );
 
         return $attachments;

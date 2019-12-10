@@ -83,16 +83,16 @@ $home_url = home_url('/');
                             <h1 style="font-size: 50px;">
                                 <!-- <span class="light"><?php //_e('Welcome to INES Marketplace!', 'inesdevhub') ?></span> -->
                                 <!-- Bienvenue sur la Marketplace INES ! -->
-                                <span class="light">Intégrez la solution INES</span>                                                                 
+                                <span class="light">Intégrez la solution INES</span>
                                 <!-- <span class="bold"><?php //_e('Simply connect your <span>CRM</span> to your Tools', 'inesdevhub') ?></span> -->
                                 <!-- Connectez simplement votre CRM à vos Outils -->
-                                <span class="bold">à votre écosystème</span>                                
+                                <span class="bold">à votre écosystème</span>
                             </h1>
-                    <?php if ( function_exists('the_subtitle') && !empty(the_subtitle()) ) : ?>
-                        <!-- WP Subtitle Plugin needed for this to work
+                            <?php if ( function_exists('the_subtitle') && !empty(the_subtitle()) ) : ?>
+                            <!-- WP Subtitle Plugin needed for this to work
                                         https://wordpress.org/plugins/wp-subtitle/ -->
-                                        <p class="tagline"><?php the_subtitle(); ?></p>
-                    <?php endif; ?>
+                            <p class="tagline"><?php the_subtitle(); ?></p>
+                            <?php endif; ?>
                         </div>
                         <!-- <div class="hero__btn-area">
                   <a href="all-products.html" class="btn btn--round btn--lg">View All Products</a>
@@ -142,56 +142,57 @@ $home_url = home_url('/');
             <div class="container">
                 <div class="row">
 
-                    <div class="col-md-4">
+                    <div class="col-md-12 col-lg-4">
                         <div class="news text-center">
                             <div class="news__thumbnail">
                                 <img src="<?php echo get_template_directory_uri() . '/assets/images/feat-card-1.png';  ?>"
                                     alt="">
                             </div>
                             <div class="news__content text-center">
-                                <a href="#">
-                                    <h4>Créez<br>votre identifiant</h4>
-                                </a>
-                                <p>Demandez vos identifiants et recevez simplement votre token d'authentification</p>
-                                <a href="#">
-                                    <button class="btn btn-lg btn-warning">Créer un compte</button>
+                                <h4>Demandez<br>votre Sandbox</h4>
+                                <p>Créez votre Sandbox pour explorer,<br>développer et tester<br>en environnement réel</p>
+                                <a href="/creer-sandbox">
+                                    <button class="btn btn-lg btn-warning">Créer sandbox</button>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-12 col-lg-4">
                         <div class="news text-center">
                             <div class="news__thumbnail">
                                 <img src="<?php echo get_template_directory_uri() . '/assets/images/feat-card-2.png';  ?>"
                                     alt="">
                             </div>
                             <div class="news__content text-center">
-                                <a href="#">
-                                    <h4>Développez<br>votre intégration</h4>
-                                </a>
-                                <p>Accédez à une base de démo dédiée et développez votre intégration en environnement
-                                    réel.</p>
-                                <a href="#">
-                                    <button class="btn btn-lg btn-warning">Documentation</button>
-                                </a>
+                                <h4>Développez<br>votre intégration</h4>
+                                <p>Accédez à la documentation<br>de nos webservices pour<br>intégrer les API INES</p>
+                                <!-- <div class="btn-group" role="group" aria-label="Basic example">
+                                    <a href="#"><button type="button" class="btn btn-lg btn-warning">REST</button></a>
+                                    <a href="#"><button type="button" class="btn btn-lg btn-warning">SOAP</button></a>
+                                </div> -->
+                                <div class="row buttons-group">
+                                <div class="col-12 col-lg-6"><a href="/api-rest"><button type="button" class="btn btn-block btn-warning">REST</button></a></div>
+                                <div class="col-12 col-lg-6"><a href="/docs/api-soap"><button type="button" class="btn btn-block btn-warning">SOAP</button></a></div>
+                                </div>
+                                
+                                <!-- <a href="#"><button type="button" class="btn btn-block btn-warning">REST</button></a>
+                                <a href="#"><button type="button" class="btn btn-block btn-warning">SOAP</button></a> -->
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-12 col-lg-4">
                         <div class="news text-center">
                             <div class="news__thumbnail">
                                 <img src="<?php echo get_template_directory_uri() . '/assets/images/feat-card-3.png';  ?>"
                                     alt="">
                             </div>
                             <div class="news__content text-center">
-                                <a href="#">
-                                    <h4>Intégrez<br>notre marketplace</h4>
-                                </a>
-                                <p>Vous souhaitez référencer votre intégration sur la Marketplace INES ? Contactez nos
+                                <h4>Intégrez<br>notre marketplace</h4>
+                                <p>Vous souhaitez référencer votre<br>intégration sur la Marketplace INES ?<br>Contactez nos
                                     équipes</p>
-                                <a href="#">
+                                <a href="https://marketplace.inescrm.com/contactez-nous/">
                                     <button class="btn btn-lg btn-warning">Contact</button>
                                 </a>
                             </div>
@@ -203,38 +204,50 @@ $home_url = home_url('/');
         </section>
 
         <section class="intro-features">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h3>Disponible en REST et SOAP</h3>
-            <br>
-            <p>L'API INES CRM vous permet de connecter votre CRM à votre système d'information. Flux de données entrant et sortant, workflows et automatismes, vous pouvez intégrez les API's INES REST et SOAP dans n'importe quelle application, site Web ou système embarqué. Découvrez notre documentation et développez en totale autonomie vos interfaces.</p>
-            <br>
-            <div class="cta-group text-left">
-            <a href="<?php echo $home_url . 'api-rest' ?>"><button class="btn btn-md btn--round mr-3">REST API</button></a>
-            <a href="<?php echo $home_url . 'docs/api-soap' ?>"><button class="btn btn-md btn--round">SOAP API</button></a>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/rest-347x260.png';  ?>" alt="" style="width: 300px;">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/soap-347x260.png';  ?>" alt="" style="width: 300px;">
-          </div>
-          <div class="col-md-6">
-            <h3>Flexible et évolutive</h3>
-            <br>
-            <p>De la création automatisée de contact à la création d'un interface avec une solution métier, vous accédez en lecture, création ou modification à tous les flux INES. Vous digitalisez tous vos workflows et utilisez la plateforme CRM pour construire un écosystème agile et personnalisé. Bénéficiez d'une assistance de nos équipes à chaque étape de votre développement et référencez votre intégration sur notre Marketplace.  </p>
-            <!-- <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Disponible en REST et SOAP</h3>
+                        <br>
+                        <p>L'API INES CRM vous permet de connecter votre CRM à votre système d'information. Flux de
+                            données entrant et sortant, workflows et automatismes, vous pouvez intégrez les API's INES
+                            REST et SOAP dans n'importe quelle application, site Web ou système embarqué. Découvrez
+                            notre documentation et développez en totale autonomie vos interfaces.</p>
+                        <br>
+                        <div class="cta-group text-left">
+                            <a href="<?php echo $home_url . 'api-rest' ?>"><button
+                                    class="btn btn-md btn--round mr-3">REST API</button></a>
+                            <a href="<?php echo $home_url . 'docs/api-soap' ?>"><button
+                                    class="btn btn-md btn--round">SOAP API</button></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-5 mt-sm-0">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/rest-347x260.png';  ?>"
+                            alt="" style="width: 300px;">
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="row">
+                    <div class="col-md-6 mt-5 mt-sm-0 order-12 order-sm-0">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/soap-347x260.png';  ?>"
+                            alt="" style="width: 300px;">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Flexible et évolutive</h3>
+                        <br>
+                        <p>De la création automatisée de contact à la création d'un interface avec une solution métier,
+                            vous accédez en lecture, création ou modification à tous les flux INES. Vous digitalisez
+                            tous vos workflows et utilisez la plateforme CRM pour construire un écosystème agile et
+                            personnalisé. Bénéficiez d'une assistance de nos équipes à chaque étape de votre
+                            développement et référencez votre intégration sur notre Marketplace. </p>
+                        <!-- <br>
             <div class="cta-group text-right">
               <button class="btn btn-lg btn--round">REST API</button>
               <button class="btn btn-lg btn--round">SOAP API</button>
             </div> -->
-          </div>
-        </div>
-        <!-- <div class="row">
+                    </div>
+                </div>
+                <!-- <div class="row">
           <div class="col-md-6">
             <h3>Disponible en REST et SOAP</h3>
             <br>
@@ -251,41 +264,42 @@ $home_url = home_url('/');
             <img src="https://via.placeholder.com/600x300.png" alt="">
           </div>
         </div> -->
-      </div>
-    </section>
+            </div>
+        </section>
 
-<!--================================
+        <!--================================
     START CALL TO ACTION AREA
     =================================-->
 
-    <section class="call-to-action bgimage" style="height:300px;">
-    <div class="bg_image_holder">
-        <!-- <img src="images/calltobg.jpg" alt=""> -->
-    </div>
-    <div class="container content_above">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="call-to-wrap">
-                    <p class="h1 text--white">
-                        <?php _e('Do you want to join our Marketplace?', 'inesdevhub'); ?>
-                    <!-- Vous souhaitez rejoindre notre Marketplace ? -->
-                    </p>                    
-                    <!-- <h4 class="text--white"> -->
-                        <?php //_e('Increase efficiency. Get the most out of your tools in a few clicks.', 'inesdevhub'); ?>
-                    <!-- Gagnez en efficacité. Tirez le meilleur de vos outils en quelques clics. -->
-                    <!-- </h4> -->
-                    <a href="<?php //echo $home_url . _x('contact-us', 'url', 'inesdevhub');?>https://marketplace.inescrm.com/contactez-nous/" class="btn btn--lg btn--round btn--white callto-action-btn">
-                    <strong>
-                        <?php _e('Contact us', 'inesdevhub'); ?>
-                    </strong>
-                    <!-- Contactez-nous -->
-                    </a>
+        <section class="call-to-action bgimage" style="height:300px;">
+            <div class="bg_image_holder">
+                <!-- <img src="images/calltobg.jpg" alt=""> -->
+            </div>
+            <div class="container content_above">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="call-to-wrap">
+                            <p class="h1 text--white">
+                                <?php _e('Do you want to join our Marketplace?', 'inesdevhub'); ?>
+                                <!-- Vous souhaitez rejoindre notre Marketplace ? -->
+                            </p>
+                            <!-- <h4 class="text--white"> -->
+                            <?php //_e('Increase efficiency. Get the most out of your tools in a few clicks.', 'inesdevhub'); ?>
+                            <!-- Gagnez en efficacité. Tirez le meilleur de vos outils en quelques clics. -->
+                            <!-- </h4> -->
+                            <a href="<?php //echo $home_url . _x('contact-us', 'url', 'inesdevhub');?>https://marketplace.inescrm.com/contactez-nous/"
+                                class="btn btn--lg btn--round btn--white callto-action-btn">
+                                <strong>
+                                    <?php _e('Contact us', 'inesdevhub'); ?>
+                                </strong>
+                                <!-- Contactez-nous -->
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-<!--================================
+        </section>
+        <!--================================
     END CALL TO ACTION AREA
     =================================-->
 

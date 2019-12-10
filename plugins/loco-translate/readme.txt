@@ -3,8 +3,8 @@ Contributors: timwhitlock
 Tags: translation, translators, localization, localisation, l10n, i18n, Gettext, PO, MO, productivity, multilingual, internationalization
 Requires at least: 4.1
 Requires PHP: 5.2.4
-Tested up to: 5.2.1
-Stable tag: 2.3.0
+Tested up to: 5.2.4
+Stable tag: 2.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -96,6 +96,14 @@ We don't collect your data or snoop on you. See the [plugin privacy notice](http
 
 
 == Changelog ==
+
+= 2.3.1 =
+* Default POT getter now looks in "lang" directory
+* Not calling deprecated magic quotes functions under PHP 7.4
+* Fixed issue with conflicting page hooks
+* Ajax file uploads now enabled by default
+* Removed legacy option migrations from 1.x branch
+* Bumped WP compatibility to 5.2.4
 
 = 2.3.0 =
 * Added experimental support for multipart uploads
@@ -306,7 +314,7 @@ We don't collect your data or snoop on you. See the [plugin privacy notice](http
 
 == Upgrade Notice ==
 
-= 2.3.0 =
+= 2.3.1 =
 * Various bug fixes and improvements
 
 

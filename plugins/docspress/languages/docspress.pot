@@ -37,7 +37,7 @@ msgctxt "Post Type Singular Name"
 msgid "Doc"
 msgstr ""
 
-#: dist/docspress/docspress.php:346, dist/docspress/docspress.php:494
+#: dist/docspress/docspress.php:346, dist/docspress/docspress.php:496
 msgid "Documentation"
 msgstr ""
 
@@ -81,19 +81,19 @@ msgstr ""
 msgid "Not found in Trash"
 msgstr ""
 
-#: dist/docspress/docspress.php:389
+#: dist/docspress/docspress.php:391
 msgid "Docs Categories"
 msgstr ""
 
-#: dist/docspress/docspress.php:391, dist/docspress/includes/admin/class-admin.php:138, dist/docspress/includes/admin/class-admin.php:139
+#: dist/docspress/docspress.php:393, dist/docspress/includes/admin/class-admin.php:138, dist/docspress/includes/admin/class-admin.php:139
 msgid "Categories"
 msgstr ""
 
-#: dist/docspress/docspress.php:532
+#: dist/docspress/docspress.php:534
 msgid "Home"
 msgstr ""
 
-#: dist/docspress/docspress.php:538
+#: dist/docspress/docspress.php:540
 msgid "Docs"
 msgstr ""
 
@@ -184,11 +184,11 @@ msgstr ""
 msgid "Use the <a href=\"%s\">classic UI</a>."
 msgstr ""
 
-#: dist/docspress/includes/admin/class-docs-list-table.php:32
+#: dist/docspress/includes/admin/class-docs-list-table.php:34
 msgid "Helpfulness"
 msgstr ""
 
-#: dist/docspress/includes/admin/class-docs-list-table.php:81
+#: dist/docspress/includes/admin/class-docs-list-table.php:139
 msgid "Votes"
 msgstr ""
 
@@ -217,19 +217,19 @@ msgid "Export"
 msgstr ""
 
 #: dist/docspress/includes/admin/class-settings.php:90
-msgid "Documentation archive page"
+msgid "Documentation Archive Page"
 msgstr ""
 
 #: dist/docspress/includes/admin/class-settings.php:91
-msgid "Page to show documentations list. <br> If you see the 404 error, please go to Settings > Permalinks and press \"Save Changes\" button."
+msgid "Page to display documentations list. <br> If you see the 404 error, please go to Settings > Permalinks and press \"Save Changes\" button."
 msgstr ""
 
 #: dist/docspress/includes/admin/class-settings.php:99
-msgid "Show comments"
+msgid "Display Comments"
 msgstr ""
 
 #: dist/docspress/includes/admin/class-settings.php:105
-msgid "Show feedback buttons"
+msgid "Display Feedback Buttons"
 msgstr ""
 
 #: dist/docspress/includes/admin/class-settings.php:106
@@ -237,90 +237,98 @@ msgid "Helpful feedback"
 msgstr ""
 
 #: dist/docspress/includes/admin/class-settings.php:112
-msgid "Show likes/dislikes count"
+msgid "Display Likes / Dislikes Count"
 msgstr ""
 
 #: dist/docspress/includes/admin/class-settings.php:118
-msgid "Show anchor links on headings in content"
+msgid "Display Suggestion Form After Like"
 msgstr ""
 
 #: dist/docspress/includes/admin/class-settings.php:124
+msgid "Suggestion Email"
+msgstr ""
+
+#: dist/docspress/includes/admin/class-settings.php:131
+msgid "Display Heading Anchors"
+msgstr ""
+
+#: dist/docspress/includes/admin/class-settings.php:137
 msgid "Sidebar"
 msgstr ""
 
-#: dist/docspress/includes/admin/class-settings.php:129
-msgid "Show search"
-msgstr ""
-
-#: dist/docspress/includes/admin/class-settings.php:135
-msgid "Show parent links"
-msgstr ""
-
-#: dist/docspress/includes/admin/class-settings.php:141
-msgid "Show child links"
-msgstr ""
-
 #: dist/docspress/includes/admin/class-settings.php:142
-msgid "Always show child navigation links (by default showed only for active)"
+msgid "Display Search"
 msgstr ""
 
 #: dist/docspress/includes/admin/class-settings.php:148
-msgid "Show number of childs"
+msgid "Display Parent Links"
 msgstr ""
 
-#: dist/docspress/includes/admin/class-settings.php:149
-msgid "Show in the title of parent link the number of childs"
+#: dist/docspress/includes/admin/class-settings.php:154
+msgid "Display Child Links"
 msgstr ""
 
-#: dist/docspress/includes/admin/class-settings.php:156
-msgid "AJAX loading"
+#: dist/docspress/includes/admin/class-settings.php:155
+msgid "Always display child navigation links (by default displayed only for active parent doc)"
+msgstr ""
+
+#: dist/docspress/includes/admin/class-settings.php:161
+msgid "Display Number of Childs"
 msgstr ""
 
 #: dist/docspress/includes/admin/class-settings.php:162
-msgid "AJAX custom JS"
+msgid "Display in the title of parent link the number of childs"
 msgstr ""
 
-#: dist/docspress/includes/admin/class-settings.php:163
+#: dist/docspress/includes/admin/class-settings.php:169
+msgid "AJAX loading"
+msgstr ""
+
+#: dist/docspress/includes/admin/class-settings.php:175
+msgid "AJAX Custom JS"
+msgstr ""
+
+#: dist/docspress/includes/admin/class-settings.php:176
 msgid "Run custom JS after document loaded via AJAX"
 msgstr ""
 
-#: dist/docspress/includes/admin/class-settings.php:172
-msgid "Show articles"
+#: dist/docspress/includes/admin/class-settings.php:185
+msgid "Display Articles"
 msgstr ""
 
-#: dist/docspress/includes/admin/class-settings.php:173
+#: dist/docspress/includes/admin/class-settings.php:186
 msgid "Top level articles list"
 msgstr ""
 
-#: dist/docspress/includes/admin/class-settings.php:179
-msgid "Number of articles"
+#: dist/docspress/includes/admin/class-settings.php:192
+msgid "Number of Articles"
 msgstr ""
 
-#: dist/docspress/includes/admin/class-settings.php:180
-msgid "Type -1 to show all available articles"
+#: dist/docspress/includes/admin/class-settings.php:193
+msgid "Type -1 to display all available articles"
 msgstr ""
 
-#: dist/docspress/includes/admin/class-settings.php:188
+#: dist/docspress/includes/admin/class-settings.php:201
 msgid "Custom CSS"
 msgstr ""
 
-#: dist/docspress/includes/admin/class-settings.php:189, dist/docspress/includes/admin/class-settings.php:197
+#: dist/docspress/includes/admin/class-settings.php:202, dist/docspress/includes/admin/class-settings.php:210
 msgid "Added in exported HTML files"
 msgstr ""
 
-#: dist/docspress/includes/admin/class-settings.php:196
+#: dist/docspress/includes/admin/class-settings.php:209
 msgid "Custom JS"
 msgstr ""
 
-#: dist/docspress/includes/admin/class-settings.php:204
+#: dist/docspress/includes/admin/class-settings.php:217
 msgid "Clean HTML RegExp"
 msgstr ""
 
-#: dist/docspress/includes/admin/class-settings.php:205
+#: dist/docspress/includes/admin/class-settings.php:218
 msgid "Each regexp on new line (change it only if you understand what you do)"
 msgstr ""
 
-#: dist/docspress/includes/admin/class-settings.php:237
+#: dist/docspress/includes/admin/class-settings.php:250
 msgid "&mdash; Select Page &mdash;"
 msgstr ""
 
@@ -328,61 +336,112 @@ msgstr ""
 msgid "Add Doc"
 msgstr ""
 
-#: dist/docspress/includes/admin/template-vue.php:31
+#: dist/docspress/includes/admin/template-vue.php:35
 msgid "Preview the doc"
 msgstr ""
 
-#: dist/docspress/includes/admin/template-vue.php:32
+#: dist/docspress/includes/admin/template-vue.php:36
 msgid "Delete this doc"
 msgstr ""
 
-#: dist/docspress/includes/admin/template-vue.php:44
+#: dist/docspress/includes/admin/template-vue.php:48
 msgid "Preview the section"
 msgstr ""
 
-#: dist/docspress/includes/admin/template-vue.php:45
+#: dist/docspress/includes/admin/template-vue.php:49
 msgid "Delete this section"
 msgstr ""
 
-#: dist/docspress/includes/admin/template-vue.php:46, dist/docspress/includes/admin/template-vue.php:58
+#: dist/docspress/includes/admin/template-vue.php:50, dist/docspress/includes/admin/template-vue.php:62
 msgid "Add a new article"
 msgstr ""
 
-#: dist/docspress/includes/admin/template-vue.php:56, dist/docspress/includes/admin/template-vue.php:67
+#: dist/docspress/includes/admin/template-vue.php:60, dist/docspress/includes/admin/template-vue.php:71
 msgid "Preview the article"
 msgstr ""
 
-#: dist/docspress/includes/admin/template-vue.php:57, dist/docspress/includes/admin/template-vue.php:68
+#: dist/docspress/includes/admin/template-vue.php:61, dist/docspress/includes/admin/template-vue.php:72
 msgid "Delete this article"
 msgstr ""
 
-#: dist/docspress/includes/admin/template-vue.php:80
+#: dist/docspress/includes/admin/template-vue.php:84
 msgid "Clone"
 msgstr ""
 
-#: dist/docspress/includes/admin/template-vue.php:81
+#: dist/docspress/includes/admin/template-vue.php:85
 msgid "Export as HTML"
 msgstr ""
 
 #. translators: %s - link.
-#: dist/docspress/includes/admin/template-vue.php:89
+#: dist/docspress/includes/admin/template-vue.php:95
 msgid "No documentations has been found. Perhaps %s?"
 msgstr ""
 
-#: dist/docspress/includes/admin/template-vue.php:89
+#: dist/docspress/includes/admin/template-vue.php:95
 msgid "create one"
 msgstr ""
 
-#: dist/docspress/includes/class-ajax.php:258
+#: dist/docspress/includes/class-ajax.php:278
 msgid "You are not allowed to delete this item."
 msgstr ""
 
-#: dist/docspress/includes/class-ajax.php:351
+#: dist/docspress/includes/class-ajax.php:390
 msgid "Sorry, you've already recorded your feedback!"
 msgstr ""
 
-#: dist/docspress/includes/class-ajax.php:366
-msgid "Thanks for your feedback!"
+#: dist/docspress/includes/class-ajax.php:411
+msgid "Thank you for feedback!"
+msgstr ""
+
+#: dist/docspress/includes/class-ajax.php:428
+msgid "Sorry, something went wrong on the server side!"
+msgstr ""
+
+#: dist/docspress/includes/class-ajax.php:448
+msgid "Sorry, something went wrong with the mail server, your suggestions were not sent!"
+msgstr ""
+
+#: dist/docspress/includes/class-ajax.php:454
+msgid "Thank you for suggestions!"
+msgstr ""
+
+#: dist/docspress/includes/class-ajax.php:479
+msgid "Anonymous"
+msgstr ""
+
+#. translators: %s - blog name.
+#: dist/docspress/includes/class-ajax.php:490
+msgid "[%s] New Doc Suggestion"
+msgstr ""
+
+#. translators: %s - doc title.
+#: dist/docspress/includes/class-ajax.php:493
+msgid "New suggestion on your doc `%s`"
+msgstr ""
+
+#. translators: %1$s - user name.
+#: dist/docspress/includes/class-ajax.php:497
+msgid "From: %1$s (IP: %2$s)"
+msgstr ""
+
+#. translators: %s - feedback type (Positive/Negative).
+#: dist/docspress/includes/class-ajax.php:500
+msgid "Type: %s"
+msgstr ""
+
+#. translators: %s - suggestion.
+#: dist/docspress/includes/class-ajax.php:503
+msgid "Suggestion: %s"
+msgstr ""
+
+#. translators: %s - doc permalink.
+#: dist/docspress/includes/class-ajax.php:506
+msgid "Doc Permalink: %s"
+msgstr ""
+
+#. translators: %s - doc edit url.
+#: dist/docspress/includes/class-ajax.php:509
+msgid "Edit Doc: %s"
 msgstr ""
 
 #: dist/docspress/templates/archive.php:65, dist/docspress/templates/search.php:63, dist/docspress/templates/single.php:38
@@ -405,6 +464,22 @@ msgstr[1] ""
 msgid "Doc navigation"
 msgstr ""
 
+#: dist/docspress/templates/single/feedback-suggestion.php:43
+msgid "How can we improve this documentation?"
+msgstr ""
+
+#: dist/docspress/templates/single/feedback-suggestion.php:46
+msgid "Your suggestions"
+msgstr ""
+
+#: dist/docspress/templates/single/feedback-suggestion.php:48
+msgid "Your Name or Email (Optional)"
+msgstr ""
+
+#: dist/docspress/templates/single/feedback-suggestion.php:50
+msgid "Send"
+msgstr ""
+
 #. translators: %s - likes number.
 #: dist/docspress/templates/single/feedback.php:36
 msgid "%d person found this useful"
@@ -424,7 +499,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: dist/docspress/templates/single/feedback.php:44
-msgid "Was this helpful to you?"
+msgid "Was this page helpful?"
 msgstr ""
 
 #: dist/docspress/templates/single/feedback.php:49

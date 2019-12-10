@@ -177,7 +177,7 @@
 <script id="tmpl-nf-widget-forms-table" type="text/template">
     <thead>
         <th class="sortable th-title" data-sort="title"><?php _e( 'Title', 'ninja-forms' ); ?></th>
-        <th class="th-shortcode"><?php _e( 'Shortcode', 'ninja-forms' ); ?></th>
+        <th class="sortable th-shortcode" data-sort="shortcode"><?php _e( 'Shortcode', 'ninja-forms' ); ?></th>
         <th class="sortable th-created" data-sort="created_at"><?php _e( 'Date Created', 'ninja-forms' ); ?></th>
         <th></th>
     </thead>

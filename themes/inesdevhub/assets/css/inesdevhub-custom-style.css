@@ -80,7 +80,9 @@
     .news .news__content h4 {
       height: 60px; }
     .news .news__content p {
-      margin: 0 0 10px 0; }
+      margin: 0 0 10px 0;
+      font-size: 0.9rem;
+      font-weight: 600; }
 
 .intro,
 .card-area,
@@ -276,5 +278,12 @@
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
+@media (min-width: 576px) {
+  .news .news__content .buttons-group button {
+    height: 55px; } }
+@media (min-width: 1200px) {
+  .news .news__content p {
+    font-size: 1rem;
+    font-weight: normal; } }
 
 /*# sourceMappingURL=inesdevhub-custom-style.css.map */

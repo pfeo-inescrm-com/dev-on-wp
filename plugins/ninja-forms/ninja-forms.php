@@ -3,7 +3,7 @@
 Plugin Name: Ninja Forms
 Plugin URI: http://ninjaforms.com/
 Description: Ninja Forms is a webform builder with unparalleled ease of use and features.
-Version: 3.4.20
+Version: 3.4.22
 Author: The WP Ninjas
 Author URI: http://ninjaforms.com/?utm_source=Ninja+Forms+Plugin&utm_medium=Plugins+WP+Dashboard
 Text Domain: ninja-forms
@@ -59,7 +59,7 @@ if( get_option( 'ninja_forms_load_deprecated', FALSE ) && ! ( isset( $_POST[ 'nf
          * @since 3.0
          */
 
-        const VERSION = '3.4.20';
+        const VERSION = '3.4.22';
         
         /**
          * @since 3.4.0
@@ -335,12 +335,6 @@ if( get_option( 'ninja_forms_load_deprecated', FALSE ) && ! ( isset( $_POST[ 'nf
                  */
                 add_filter('template_include', array(self::$instance, 'maybe_load_public_form'));
 
-
-                /*
-                 * Log queries that affect our CPT.
-                 */
-                add_filter( 'query', array( self::$instance, 'log_postmeta_query' ) );
-
                 /*
                  * Shortcodes
                  */
@@ -550,37 +544,6 @@ if( get_option( 'ninja_forms_load_deprecated', FALSE ) && ! ( isset( $_POST[ 'nf
                 // Record that there are no required updates.
                 update_option( 'ninja_forms_needs_updates', 0 );
             }
-        }
-
-        function log_postmeta_query( $query )
-        {
-            // Record a copy of the original query so we don't modify it by accident.
-            $origin = $query;
-            // Avoid catching this method in an infinite loop.
-            if ( false === strpos( $query, 'nf3_object' ) ) {
-                /*
-                 * If this query affects our CPT,
-                 * log that query and a stack trace.
-                 */
-                if ( false !== strpos( $query, 'postmeta' ) ) {
-                    if ( false !== strpos( $query, '_field_' ) ) {
-                        global $wpdb;
-                        $table = $wpdb->prefix . 'nf3_objects';
-                        $meta_table = $wpdb->prefix . 'nf3_object_meta';
-                        $sql = "INSERT INTO {$table} (type) VALUES ('log');";
-                        $wpdb->query( $sql );
-                        $id = $wpdb->insert_id;
-                        $sql = "INSERT INTO {$meta_table} ( parent_id, `key`, `value`) VALUES ";
-                        $trace = debug_backtrace( DEBUG_BACKTRACE_IGNORE_ARGS );
-                        $trace = maybe_serialize( json_encode( $trace ) );
-                        $wpdb->escape_by_ref( $query );
-                        $sql .= "({$id}, 'query', '{$query}'), ";
-                        $sql .= "({$id}, 'trace', '{$trace}');";
-                        $wpdb->query( $sql );
-                    }
-                }
-            }
-         return $origin;
         }
 
         function maybe_load_public_form($template) {

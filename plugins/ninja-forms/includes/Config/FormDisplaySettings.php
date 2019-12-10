@@ -46,7 +46,7 @@ return apply_filters( 'ninja_forms_form_display_settings', array(
 
     'public_link' => array(
         'name' => 'public_link',
-        'type' => 'copytext',
+        'type' => 'copyresettext',
         'label' => __( 'Link To Your Form', 'ninja-forms' ),
         'width' => 'full',
         'group' => '',

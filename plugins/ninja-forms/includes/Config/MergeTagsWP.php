@@ -121,7 +121,7 @@ return apply_filters( 'ninja_forms_merge_tags_wp', array(
 
     /*
     |--------------------------------------------------------------------------
-    | User Dispaly Name
+    | User Disply Name
     |--------------------------------------------------------------------------
     */
 
@@ -130,6 +130,19 @@ return apply_filters( 'ninja_forms_merge_tags_wp', array(
         'tag' => '{wp:user_display_name}',
         'label' => __( 'User Display Name', 'ninja_forms' ),
         'callback' => 'user_display_name'
+    ),
+
+    /*
+    |--------------------------------------------------------------------------
+    | User Username
+    |--------------------------------------------------------------------------
+    */
+
+    'username' => array(
+        'id' => 'username',
+        'tag' => '{wp:user_username}',
+        'label' => __( 'User Username', 'ninja_forms' ),
+        'callback' => 'user_username'
     ),
 
     /*

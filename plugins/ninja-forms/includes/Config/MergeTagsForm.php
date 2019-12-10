@@ -2,6 +2,32 @@
 
 return apply_filters( 'ninja_forms_merge_tags_form', array(
 
+   /*
+   |--------------------------------------------------------------------------
+   | Form ID
+   |--------------------------------------------------------------------------
+   */
+
+	'form_id' => array(
+		'id' => 'form_id',
+		'tag' => '{form:id}',
+		'label' => __( 'Form ID', 'ninja_forms' ),
+		'callback' => 'get_form_id',
+	),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Form Title
+    |--------------------------------------------------------------------------
+    */
+
+    'form_title' => array(
+        'id' => 'form_title',
+        'tag' => '{form:title}',
+        'label' => __( 'Form Title', 'ninja_forms' ),
+        'callback' => 'get_form_title',
+    ),
+
     /*
     |--------------------------------------------------------------------------
     | Submission Sequence Number

@@ -155,6 +155,13 @@ final class NF_MergeTags_WP extends NF_Abstracts_MergeTags
         return ( $current_user ) ? $current_user->display_name : '';
     }
 
+	protected function user_username()
+	{
+		$current_user = wp_get_current_user();
+
+		return ( $current_user ) ? $current_user->user_nicename : '';
+	}
+
     protected function user_email()
     {
         $current_user = wp_get_current_user();

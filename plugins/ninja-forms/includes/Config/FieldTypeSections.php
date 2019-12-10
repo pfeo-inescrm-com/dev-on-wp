@@ -10,7 +10,7 @@ return apply_filters( 'ninja_forms_field_type_sections', array(
 
     'saved'             => array(
         'id'            => 'saved',
-        'nicename'      => __( 'Saved Fields', 'ninja-forms' ),
+        'nicename'      => __( 'Favorite Fields', 'ninja-forms' ),
         'classes'       => 'nf-saved',
         'fieldTypes'    => array(),
     ),

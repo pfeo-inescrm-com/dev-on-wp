@@ -163,6 +163,11 @@ class NF_AJAX_Controllers_Submission extends NF_Abstracts_Controller
             $form_settings = $form->get_settings();
         }
 
+	    // Init Form Merge Tags.
+	    $form_merge_tags = Ninja_Forms()->merge_tags[ 'form' ];
+	    $form_merge_tags->set_form_id( $this->_form_id );
+	    $form_merge_tags->set_form_title( $form_settings['title'] );
+
         $this->_data[ 'form_id' ] = $this->_form_data[ 'form_id' ] = $this->_form_id;
         $this->_data[ 'settings' ] = $form_settings;
         $this->_data[ 'settings' ][ 'is_preview' ] = $this->is_preview();
@@ -261,7 +266,10 @@ class NF_AJAX_Controllers_Submission extends NF_Abstracts_Controller
         | Check for unique field settings.
         |--------------------------------------------------------------------------
         */
-        if ( isset ( $this->_data[ 'settings' ][ 'unique_field' ] ) && ! empty( $this->_data[ 'settings' ][ 'unique_field' ] ) ) {
+        if ( isset( $this->_data[ 'resume' ] ) && $this->_data[ 'resume' ] ){
+            // On Resume Submission, we don't need to run this check again.
+            // This section intentionally left blank.
+        } elseif ( isset ( $this->_data[ 'settings' ][ 'unique_field' ] ) && ! empty( $this->_data[ 'settings' ][ 'unique_field' ] ) ) {
             /*
              * Get our unique field
              */

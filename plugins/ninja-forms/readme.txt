@@ -1,9 +1,9 @@
 === Ninja Forms - The Easy and Powerful Forms Builder ===
 Contributors: wpninjasllc, kstover, jameslaws, kbjohnson90, klhall1987, krmoorhouse, jmcelhaney, wpnzach, ericwindhamsd
 Tags: form, forms, contact form, custom form, form builder, form creator, form manager, form creation, contact forms, custom forms, forms builder, forms creator, forms manager, forms creation, form administration,
-Requires at least: 5.0
-Tested up to: 5.2
-Stable tag: 3.4.20
+Requires at least: 5.1
+Tested up to: 5.3
+Stable tag: 3.4.22
 License: GPLv2 or later
 
 Ninja Forms is an easy to use drag and drop form builder with an intuitive UI that can be used to create contact forms, email subscription forms, lead generation forms, WordPress registration and login forms, order forms, payment and donation forms, and much more!
@@ -137,17 +137,51 @@ This section describes how to install the plugin and get it working.
 
 == Upgrade Notice ==
 
-= 3.4.20 (19 September 2019) =
+= 3.4.22 (21 November 2019) =
 
 *Bugs:*
 
-* Resolved an issue that was causing public links to fail on duplicated forms.
-* The merge tag selector box in the form builder should no longer appear halfway off the page on smaller screen sizes.
-* Long field keys should no longer cause the merge tag list to cover up the categories in the merge tag selector box.
-* Resolved an issue that was causing some actions to fail after returning from a redirected payment gateway.
-* List field options on imported forms should now appear in the correct order in the form builder.
+* The unique field restriction should no longer block payment actions from completing.
+* Corrected an error that was preventing the current list of favorite fields from displaying in any location.
+* Updated some of our builder styles to account for updates in WordPress 5.3.
+* Corrected an error that sometimes caused the images in the select image field to not be found.
+* Disabled an internal error logging function that was sometimes causing bloat in our database tables.
+
+*Changes:*
+
+* Email actions now support file attachments from the WordPress media library.
 
 == Changelog ==
+
+= 3.4.22 (21 November 2019) =
+
+*Bugs:*
+
+* The unique field restriction should no longer block payment actions from completing.
+* Corrected an error that was preventing the current list of favorite fields from displaying in any location.
+* Updated some of our builder styles to account for updates in WordPress 5.3.
+* Corrected an error that sometimes caused the images in the select image field to not be found.
+* Disabled an internal error logging function that was sometimes causing bloat in our database tables.
+
+*Changes:*
+
+* Email actions now support file attachments from the WordPress media library.
+
+= 3.4.21 (11 November 2019) =
+
+*Bugs:*
+
+* Added a missing label to our honeypot field, in case styling errors somehow make it visible.
+* Removed an errant console message from our admin dashboard.
+* Resolved an issue that was sometimes resulting in warnings being written to logs on form load.
+* Modified our Gutenberg block to prevent it from displaying improperly on Bedrock installations.
+
+*Changes:*
+
+* The select image field has arrived!
+* Added functionality for resetting the public link on a form.
+* Forms in the dashboard can now be sorted by shortcode (ID).
+* Added merge tags for form title, form id, and username (if authenticated).
 
 = 3.4.20 (19 September 2019) =
 

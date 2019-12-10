@@ -257,6 +257,9 @@ class NF_Abstracts_ModelFactory
         $field_by_key = array();
 
         $form_id = $this->_object->get_id();
+        if ( ! $form_id && empty( $where ) ) {
+            $this->_fields = array();
+        }
 
         if( $where || $fresh || ! $this->_fields ){
 

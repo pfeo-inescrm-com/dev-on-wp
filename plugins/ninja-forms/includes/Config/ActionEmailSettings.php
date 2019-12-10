@@ -180,4 +180,17 @@ return apply_filters( 'ninja_forms_action_email_settings', array(
         'label' => __( 'Attach CSV', 'ninja-forms' ),
     ),
 
+    /**
+     * File Attachments
+     */
+
+     'file_attachment' => array(
+         'name' => 'file_attachment',
+         'type' => 'media',
+         'group' => 'advanced',
+         'label' => __('Add Attachment', 'ninja-forms'),
+         'width' => 'full',
+         'use_merge_tags' => false,
+     )
+
 ));

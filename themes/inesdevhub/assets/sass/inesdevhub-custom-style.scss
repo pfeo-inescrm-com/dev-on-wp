@@ -148,7 +148,15 @@ $facebookColor: #516ca4;
 
     p {
       margin: 0 0 10px 0;
+      font-size: 0.9rem;
+      font-weight: 600;
     }
+
+
+
+
+
+
   }
 }
 
@@ -419,7 +427,18 @@ $facebookColor: #516ca4;
 // No media query for `xs` since this is the default in Bootstrap
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+  .news {
+    .news__content {
+      .buttons-group {
+        button {
+          height: 55px;
+          // width: 100px;
+        }
+      }
+    }
+  }
+}
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {}
@@ -428,4 +447,19 @@ $facebookColor: #516ca4;
 @media (min-width: 992px) {}
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+  .news {
+    .news__content {
+      p {
+        font-size: 1rem;
+        font-weight: normal;
+      }
+  
+      .btn-group {
+        button {
+          // min-width: unset;
+        }
+      }
+    }
+  }
+}

@@ -87,8 +87,8 @@ class DocsPress_Settings {
             'docspress_settings' => array(
                 array(
                     'name'    => 'docs_page_id',
-                    'label'   => __( 'Documentation archive page', 'docspress' ),
-                    'desc'    => __( 'Page to show documentations list. <br> If you see the 404 error, please go to Settings > Permalinks and press "Save Changes" button.', 'docspress' ),
+                    'label'   => __( 'Documentation Archive Page', 'docspress' ),
+                    'desc'    => __( 'Page to display documentations list. <br> If you see the 404 error, please go to Settings > Permalinks and press "Save Changes" button.', 'docspress' ),
                     'type'    => 'select',
                     'options' => $this->get_pages(),
                 ),
@@ -96,26 +96,39 @@ class DocsPress_Settings {
             'docspress_single' => array(
                 array(
                     'name'    => 'show_comments',
-                    'label'   => __( 'Show comments', 'docspress' ),
+                    'label'   => __( 'Display Comments', 'docspress' ),
                     'type'    => 'checkbox',
                     'default' => 'on',
                 ),
                 array(
                     'name'    => 'show_feedback_buttons',
-                    'label'   => __( 'Show feedback buttons', 'docspress' ),
+                    'label'   => __( 'Display Feedback Buttons', 'docspress' ),
                     'desc'    => __( 'Helpful feedback', 'docspress' ),
                     'type'    => 'checkbox',
                     'default' => 'on',
                 ),
                 array(
                     'name'    => 'show_feedback_buttons_likes',
-                    'desc'    => __( 'Show likes/dislikes count', 'docspress' ),
+                    'desc'    => __( 'Display Likes / Dislikes Count', 'docspress' ),
                     'type'    => 'checkbox',
                     'default' => 'on',
                 ),
                 array(
+                    'name'    => 'show_feedback_suggestion',
+                    'desc'    => __( 'Display Suggestion Form After Like', 'docspress' ),
+                    'type'    => 'checkbox',
+                    'default' => 'off',
+                ),
+                array(
+                    'name'        => 'show_feedback_suggestion_email',
+                    'desc'        => __( 'Suggestion Email', 'docspress' ),
+                    'type'        => 'text',
+                    'placeholder' => get_option( 'admin_email' ),
+                    'default'     => '',
+                ),
+                array(
                     'name'    => 'show_anchor_links',
-                    'label'   => __( 'Show anchor links on headings in content', 'docspress' ),
+                    'label'   => __( 'Display Heading Anchors', 'docspress' ),
                     'type'    => 'checkbox',
                     'default' => 'on',
                 ),
@@ -126,27 +139,27 @@ class DocsPress_Settings {
                 ),
                 array(
                     'name'    => 'sidebar_show_search',
-                    'label'   => __( 'Show search', 'docspress' ),
+                    'label'   => __( 'Display Search', 'docspress' ),
                     'type'    => 'checkbox',
                     'default' => 'on',
                 ),
                 array(
                     'name'    => 'sidebar_show_nav_parents',
-                    'label'   => __( 'Show parent links', 'docspress' ),
+                    'label'   => __( 'Display Parent Links', 'docspress' ),
                     'type'    => 'checkbox',
                     'default' => 'off',
                 ),
                 array(
                     'name'    => 'sidebar_show_nav_childs',
-                    'label'   => __( 'Show child links', 'docspress' ),
-                    'desc'    => __( 'Always show child navigation links (by default showed only for active)', 'docspress' ),
+                    'label'   => __( 'Display Child Links', 'docspress' ),
+                    'desc'    => __( 'Always display child navigation links (by default displayed only for active parent doc)', 'docspress' ),
                     'type'    => 'checkbox',
                     'default' => 'off',
                 ),
                 array(
                     'name'    => 'sidebar_show_nav_number_of_childs',
-                    'label'   => __( 'Show number of childs', 'docspress' ),
-                    'desc'    => __( 'Show in the title of parent link the number of childs', 'docspress' ),
+                    'label'   => __( 'Display Number of Childs', 'docspress' ),
+                    'desc'    => __( 'Display in the title of parent link the number of childs', 'docspress' ),
                     'type'    => 'checkbox',
                     'default' => 'on',
                 ),
@@ -159,7 +172,7 @@ class DocsPress_Settings {
                 ),
                 array(
                     'name'    => 'ajax_custom_js',
-                    'label'   => __( 'AJAX custom JS', 'docspress' ),
+                    'label'   => __( 'AJAX Custom JS', 'docspress' ),
                     'desc'    => __( 'Run custom JS after document loaded via AJAX', 'docspress' ),
                     'type'    => 'textarea',
                     'size'    => 'large',
@@ -169,15 +182,15 @@ class DocsPress_Settings {
             'docspress_archive' => array(
                 array(
                     'name'    => 'show_articles',
-                    'label'   => __( 'Show articles', 'docspress' ),
+                    'label'   => __( 'Display Articles', 'docspress' ),
                     'desc'    => __( 'Top level articles list', 'docspress' ),
                     'type'    => 'checkbox',
                     'default' => 'on',
                 ),
                 array(
                     'name'    => 'articles_number',
-                    'label'   => __( 'Number of articles', 'docspress' ),
-                    'desc'    => __( 'Type -1 to show all available articles', 'docspress' ),
+                    'label'   => __( 'Number of Articles', 'docspress' ),
+                    'desc'    => __( 'Type -1 to display all available articles', 'docspress' ),
                     'type'    => 'number',
                     'default' => 3,
                 ),
@@ -258,23 +271,31 @@ class DocsPress_Settings {
         ?>
         <script type="text/javascript">
             jQuery(function($) {
-                $('input[name="docspress_settings[ajax]"]:checkbox').on( 'change', function() {
+                $('input[name="docspress_single[show_feedback_buttons]"]:checkbox').on( 'change', function() {
 
-                    if ( $(this).is(':checked' ) ) {
-                        $('tr.ajax_custom_js').show();
-                    } else {
-                        $('tr.ajax_custom_js').hide();
-                    }
+                    $('tr.show_feedback_buttons_likes')[ $(this).is(':checked' ) ? 'show' : 'hide' ]();
+
+                }).change();
+
+                $('input[name="docspress_single[show_feedback_suggestion]"]:checkbox, input[name="docspress_single[show_feedback_buttons]"]:checkbox').on( 'change', function() {
+                    const isCheckedFeedback = $('input[name="docspress_single[show_feedback_buttons]"]').is(':checked' );
+                    const isCheckedSuggestion = $('input[name="docspress_single[show_feedback_suggestion]"]').is(':checked' );
+
+                    $('tr.show_feedback_suggestion')[ isCheckedFeedback ? 'show' : 'hide' ]();
+
+                    $('tr.show_feedback_suggestion_email')[ isCheckedFeedback && isCheckedSuggestion ? 'show' : 'hide' ]();
+
+                }).change();
+
+                $('input[name="docspress_single[ajax]"]:checkbox').on( 'change', function() {
+
+                    $('tr.ajax_custom_js')[ $(this).is(':checked' ) ? 'show' : 'hide' ]();
 
                 }).change();
 
                 $('input[name="docspress_archive[show_articles]"]:checkbox').on( 'change', function() {
 
-                    if ( $(this).is(':checked' ) ) {
-                        $('tr.articles_number').show();
-                    } else {
-                        $('tr.articles_number').hide();
-                    }
+                    $('tr.articles_number')[ $(this).is(':checked' ) ? 'show' : 'hide' ]();
 
                 }).change();
             });

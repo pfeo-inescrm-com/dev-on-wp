@@ -2,7 +2,7 @@
 /**
  * Plugin Name:  DocsPress
  * Description:  Online Documentation Engine for WordPress
- * Version:      2.0.1
+ * Version:      2.1.2
  * Author:       nK
  * Author URI:   https://nkdev.info
  * License:      GPLv2 or later
@@ -341,26 +341,28 @@ class DocsPress {
         $docs_page = $docspress_archive_id ? get_post( $docspress_archive_id ) : false;
 
         $labels = array(
-            'name'                => _x( 'DocsPress', 'Post Type General Name', 'docspress' ),
-            'singular_name'       => _x( 'Doc', 'Post Type Singular Name', 'docspress' ),
-            'menu_name'           => __( 'Documentation', 'docspress' ),
-            'parent_item_colon'   => __( 'Parent Doc', 'docspress' ),
-            'all_items'           => __( 'All Documentations', 'docspress' ),
-            'view_item'           => __( 'View Documentation', 'docspress' ),
-            'add_new_item'        => __( 'Add Documentation', 'docspress' ),
-            'add_new'             => __( 'Add New', 'docspress' ),
-            'edit_item'           => __( 'Edit Documentation', 'docspress' ),
-            'update_item'         => __( 'Update Documentation', 'docspress' ),
-            'search_items'        => __( 'Search Documentation', 'docspress' ),
-            'not_found'           => __( 'Not documentation found', 'docspress' ),
-            'not_found_in_trash'  => __( 'Not found in Trash', 'docspress' ),
+            'name'               => $docs_page ? get_the_title( $docs_page ) : _x( 'DocsPress', 'Post Type General Name', 'docspress' ),
+            'singular_name'      => _x( 'Doc', 'Post Type Singular Name', 'docspress' ),
+            'menu_name'          => __( 'Documentation', 'docspress' ),
+            'parent_item_colon'  => __( 'Parent Doc', 'docspress' ),
+            'all_items'          => __( 'All Documentations', 'docspress' ),
+            'view_item'          => __( 'View Documentation', 'docspress' ),
+            'add_new_item'       => __( 'Add Documentation', 'docspress' ),
+            'add_new'            => __( 'Add New', 'docspress' ),
+            'edit_item'          => __( 'Edit Documentation', 'docspress' ),
+            'update_item'        => __( 'Update Documentation', 'docspress' ),
+            'search_items'       => __( 'Search Documentation', 'docspress' ),
+            'not_found'          => __( 'Not documentation found', 'docspress' ),
+            'not_found_in_trash' => __( 'Not found in Trash', 'docspress' ),
         );
+
         $rewrite = array(
-            'slug'                => $docs_page ? get_post_field( 'post_name', $docs_page ) : 'docs',
-            'with_front'          => false,
-            'pages'               => true,
-            'feeds'               => true,
+            'slug'       => $docs_page ? get_post_field( 'post_name', $docs_page ) : 'docs',
+            'with_front' => false,
+            'pages'      => true,
+            'feeds'      => true,
         );
+
         $args = array(
             'labels'              => $labels,
             'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions', 'page-attributes', 'comments' ),
