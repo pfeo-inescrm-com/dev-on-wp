@@ -264,7 +264,7 @@ class NF_Abstracts_ModelFactory
         if( $where || $fresh || ! $this->_fields ){
 
             // @TODO: Remove the second half of this IF block and replace it with a required update check.
-            if(WPN_Helper::use_cache() || 1 == $form_id) {
+            if(0 !== $form_id && (WPN_Helper::use_cache() || 1 == $form_id)) {
                 $form_cache = WPN_Helper::get_nf_cache( $form_id );
             } else {
                 $form_cache = false;

@@ -119,7 +119,7 @@ final class NF_Display_Render
         // If maintenance isn't empty and the bool is set to 1 then..
         if( true == $maintenance ) {
             // Set a filterable maintenance message and echo it out.
-            $maintenance_msg = apply_filters( 'nf_maintenance_message', __( 'This form is currently undergoing maintenance. Please try again later.', 'ninja-forms' ) );
+            $maintenance_msg = apply_filters( 'nf_maintenance_message', esc_html__( 'This form is currently undergoing maintenance. Please try again later.', 'ninja-forms' ) );
             echo $maintenance_msg;
 
             // bail.
@@ -152,7 +152,7 @@ final class NF_Display_Render
         $fields = array();
 
         if( empty( $form_fields ) ){
-            echo __( 'No Fields Found.', 'ninja-forms' );
+            echo esc_html__( 'No Fields Found.', 'ninja-forms' );
         } else {
 
             // TODO: Replace unique field key checks with a refactored model/factory.
@@ -436,7 +436,7 @@ final class NF_Display_Render
         $fields = array();
 
         if( empty( $form['fields'] ) ){
-            echo __( 'No Fields Found.', 'ninja-forms' );
+            echo esc_html__( 'No Fields Found.', 'ninja-forms' );
         } else {
             foreach ($form['fields'] as $field_id => $field) {
 

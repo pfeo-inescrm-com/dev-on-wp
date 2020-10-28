@@ -71,7 +71,7 @@ class NF_FormBlock {
 
 		// check for preview and iframe get parameters
 		if( isset( $_GET[ 'nf_preview_form' ] ) && isset( $_GET[ 'nf_iframe' ] ) ){
-			$form_id = intval( $_GET[ 'nf_preview_form' ] );
+			$form_id = absint( $_GET[ 'nf_preview_form' ] );
 			// Style below: update width and height for particular form
 			?>
 			<style media="screen">

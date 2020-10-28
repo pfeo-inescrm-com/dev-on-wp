@@ -172,8 +172,8 @@ $home_url = home_url('/');
                                     <a href="#"><button type="button" class="btn btn-lg btn-warning">SOAP</button></a>
                                 </div> -->
                                 <div class="row buttons-group">
-                                <div class="col-12 col-lg-6"><a href="/api-rest"><button type="button" class="btn btn-block btn-warning">REST</button></a></div>
-                                <div class="col-12 col-lg-6"><a href="/docs/api-soap"><button type="button" class="btn btn-block btn-warning">SOAP</button></a></div>
+                                <div class="col-12 col-lg-6"><a href="<?php echo get_site_url(); ?>/api-rest"><button type="button" class="btn btn-block btn-warning">REST</button></a></div>
+                                <div class="col-12 col-lg-6"><a href="<?php echo get_site_url(); ?>/docs/api-soap"><button type="button" class="btn btn-block btn-warning">SOAP</button></a></div>
                                 </div>
                                 
                                 <!-- <a href="#"><button type="button" class="btn btn-block btn-warning">REST</button></a>

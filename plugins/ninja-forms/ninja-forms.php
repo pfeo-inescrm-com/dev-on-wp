@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: Ninja Forms
-Plugin URI: http://ninjaforms.com/
+Plugin URI: http://ninjaforms.com/?utm_source=Ninja+Forms+Plugin&utm_medium=readme
 Description: Ninja Forms is a webform builder with unparalleled ease of use and features.
-Version: 3.4.22
-Author: The WP Ninjas
+Version: 3.4.24.1
+Author: Saturday Drive
 Author URI: http://ninjaforms.com/?utm_source=Ninja+Forms+Plugin&utm_medium=Plugins+WP+Dashboard
 Text Domain: ninja-forms
 Domain Path: /lang/
@@ -59,7 +59,7 @@ if( get_option( 'ninja_forms_load_deprecated', FALSE ) && ! ( isset( $_POST[ 'nf
          * @since 3.0
          */
 
-        const VERSION = '3.4.22';
+        const VERSION = '3.4.24.1';
         
         /**
          * @since 3.4.0
@@ -469,12 +469,11 @@ if( get_option( 'ninja_forms_load_deprecated', FALSE ) && ! ( isset( $_POST[ 'nf
 
             add_action( 'nf_weekly_promotion_update', array( self::$instance, 'nf_run_promotion_manager' ) );
             add_action( 'activated_plugin', array( self::$instance, 'nf_bust_promotion_cache_on_plugin_activation' ), 10, 2 );
-                        
 
             // Checks php version and..
-            if( PHP_VERSION < 5.6 ) {
+            if (version_compare(PHP_VERSION, '7.2.0', '<')) {
                 // Pulls in the whip notice if the user is.
-                add_action( 'admin_init', array( self::$instance, 'nf_whip_notice' ) );
+                add_action( 'admin_init', array( self::$instance, 'nf_php_version_whip_notice' ) );
             }
             
             add_action( 'admin_init', array( self::$instance, 'nf_do_telemetry' ) );
@@ -579,21 +578,21 @@ if( get_option( 'ninja_forms_load_deprecated', FALSE ) && ! ( isset( $_POST[ 'nf
 	     */
 	    function plugin_get_default_privacy_content() {
 		    return
-			    '<h2>' . __( 'Ninja Forms allows you to collect personal information' ) . '</h2>' .
-			    '<p>' . __( 'If you are using Ninja Forms to collect personal information, you should consult a legal professional for your use case.' ) . '</p>';
+			    '<h2>' . esc_html__( 'Ninja Forms allows you to collect personal information', 'ninja-forms' ) . '</h2>' .
+			    '<p>' . esc_html__( 'If you are using Ninja Forms to collect personal information, you should consult a legal professional for your use case.', 'ninja-forms' ) . '</p>';
 	    }
 
         /**
-         * NF Whip Notice
-         * If the user is on a version below PHP 5.6 then we get an instance of the
-         * NF Whip class which will add a non-dismissible admin notice.
+         * NF PHP Version Whip Notice
+         * If the user is on a version below PHP 7.2 then we get an instance of the
+         * NF PHP Version Whip class which will add a non-dismissible admin notice.
          *
-         * @return NF_Whip
+         * @return NF_Php_Version_Whip
          */
-        public function nf_whip_notice()
+        public function nf_php_version_whip_notice()
         {
-            require_once self::$dir . '/includes/Libraries/Whip/NF_Whip.php';
-            return new NF_Whip();
+            require_once self::$dir . '/includes/Libraries/Whip/NF_Php_Version_Whip.php';
+            return new NF_Php_Version_Whip();
         }
         
         /**
@@ -724,6 +723,7 @@ if( get_option( 'ninja_forms_load_deprecated', FALSE ) && ! ( isset( $_POST[ 'nf
 
         public function plugins_loaded()
         {
+            unload_textdomain('ninja-forms');
             load_plugin_textdomain( 'ninja-forms', false, basename( dirname( __FILE__ ) ) . '/lang' );
 
             /*
@@ -924,7 +924,7 @@ if( get_option( 'ninja_forms_load_deprecated', FALSE ) && ! ( isset( $_POST[ 'nf
         {
             if( ! $form_id ) return;
 
-            $noscript_message = __( 'Notice: JavaScript is required for this content.', 'ninja-forms' );
+            $noscript_message = esc_html__( 'Notice: JavaScript is required for this content.', 'ninja-forms' );
             $noscript_message = apply_filters( 'ninja_forms_noscript_message', $noscript_message );
 
             Ninja_Forms()->template( 'display-noscript-message.html.php', array( 'message' => $noscript_message ) );
@@ -1051,11 +1051,11 @@ if( get_option( 'ninja_forms_load_deprecated', FALSE ) && ! ( isset( $_POST[ 'nf
             // Allow plugin to filter the output error trigger
             if ( WP_DEBUG && apply_filters( 'ninja_forms_deprecated_function_trigger_error', $show_errors ) ) {
                 if ( ! is_null( $replacement ) ) {
-                    trigger_error( sprintf( __( '%1$s is <strong>deprecated</strong> since Ninja Forms version %2$s! Use %3$s instead.', 'ninja-forms' ), $deprecated, $version, $replacement ) );
+                    trigger_error( sprintf( esc_html__( '%1$s is <strong>deprecated</strong> since Ninja Forms version %2$s! Use %3$s instead.', 'ninja-forms' ), $deprecated, $version, $replacement ) );
                     // trigger_error(  print_r( $backtrace, 1 ) ); // Limited to previous 1028 characters, but since we only need to move back 1 in stack that should be fine.
                     // Alternatively we could dump this to a file.
                 } else {
-                    trigger_error( sprintf( __( '%1$s is <strong>deprecated</strong> since Ninja Forms version %2$s.', 'ninja-forms' ), $deprecated, $version ) );
+                    trigger_error( sprintf( esc_html__( '%1$s is <strong>deprecated</strong> since Ninja Forms version %2$s.', 'ninja-forms' ), $deprecated, $version ) );
                     // trigger_error( print_r( $backtrace, 1 ) );// Limited to previous 1028 characters, but since we only need to move back 1 in stack that should be fine.
                     // Alternatively we could dump this to a file.
                 }
@@ -1244,11 +1244,11 @@ if( get_option( 'ninja_forms_load_deprecated', FALSE ) && ! ( isset( $_POST[ 'nf
      */
     function nf_custom_cron_job_recurrence( $schedules ) {
         $schedules[ 'nf-monthly' ] = array(
-            'display' => __( 'Once per month', 'ninja-forms' ),
+            'display' => esc_html__( 'Once per month', 'ninja-forms' ),
             'interval' => 2678400,
         );
         $schedules[ 'nf-weekly' ] = array(
-            'display' => __( 'Once per week', 'ninja-forms' ),
+            'display' => esc_html__( 'Once per week', 'ninja-forms' ),
             'interval' => 604800,
         );
         return $schedules;

@@ -56,7 +56,7 @@ final class NF_Admin_Menus_Forms extends NF_Abstracts_Menu
 
     public function get_page_title()
     {
-        return __( 'Ninja Forms', 'ninja-forms' );
+        return esc_html__( 'Ninja Forms', 'ninja-forms' );
     }
 
     public function admin_init()
@@ -266,7 +266,7 @@ final class NF_Admin_Menus_Forms extends NF_Abstracts_Menu
         $form_id = Ninja_Forms()->form()->import_form( $form );
 
         if( ! $form_id ){
-            $error_message = ( function_exists( 'json_last_error_msg' ) && json_last_error_msg() ) ? json_last_error_msg() : __( 'Form Template Import Error.', 'ninja-forms' );
+            $error_message = ( function_exists( 'json_last_error_msg' ) && json_last_error_msg() ) ? json_last_error_msg() : esc_html__( 'Form Template Import Error.', 'ninja-forms' );
             wp_die( $error_message );
         }
 
@@ -351,7 +351,7 @@ final class NF_Admin_Menus_Forms extends NF_Abstracts_Menu
             'requireBaseUrl'    => Ninja_Forms::$url . 'assets/js/',
             'previewurl'        => home_url() . '/?nf_preview_form=',
             'wp_locale'         => $wp_locale->number_format,
-            'editFormText'      => __( 'Edit Form', 'ninja-forms' ),
+            'editFormText'      => esc_html__( 'Edit Form', 'ninja-forms' ),
             'mobile'            => ( wp_is_mobile() ) ? 1: 0,
             'currencySymbols'   => array_merge( array( '' => Ninja_Forms()->get_setting( 'currency_symbol' ) ), Ninja_Forms::config( 'CurrencySymbol' ) ),
             'dateFormat'        => Ninja_Forms()->get_setting( 'date_format' ),
@@ -709,7 +709,7 @@ final class NF_Admin_Menus_Forms extends NF_Abstracts_Menu
         $merge_tags = array(
             'fields' => array(
                 'id'    => 'fields',
-                'label' => __( 'Fields', 'ninja-forms' )
+                'label' => esc_html__( 'Fields', 'ninja-forms' )
             )
         );
 

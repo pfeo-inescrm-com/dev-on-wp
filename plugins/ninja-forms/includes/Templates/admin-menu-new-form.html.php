@@ -20,7 +20,7 @@
                 $link = 'http://www.shareasale.com/r.cfm?u=' . $u_id . '&b=812237&m=63061&afftrack=&urllink=' . $link;
             }
         ?>
-            <a href="<?php echo $link; ?>" target="_blank" class="nf-cta-bubble"><?php printf( __( "Create multi-column form layouts with Layout & Styles...%slearn more now!%s", 'ninja-forms' ), '<span>', '</span>' ); ?></a>
+            <a href="<?php echo $link; ?>" target="_blank" class="nf-cta-bubble"><?php printf( esc_html__( "Create multi-column form layouts with Layout & Styles...%slearn more now!%s", 'ninja-forms' ), '<span>', '</span>' ); ?></a>
         <?php
         }
         ?>
@@ -80,16 +80,16 @@
 </script>
 
 <script id="tmpl-nf-sub-header-fields" type="text/template">
-    <a class="nf-master-control nf-open-drawer" title="<?php _e( 'Add new field', 'ninja-forms' ); ?>" href="#" data-drawerid="addField">
+    <a class="nf-master-control nf-open-drawer" title="<?php esc_html_e( 'Add new field', 'ninja-forms' ); ?>" href="#" data-drawerid="addField">
         <i class="fa fa-plus" data-drawerid="addField" aria-hidden="true"></i>
-        <span data-drawerid="addField"><?php _e( 'Add new field', 'ninja-forms' ); ?></span>
+        <span data-drawerid="addField"><?php esc_html_e( 'Add new field', 'ninja-forms' ); ?></span>
     </a>
 </script>
 
 <script id="tmpl-nf-sub-header-actions" type="text/template">
-    <a class="nf-master-control nf-open-drawer" title="<?php _e( 'Add new action', 'ninja-forms' ); ?>" href="#" data-drawerid="addAction">
+    <a class="nf-master-control nf-open-drawer" title="<?php esc_html_e( 'Add new action', 'ninja-forms' ); ?>" href="#" data-drawerid="addAction">
         <i class="fa fa-plus" data-drawerid="addAction" aria-hidden="true"></i>
-        <span><?php _e( 'Add new action', 'ninja-forms' ); ?></span>
+        <span><?php esc_html_e( 'Add new action', 'ninja-forms' ); ?></span>
     </a>
 </script>
 
@@ -111,15 +111,15 @@
 </script>
 
 <script id="tmpl-nf-mobile-menu-button" type="text/template">
-    <a class="nf-button nf-mobile-menu" title="<?php _e( 'Expand Menu', 'ninja-forms' ); ?>" {{{ data.maybeDisabled() }}}" href="#"><span class="dashicons dashicons-editor-ul"></span></a>
+    <a class="nf-button nf-mobile-menu" title="<?php esc_html_e( 'Expand Menu', 'ninja-forms' ); ?>" {{{ data.maybeDisabled() }}}" href="#"><span class="dashicons dashicons-editor-ul"></span></a>
 </script>
 
 <script id="tmpl-nf-app-header-publish-button" type="text/template">
-    <a href="#" style="width:{{{ data.publishWidth }}} !important" class="nf-button primary {{{ data.maybeDisabled() }}} publish" title="<?php _e( 'Publish', 'ninja-forms' ); ?>"><?php _e( 'PUBLISH', 'ninja-forms' ); ?></a>
+    <a href="#" style="width:{{{ data.publishWidth }}} !important" class="nf-button primary {{{ data.maybeDisabled() }}} publish" title="<?php esc_html_e( 'Publish', 'ninja-forms' ); ?>"><?php esc_html_e( 'PUBLISH', 'ninja-forms' ); ?></a>
 </script>
 
 <script id="tmpl-nf-add-header-publish-loading" type="text/template">
-    <a href="#" {{{ data.publishWidth }}} class="nf-button primary {{{ data.maybeDisabled() }}} publish" title="<?php _e( 'Loading', 'ninja-forms' ); ?>">
+    <a href="#" {{{ data.publishWidth }}} class="nf-button primary {{{ data.maybeDisabled() }}} publish" title="<?php esc_html_e( 'Loading', 'ninja-forms' ); ?>">
         <div class="nf-loading">
             <ul>
                 <li></li>
@@ -131,10 +131,10 @@
 </script>
 
 <script id="tmpl-nf-app-header-view-changes" type="text/template">
-    <a class="nf-cancel viewChanges" title="<?php _e( 'View Changes', 'ninja-forms' ); ?>" style="text-decoration: none;" href="#"><span class="dashicons dashicons-backup"></span></a>
+    <a class="nf-cancel viewChanges" title="<?php esc_html_e( 'View Changes', 'ninja-forms' ); ?>" style="text-decoration: none;" href="#"><span class="dashicons dashicons-backup"></span></a>
 </script>
 <script id="tmpl-nf-app-header-public-link" type="text/template">
-    <a class="nf-public-link publicLink" title="<?php _e( 'Public Link', 'ninja-forms' ); ?>" style="text-decoration: none;" href="#"><span class="dashicons dashicons-admin-links"></span></a>
+    <a class="nf-public-link publicLink" title="<?php esc_html_e( 'Public Link', 'ninja-forms' ); ?>" style="text-decoration: none;" href="#"><span class="dashicons dashicons-admin-links"></span></a>
 </script>
 
 <script id="tmpl-nf-main" type="text/template">
@@ -159,16 +159,16 @@
 
 <script id="tmpl-nf-main-content-fields-empty" type="text/template">
     <div class="nf-fields-empty">
-        <h3><?php _e( 'Add form fields', 'ninja-forms' ); ?></h3>
-        <p><?php _e( 'Get started by adding your first form field.', 'ninja-forms' ); ?> <?php _e( "It's that easy.", 'ninja-forms' ); ?>
+        <h3><?php esc_html_e( 'Add form fields', 'ninja-forms' ); ?></h3>
+        <p><?php esc_html_e( 'Get started by adding your first form field.', 'ninja-forms' ); ?> <?php esc_html_e( "It's that easy.", 'ninja-forms' ); ?>
     </div>
 </script>
 
 <script id="tmpl-nf-main-content-actions-empty" type="text/template">
     <tr>
         <td colspan="4">
-            <h3><?php _e( 'Add form actions', 'ninja-forms' ); ?></h3>
-            <p><?php _e( "Get started by adding your first form field. Just click the plus and select the actions you want. It's that easy.", 'ninja-forms' ); ?></p>
+            <h3><?php esc_html_e( 'Add form actions', 'ninja-forms' ); ?></h3>
+            <p><?php esc_html_e( "Get started by adding your first form field. Just click the plus and select the actions you want. It's that easy.", 'ninja-forms' ); ?></p>
         </td>
     </tr>
 </script>
@@ -201,9 +201,9 @@
 </script>
 
 <script id="tmpl-nf-item-controls" type="text/template">
-    <div class="nf-item-edit nf-item-control"><a href="#" title="<?php _e( 'Edit', 'ninja-forms' ); ?>"><i class="nf-edit-settings fa fa-cog" aria-hidden="true"></i><!-- <span class="nf-item-editing">Editing {{{ data.objectType }}}</span> --></a></div>
-    <div class="nf-item-duplicate nf-item-control"><a href="#" title="<?php _e( 'Duplicate (^ + C + click)', 'ninja-forms' ); ?>"><i class="nf-duplicate fa fa-files-o" aria-hidden="true"></i></a></div>
-    <div class="nf-item-delete nf-item-control"><a href="#" title="<?php _e( 'Delete (^ + D + click)', 'ninja-forms' ); ?>"><i class="nf-delete fa fa-trash" aria-hidden="true"></i></a></div>
+    <div class="nf-item-edit nf-item-control"><a href="#" title="<?php esc_html_e( 'Edit', 'ninja-forms' ); ?>"><i class="nf-edit-settings fa fa-cog" aria-hidden="true"></i><!-- <span class="nf-item-editing">Editing {{{ data.objectType }}}</span> --></a></div>
+    <div class="nf-item-duplicate nf-item-control"><a href="#" title="<?php esc_html_e( 'Duplicate (^ + C + click)', 'ninja-forms' ); ?>"><i class="nf-duplicate fa fa-files-o" aria-hidden="true"></i></a></div>
+    <div class="nf-item-delete nf-item-control"><a href="#" title="<?php esc_html_e( 'Delete (^ + D + click)', 'ninja-forms' ); ?>"><i class="nf-delete fa fa-trash" aria-hidden="true"></i></a></div>
 </script>
 
 <script id="tmpl-nf-action-table" type="text/template">
@@ -211,9 +211,9 @@
         <thead>
             <tr>
                 <th></th>
-                <th><?php _e( 'Name', 'ninja-forms' ); ?></th>
-                <th><?php _e( 'Type', 'ninja-forms' ); ?></th>
-                <th><?php _e( 'Actions', 'ninja-forms' ); ?></th>
+                <th><?php esc_html_e( 'Name', 'ninja-forms' ); ?></th>
+                <th><?php esc_html_e( 'Type', 'ninja-forms' ); ?></th>
+                <th><?php esc_html_e( 'Actions', 'ninja-forms' ); ?></th>
             </tr>
         </thead>
         <tbody>
@@ -236,7 +236,7 @@
 
 <script id="tmpl-nf-mobile-menu" type="text/template">
     <ul class="primary">
-        <li class="nf-publish {{{ data.maybeDisabled() }}}"><?php _e( 'Publish', 'ninja-forms' ); ?></li>
+        <li class="nf-publish {{{ data.maybeDisabled() }}}"><?php esc_html_e( 'Publish', 'ninja-forms' ); ?></li>
     </ul>
     <ul class="secondary"></ul>
 </script>
@@ -248,8 +248,8 @@
 <script id="tmpl-nf-drawer" type="text/template">
     <div id="nf-drawer-header"></div>
     <span id="nf-drawer-content"></span>
-    <a class="nf-toggle-drawer" title="<?php _e ( 'Toggle Drawer', 'ninja-forms' ); ?>">
-        <span class="dashicons dashicons-admin-collapse"></span><span class="nf-expand-off"><?php _e( 'Full screen', 'ninja-forms' ); ?></span><span class="nf-expand-on"><?php _e( 'Half screen', 'ninja-forms' ); ?></span>
+    <a class="nf-toggle-drawer" title="<?php esc_html_e( 'Toggle Drawer', 'ninja-forms' ); ?>">
+        <span class="dashicons dashicons-admin-collapse"></span><span class="nf-expand-off"><?php esc_html_e( 'Full screen', 'ninja-forms' ); ?></span><span class="nf-expand-on"><?php esc_html_e( 'Half screen', 'ninja-forms' ); ?></span>
     </a>
     <span id="nf-drawer-footer"></span>
     <# if(1 != nfAdmin.devMode){ #>
@@ -293,7 +293,7 @@
         </td>
         <td>
             <# if ( ! data.disabled ) { #>
-                <a href="#" title="<?php _e( 'Undo', 'ninja-forms' ); ?>" class="undoSingle disabled" style="text-decoration:none;">
+                <a href="#" title="<?php esc_html_e( 'Undo', 'ninja-forms' ); ?>" class="undoSingle disabled" style="text-decoration:none;">
             <# } #>
 
             <span class="dashicons dashicons-image-rotate {{{ ( data.disabled ) ? 'disabled' : '' }}}"></span>
@@ -306,7 +306,7 @@
 </script>
 
 <script id="tmpl-nf-drawer-content-public-link" type="text/template">
-    <h3><?php echo __('Display Your Form', 'ninja-forms'); ?></h3>
+    <h3><?php esc_html_e('Display Your Form', 'ninja-forms'); ?></h3>
     <div class="embed-form"></div>
     <div class="enable-public-link"></div>
     <div class="copy-public-link"></div>
@@ -332,7 +332,7 @@
 </script>
 
 <script id="tmpl-nf-add-saved-field-button" type="text/template">
-    <a href="#" title="<?php _e( 'Add', 'ninja-forms' ); ?>" class="nf-button primary"><?php _e( 'Add', 'ninja-forms' ); ?></a>
+    <a href="#" title="<?php esc_html_e( 'Add', 'ninja-forms' ); ?>" class="nf-button primary"><?php esc_html_e( 'Add', 'ninja-forms' ); ?></a>
 </script>
 
 <script id="tmpl-nf-add-saved-field-loading" type="text/template">
@@ -393,34 +393,34 @@
         <div class="nf-search">
             <input type="search" class="nf-filter" value="" placeholder="Filter" tabindex="-1" />
         </div>
-        <a href="#" title="<?php _e( 'Done', 'ninja-forms' ); ?>" class="nf-button primary nf-close-drawer {{{ data.renderDisabled() }}}" tabindex="-1"><?php _e( 'Done', 'ninja-forms' ); ?></a>
+        <a href="#" title="<?php esc_html_e( 'Done', 'ninja-forms' ); ?>" class="nf-button primary nf-close-drawer {{{ data.renderDisabled() }}}" tabindex="-1"><?php esc_html_e( 'Done', 'ninja-forms' ); ?></a>
     </header>
 </script>
 
 <script id="tmpl-nf-drawer-header-edit-settings" type="text/template">
     <header class="nf-drawer-header">
-        <a href="#" title="<?php _e( 'Done', 'ninja-forms' ); ?>" class="nf-button primary nf-close-drawer {{{ data.renderDisabled() }}}" tabindex="-1"><?php _e( 'Done', 'ninja-forms' ); ?></a>
+        <a href="#" title="<?php esc_html_e( 'Done', 'ninja-forms' ); ?>" class="nf-button primary nf-close-drawer {{{ data.renderDisabled() }}}" tabindex="-1"><?php esc_html_e( 'Done', 'ninja-forms' ); ?></a>
     </header>
 </script>
 
 <script id="tmpl-nf-drawer-header-view-changes" type="text/template">
     <header class="nf-drawer-header">
         <div>
-            <a href="#" title="<?php _e( 'Undo All', 'ninja-forms' ); ?>" class="nf-button secondary undoChanges" style="float:left;" tabindex="-1"><span class="dashicons dashicons-backup"></span><?php _e( ' Undo All', 'ninja-forms' ); ?></a>
+            <a href="#" title="<?php esc_html_e( 'Undo All', 'ninja-forms' ); ?>" class="nf-button secondary undoChanges" style="float:left;" tabindex="-1"><span class="dashicons dashicons-backup"></span><?php esc_html_e( ' Undo All', 'ninja-forms' ); ?></a>
         </div>
-        <a href="#" title="<?php _e( 'Done', 'ninja-forms' ); ?>" class="nf-button primary nf-close-drawer" tabindex="-1"><?php _e( 'Done', 'ninja-forms' ); ?></a>
+        <a href="#" title="<?php esc_html_e( 'Done', 'ninja-forms' ); ?>" class="nf-button primary nf-close-drawer" tabindex="-1"><?php esc_html_e( 'Done', 'ninja-forms' ); ?></a>
     </header>
 </script>
 
 <script id="tmpl-nf-drawer-header-public-link" type="text/template">
     <header class="nf-drawer-header">
-        <a href="#" title="<?php _e( 'Done', 'ninja-forms' ); ?>" class="nf-button primary nf-close-drawer" tabindex="-1"><?php _e( 'Done', 'ninja-forms' ); ?></a>
+        <a href="#" title="<?php esc_html_e( 'Done', 'ninja-forms' ); ?>" class="nf-button primary nf-close-drawer" tabindex="-1"><?php esc_html_e( 'Done', 'ninja-forms' ); ?></a>
     </header>
 </script>
 
 <script id="tmpl-nf-drawer-header-new-form" type="text/template">
     <header class="nf-drawer-header">
-        <h3><?php _e( 'Almost there...', 'ninja-forms' ); ?></h3>
+        <h3><?php esc_html_e( 'Almost there...', 'ninja-forms' ); ?></h3>
     </header>
 </script>
 
@@ -428,9 +428,9 @@
     <span class="new-form-name"></span>
     <div class="new-form-submit"></div>
     <div>
-        <a href="#" title="<?php _e( 'Not Yet', 'ninja-forms' ); ?>" class="nf-button secondary nf-close-drawer" style="float:left;" tabindex="-1"><?php _e( 'Not Yet', 'ninja-forms' ); ?></a>
+        <a href="#" title="<?php esc_html_e( 'Not Yet', 'ninja-forms' ); ?>" class="nf-button secondary nf-close-drawer" style="float:left;" tabindex="-1"><?php esc_html_e( 'Not Yet', 'ninja-forms' ); ?></a>
     </div>
-    <a href="#" title="<?php _e( 'Publish', 'ninja-forms' ); ?>" class="nf-button primary nf-close-drawer publish" tabindex="-1"><?php _e( 'Publish', 'ninja-forms' ); ?></a>
+    <a href="#" title="<?php esc_html_e( 'Publish', 'ninja-forms' ); ?>" class="nf-button primary nf-close-drawer publish" tabindex="-1"><?php esc_html_e( 'Publish', 'ninja-forms' ); ?></a>
 </script>
 
 <script id="tmpl-nf-app-menu-item" type="text/template">
@@ -439,7 +439,7 @@
 
 <script id="tmpl-nf-staged-fields-drag" type="text/template">
     <div class="nf-staged-fields-drag">
-        <div id="drag-item-1" class="nf-staged-fields-drag-wrap">{{{ data.num }}}<?php _e( ' Fields', 'ninja-forms' ); ?></div>
+        <div id="drag-item-1" class="nf-staged-fields-drag-wrap">{{{ data.num }}}<?php esc_html_e( ' Fields', 'ninja-forms' ); ?></div>
         <div id="drag-item-2" class="nf-staged-fields-drag-wrap">&nbsp;</div>
         <div id="drag-item-3" class="nf-staged-fields-drag-wrap">&nbsp;</div>
     </div>
@@ -476,10 +476,10 @@
         {{{ data.renderSetting() }}}
         <span class="nf-setting-error"></span>
         <span class="nf-dev-import-options" style="display:none">
-            <?php _e( 'Please use the following format', 'ninja-forms' ); ?>:
+            <?php esc_html_e( 'Please use the following format', 'ninja-forms' ); ?>:
             <br>
             <br>
-            <strong><?php _e( 'Label, Value, Calc Value', 'ninja-forms' ); ?></strong>
+            <strong><?php esc_html_e( 'Label, Value, Calc Value', 'ninja-forms' ); ?></strong>
             <br>
             <br>
             <em>
@@ -491,10 +491,10 @@ Label Two, value-two, 2
 Label Three, value-three, 3
             </pre>
             <textarea></textarea>
-            <a href="#" class="nf-button primary nf-import extra"><?php _e( 'Import', 'ninja-forms' ); ?></a>
+            <a href="#" class="nf-button primary nf-import extra"><?php esc_html_e( 'Import', 'ninja-forms' ); ?></a>
         </span>
         <span class="nf-import-options" style="display:none">
-            <?php _e( 'Please place one label on each line, separated by commas.', 'ninja-forms' ); ?>
+            <?php esc_html_e( 'Please place one label on each line, separated by commas.', 'ninja-forms' ); ?>
             <br>
             <br>
             <em>
@@ -506,7 +506,7 @@ Label Two,
 Label Three
             </pre>
             <textarea></textarea>
-            <a href="#" class="nf-button primary nf-import extra"><?php _e( 'Import', 'ninja-forms' ); ?></a>
+            <a href="#" class="nf-button primary nf-import extra"><?php esc_html_e( 'Import', 'ninja-forms' ); ?></a>
         </span>
     </div>
 </script>
@@ -532,7 +532,7 @@ Label Three
 <script id="tmpl-nf-edit-setting-copytext" type="text/template">
     <label style="position:relative;" for="{{{ data.name }}}" class="{{{ data.renderLabelClasses() }}}">{{{ data.label }}} {{{ data.renderTooltip() }}}
         <input type="text" class="setting" id="{{{ data.name }}}" value="{{{ data.value }}}" readonly="readonly" />
-        <button class="nf-button primary js-click-copytext" style="position:absolute;top:50%;right:5px;padding:0px 15px;"><?php echo __('Copy', 'ninja-forms'); ?></button>
+        <button class="nf-button primary js-click-copytext" style="position:absolute;top:50%;right:5px;padding:0px 15px;"><?php esc_html_e('Copy', 'ninja-forms'); ?></button>
     </label>
 </script>
 
@@ -540,10 +540,10 @@ Label Three
     <label style="position:relative;" for="{{{ data.name }}}" class="{{{ data.renderLabelClasses() }}}">{{{ data.label }}} {{{ data.renderTooltip() }}}
         <input type="text" class="setting" id="{{{ data.name }}}" value="{{{ data.value }}}" readonly="readonly" />
         <div style="position:absolute;top:50%;right:5px;">
-            <button class="nf-button primary js-click-copytext" style="padding:0px 15px;"><?php echo __('Copy', 'ninja-forms'); ?></button>
-            <button class="nf-button secondary js-click-resettext" style="padding:0px 15px;"><?php echo __('Reset', 'ninja-forms'); ?></button>
-            <button class="nf-button primary js-click-confirm" style="padding:0px 15px;display:none;"><?php echo __('Confirm Reset', 'ninja-forms'); ?></button>
-            <button class="nf-button secondary js-click-cancel" style="padding:0px 15px;display:none;"><?php echo __('Cancel', 'ninja-forms'); ?></button>
+            <button class="nf-button primary js-click-copytext" style="padding:0px 15px;"><?php esc_html_e('Copy', 'ninja-forms'); ?></button>
+            <button class="nf-button secondary js-click-resettext" style="padding:0px 15px;"><?php esc_html_e('Reset', 'ninja-forms'); ?></button>
+            <button class="nf-button primary js-click-confirm" style="padding:0px 15px;display:none;"><?php esc_html_e('Confirm Reset', 'ninja-forms'); ?></button>
+            <button class="nf-button secondary js-click-cancel" style="padding:0px 15px;display:none;"><?php esc_html_e('Cancel', 'ninja-forms'); ?></button>
         </div>
     </label>
 </script>
@@ -809,11 +809,15 @@ Label Three
         if ( 'undefined' != typeof columns.value ) {
             #>
              <div class='image-option-media-value'>
-                <input type="text" class="setting" value="{{{ data.value }}}" data-id="value">
-            </div>
+            <#
+        } else {
+            #>
+             <div style='display:none;'>
             <#
         }
     #>
+                <input type="text" class="setting" value="{{{ data.value }}}" data-id="value">
+            </div>
     <#
         if ( 'undefined' != typeof columns.calc ) {
         #>
@@ -840,7 +844,7 @@ Label Three
     
     <div class='has-merge-tags' style='margin-left:40px;padding:0px 15px;width:45%;display:inline-block;'>
         <label style="width:95%;text-transform:none;font-size:12px;">
-            <span><?php _e('Image', 'ninja-forms'); ?></span><br/>
+            <span><?php esc_html_e('Image', 'ninja-forms'); ?></span><br/>
             <input type="text" class="setting" value="{{{ data.image }}}" data-id="image" style="width: 100%;margin-top: 5px;" disabled>
             <span class="extra open-media-manager dashicons dashicons-admin-media merge-tags" style="top:30px;"></span>
         </label>
@@ -875,7 +879,7 @@ Label Three
             <input type="text" class="setting" value="{{{ data.name }}}" data-id="name">
             <span class="nf-option-error"></span>
         </div>
-        <div><?php _e( 'Decimals', 'ninja-forms' ); ?></div>
+        <div><?php esc_html_e( 'Decimals', 'ninja-forms' ); ?></div>
         <div>
             <input type="text" class="setting" value="{{{ data.dec }}}" data-id="dec">
             <span class="nf-option-error"></span>
@@ -915,7 +919,7 @@ Label Three
         Text
         <input type="url" class="widefat code link-text"> <br />
         <label>
-            <input type="checkbox" class="link-new-window"><?php _e( ' Open in new window', 'ninja-forms' ); ?>
+            <input type="checkbox" class="link-new-window"><?php esc_html_e( ' Open in new window', 'ninja-forms' ); ?>
         </label>
         <input type="button" class="cancel-link extra" value="Cancel">
         <input type="button" class="insert-link extra" value="Insert">

@@ -14,7 +14,7 @@ return apply_filters( 'ninja-forms-dashboard-promotions', array(
     'id'        => 'ninja-shop',
     'location'  => 'dashboard',
     'type'      => 'ninja-shop',
-    'content'   => '<a href="https://getninjashop.com/?utm_source=ninja-forms-plugin&utm_medium=dashboard-banner-ad&utm_campaign=ninja-shop-banner-ad" target="_blank" style="color:#FFF !important;background:#5DA54B;"><span class="dashicons dashicons-cart"></span>' . __( 'Are you frustrated with complicated eCommerce solutions?', 'ninja-forms' ) . '<br /><span class="cta">' . __( 'Start Selling Today With Ninja Shop!', 'ninja-forms' ) . '</span></a>',
+    'content'   => '<a href="https://getninjashop.com/?utm_source=ninja-forms-plugin&utm_medium=dashboard-banner-ad&utm_campaign=ninja-shop-banner-ad" target="_blank" style="color:#FFF !important;background:#5DA54B;"><span class="dashicons dashicons-cart"></span>' . esc_html__( 'Are you frustrated with complicated eCommerce solutions?', 'ninja-forms' ) . '<br /><span class="cta">' . esc_html__( 'Start Selling Today With Ninja Shop!', 'ninja-forms' ) . '</span></a>',
     'script'    => "",
   ),
 

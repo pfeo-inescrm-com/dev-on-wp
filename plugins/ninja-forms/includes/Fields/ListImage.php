@@ -29,7 +29,7 @@ class NF_Fields_ListImage extends NF_Abstracts_List
     {
         parent::__construct();
 
-        $this->_nicename = __('Select Image', 'ninja-forms');
+        $this->_nicename = esc_html__('Select Image', 'ninja-forms');
 
         add_filter('ninja_forms_merge_tag_calc_value_' . $this->_type, [$this, 'get_calc_value'], 10, 2);
 

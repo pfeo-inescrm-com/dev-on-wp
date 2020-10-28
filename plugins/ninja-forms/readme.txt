@@ -1,124 +1,290 @@
-=== Ninja Forms - The Easy and Powerful Forms Builder ===
+=== Ninja Forms Contact Form - The Drag and Drop Form Builder for WordPress ===
 Contributors: wpninjasllc, kstover, jameslaws, kbjohnson90, klhall1987, krmoorhouse, jmcelhaney, wpnzach, ericwindhamsd
-Tags: form, forms, contact form, custom form, form builder, form creator, form manager, form creation, contact forms, custom forms, forms builder, forms creator, forms manager, forms creation, form administration,
+Tags: forms, contact form, email form, form builder, custom form, pdf form, registration form, payment form, login form, contact me, signature form, upload form, file upload form, conditional form, feedback form, appointment form, quote form, survey form, contact button, signup form, form plugin, contact form plugin, subscription form, email subscription form, newsletter form, donation form, booking form, quote request form, multi page form, conditional logic form, subscription form, application form, employment verification form, star rating form, rating form, event form, mailchimp form, campaign monitor form, constant contact form, mailpoet form, aweber form, cleverreach form, emma form, convertkit form, active campaign form, salesforce form, zoho form, capsule form, insightly form, pipelinedeals form, onepagecrm form
 Requires at least: 5.1
 Tested up to: 5.3
-Stable tag: 3.4.22
+Stable tag: 3.4.24.1
 License: GPLv2 or later
 
-Ninja Forms is an easy to use drag and drop form builder with an intuitive UI that can be used to create contact forms, email subscription forms, lead generation forms, WordPress registration and login forms, order forms, payment and donation forms, and much more!
+The 100% beginner friendly WordPress form builder. Drag & drop form fields to build beautiful, professional contact forms in minutes.
 
 == Description ==
-Ninja Forms is the ultimate FREE contact form creation tool for WordPress. Build forms within minutes using our simple, yet powerful, drag-and-drop form creator. For beginners, quickly and easily design complex forms with absolutely no code. For developers, utilize built-in hooks, filters, and even custom field templates to do whatever you need at any step in the form building or submission using Ninja Forms as a framework.
 
-**Features of Ninja Forms include, but are not limited to:**
+= The Most User Friendly WordPress Contact Form Builder =
+Use Ninja Forms to create beautiful, user friendly WordPress forms that will make you feel like a professional web developer!
 
-* No Limitations on the number of forms, fields, emails, actions, or submissions that can be included.
+= 100% Beginner Friendly =
+Not a tech person? No problem. No coding skills required. You can design beautiful, complex forms like a pro with a dedicated support team at your back. No question is too small- build your forms with a professional team happy to answer any question or address any issue.
 
-* Give the user additional information with a success message or redirect them elsewhere after they complete a form.
+= Build beautiful WordPress forms without being a designer =
+Drag and drop fields. Easy row and column layouts. Multi page forms. Conditional forms. You don't have to be a designer to create forms that will blend beautifully with your WordPress website.
 
-* Email form data to administrators and/or users every time a form is processed.
+= Advanced features you won’t need a developer to build =
+Let users upload files and make any form an upload form. Send or export submissions as a PDF, Microsoft Excel file, even Google Sheets. Send email from any form to just the people that need it. You don't need to be (or hire!) a developer.
 
-* Dedicated fields for emails, dates utilizing a datepicker, phone numbers, addresses and more.
+= Accept payments and donations with a payment form or donation form =
+You can accept PayPal and credit card payments securely and easily from any of your WordPress forms. Single payments or subscriptions, fixed, variable, or user entered amounts. Give your customers or donors all the options, or just one with a PayPal form, Stripe form, and more!
 
-* Validate required fields and define specific entry formats with custom input masks
+= Get more from your signup forms and lead generation forms =
+Experience the difference a fully customizable email subscription form or lead generation form will make for your business. Grow your mailing lists and bring in new leads like never before. Complete integration with MailChimp, Constant Contact, Campaign Monitor, Salesforce CRM, Zoho CRM, Insightly CRM, and more!
 
-* Manage, Edit, and Export form user submissions from the convenience of the WordPress dashboard.
+= Easy WordPress GDPR compliance =
+Ninja Forms makes WordPress GDPR compliance simple. We never collect or store personally identifiable information, or any information, from your forms. Easy to use templates are included for Right to Be Forgotten and Data Export requests. Ties into native WordPress GDPR features for automated compliance.
 
-* Export and Import forms and favorite fields.
+= Use pre-built templates to get started fast =
+Have a form ready to go in literally minutes. Find pre-built templates for a contact form, registration form, application form, MailChimp form, quote request form, PayPal form, Stripe form, and many others!
 
-* Several anti-spam field options including Google reCaptcha, akismet, question/response fields, and honeypot fields by default.
+= Mobile responsive & blends beautifully with any well designed theme =
+Built with accessibility and mobile responsiveness in mind. Ninja Forms adopts the design  choices made by your theme to blend perfectly with the look and feel you worked so hard to pick out.
 
-* Form submission via AJAX without page refreshes.
+= More integrations than any other WordPress form builder =
+If you can dream it, we’ll do our best to help you build it! There's so many more ways to use a WordPress form than we can pack into a page. Really need something that you're not sure you can do with Ninja Forms? Ask us, or check out our full feature list!
 
-* Increased functionality and integrations when using one of our many add-on [extensions.](https://ninjaforms.com/extensions/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=extensions)
+== Full Ninja Forms Feature List ==
 
-**Save when purchasing multiple add-ons when you purchase one of our Ninja Forms Memberships**
+= Core Ninja Forms Features =
+The core Ninja Forms WordPress form builder is 100% free, always. Build complex forms in minutes with the most modern, user friendly, drag and drop form builder in WordPress! Core Ninja Forms features includes but are not limited to:
 
-**Get our most popular add-ons with the [Personal membership:](https://ninjaforms.com/personal-membership/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=personal+memberhsip)**
+* Drag and drop form builder
+* 27+ field types
+* Regular updates
+* Dedicated support
+* Customizable form templates
+* Fully responsive, SEO, & mobile friendly
+* Beautifully matches your theme’s design decisions
+* Translated into 16+ languages
+* Easy WordPress GDPR compliance
+* Unlimited forms
+* Unlimited form submissions
+* Submission exports
+* Customizable email notifications from any form
+* Spam protection including Akismet and Google reCaptcha
+* Export and import forms
+* Shareable public form links
+* Developer friendly
 
-* [Conditional Logic](https://ninjaforms.com/extensions/conditional-logic/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=Conditional+Logic) - Conditional Logic will allow you to show or hide fields and send emails or process form actions based on the user’s input.
+= Ninja Forms Add-on Features =
+As your needs grow, Ninja Forms will grow with you. Select just the individual [features](https://ninjaforms.com/add-ons/?utm_source=Ninja+Forms+Plugin&utm_medium=readme) you need as you need them, or [become a member today](https://ninjaforms.com/pricing/?utm_source=Ninja+Forms+Plugin&utm_medium=readme) with a plan that meets your needs and your budget! Take your WordPress forms farther! 
 
-* [File Uploads](https://ninjaforms.com/extensions/file-uploads/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=File+Uploads) - File Uploads allows users to upload files with their form submissions to your server, Media Library, Dropbox, or Amazon S3
+* [Layout & Styles](https://ninjaforms.com/extensions/layout-styles/?utm_source=Ninja+Forms+Plugin&utm_medium=readme) 
+* [Conditional Logic](https://ninjaforms.com/extensions/conditional-logic/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [Multi-Part Forms](https://ninjaforms.com/extensions/multi-part-forms/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [File Uploads](https://ninjaforms.com/extensions/file-uploads/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [PDF Form Submissions](https://ninjaforms.com/extensions/pdf-form-submission/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [Excel Export](https://ninjaforms.com/extensions/excel-export/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [Save Progress](https://ninjaforms.com/extensions/save-progress/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [User Management](https://ninjaforms.com/extensions/user-management/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [Front End Posting](https://ninjaforms.com/extensions/front-end-posting/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [User Analytics](https://ninjaforms.com/extensions/user-analytics/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [Webhooks](https://ninjaforms.com/extensions/webhooks/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
 
-* [Layout and Styles](https://ninjaforms.com/extensions/layout-styles/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=Layout+and+Styles) - Layout & Styles gives use the ability to easily create complex form layouts and make fine-grained CSS changes rapidly without having to add a bunch of extra CSS to your theme’s style-sheets.
+= Ninja Forms Integrations =
+Integrate your WordPress forms with the services your business or organization needs to communicate, organize, and grow. Don’t see the service you need listed below? Check out our FAQ for more, or contact us directly!
 
-* [Multi-Part Forms](https://ninjaforms.com/extensions/multi-part-forms/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=Multi-Part+Forms) - Multi-part allows you to easily breakup long forms into multiple parts including part titles and a form progress bar.
+* [PayPal](https://ninjaforms.com/extensions/paypal-express/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [Stripe](https://ninjaforms.com/extensions/stripe/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [Elavon](https://ninjaforms.com/extensions/elavon/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [Recurly](https://ninjaforms.com/extensions/recurly/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [MailChimp](https://ninjaforms.com/extensions/mail-chimp/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [Constant Contact](https://ninjaforms.com/extensions/constant-contact/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [Campaign Monitor](https://ninjaforms.com/extensions/campaign-monitor/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [Active Campaign](https://ninjaforms.com/extensions/active-campaign/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [AWeber](https://ninjaforms.com/extensions/aweber/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [CleverReach](https://ninjaforms.com/extensions/cleverreach/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [MailPoet](https://ninjaforms.com/extensions/mailpoet/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [ConvertKit](https://ninjaforms.com/extensions/convertkit/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [Emma](https://ninjaforms.com/extensions/emma/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [EmailOctopus](https://ninjaforms.com/extensions/emailoctopus/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [Help Scout](https://ninjaforms.com/extensions/help-scout/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [Salesforce](https://ninjaforms.com/extensions/salesforce-crm/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [Zoho CRM](https://ninjaforms.com/extensions/zoho-crm/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [Insightly](https://ninjaforms.com/extensions/insightly-crm/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [Capsule](https://ninjaforms.com/extensions/capsule-crm/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [PipelineDeals](https://ninjaforms.com/extensions/pipelinedeals-crm/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [OnePageCRM](https://ninjaforms.com/extensions/onepage-crm/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [ClickSend SMS](https://ninjaforms.com/extensions/clicksend-sms/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [Twilio SMS](https://ninjaforms.com/extensions/twilio-sms/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [Slack](https://ninjaforms.com/extensions/slack/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [Trello](https://ninjaforms.com/extensions/trello/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
+* [Zapier](https://ninjaforms.com/extensions/zapier/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)
 
-* [PayPal Express](https://ninjaforms.com/extensions/paypal-express/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=PayPal+Express) - This add-on allows you to setup a PayPal Form that will send a payment to PayPal’s Express API as part of the form submission.
+Don’t see a feature you need for Ninja Forms? Just have a question about your WordPress forms? We strive to be the easiest, most beginner friendly WordPress contact form builder in the WordPress space while still bringing you all the form building features you need to succeed. Your feedback is invaluable to us, so don’t hesitate to [reach out and make a request](https://ninjaforms.com/contact/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)!
 
-* [Campaign Monitor](https://ninjaforms.com/extensions/campaign-monitor/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=Campaign+Monitor) - The Campaign Monitor add-on allows you to send submission data to your Campaign Monitor list automatically when the user submits the form.
+== Notes ==
 
-* [Constant Contact](https://ninjaforms.com/extensions/constant-contact/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=Constant+Contact) - The Constant Contact add-on allows you to send submission data to your Constant Contact list automatically when the user submits the form.
+Ninja Forms is a 100% beginner friendly WordPress form builder, appropriate for complete beginners all the way to seasoned WordPress developers. We don’t just say it, we stand by it. [Our support team](https://ninjaforms.com/contact/?utm_source=Ninja+Forms+Plugin&utm_medium=readme) is standing by to help you realize your site’s potential anywhere your forms are concerned. 
 
-* [ConvertKit](https://ninjaforms.com/extensions/convertkit/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=convertkit) - The Convertkit add-on allows you to send submission data to your Convertkit list automatically when the user submits the form.
+Not sure if you can build the forms you need? Wondering if forms are the answer to do the thing you or your clients need to make happen? [Reach out](https://ninjaforms.com/contact/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)! Our dedicated, professional support team is happy to help however we can, and answer any questions you might have!
 
-* [EmailOctopus](https://ninjaforms.com/extensions/EmailOctopus/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=Email+Octopus) - The EmailOctopus add-on allows you to send submission data to your Email Octopus list automatically when the user submits the form.
+== Additional Branding and Trademark Information ==
 
-* [Emma](https://ninjaforms.com/extensions/Emma/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=emma) - The Emma add-on allows you to send submission data to your Emma list automatically when the user submits the form.
-
-* A 20% discount on all future add-on purchases
-
-**The [Professional Membership](https://ninjaforms.com/professional-membership/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=professional+memberhsip) adds more to what you get with the Personal Membership:**
-
-* [Stripe](https://ninjaforms.com/extensions/stripe/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=Stripe) - With the Stripe add-on, you can setup a Stripe Form that will send a Credit Card payment to Stripe when the user submits your form.
-
-* [Recurly](https://ninjaforms.com/extensions/recurly/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=recurly) - The Recurly add-on allows you to subscribe users to Recurly plans through your form.
-
-* [Post Creation](https://ninjaforms.com/extensions/front-end-posting/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=Post+Creation) - Post Creation (formally called Front-end Posting) allows you to setup an action on your form that will create a WordPress Post using the submission data from the form.
-
-* [User Management](https://ninjaforms.com/extensions/user-management/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=User+Management) - Use the User management add-on to create a custom WordPress Registration form or WordPress Login form. This add-on can also be used to allow users to update their WordPress user from the Front-end through a Ninja Form.
-
-* [Zapier](https://ninjaforms.com/extensions/zapier/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=Zapier) - Use the Zapier add-on to send submission data to any of Zapier’s integrations automatically on the submission of the form.
-
-* [Webhooks](https://ninjaforms.com/extensions/webhooks/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=webhooks) - The Webhooks add-on allows you to send submission data to an external API using simple GET or POST requests.
-
-* A 40% discount on all future add-on purchases
-
-**The [Agency Membership](https://ninjaforms.com/agency-membership/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=agency+membership) contains unlimited licenses for all the plugins included in the Personal and Professional Memberships and all of the other Ninja Forms add-ons available:**
-
-* [SalesForce](https://ninjaforms.com/extensions/salesforce-crm/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=SalesForce+CRM)
-* [Zoho CRM](https://ninjaforms.com/extensions/zoho-crm/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=Zoho+CRM)
-* [Trello](https://ninjaforms.com/extensions/trello/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=Trello)
-* [Slack](https://ninjaforms.com/extensions/slack/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=Slack)
-* [Aweber](https://ninjaforms.com/extensions/aweber/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=Aweber)
-* [ActiveCampaign](https://ninjaforms.com/extensions/active-campaign/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=activecampaign)
-* [Capsule CRM](https://ninjaforms.com/extensions/capsule-crm/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=Capsule+CRM)
-* [Insightly CRM](https://ninjaforms.com/extensions/insightly-crm/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=Insightly+CRM)
-* [User Analytics](https://ninjaforms.com/extensions/user-analytics/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=user+analytics)
-* [MailPoet](https://ninjaforms.com/extensions/mailpoet/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=MailPoet)
-* [CleverReach](https://ninjaforms.com/extensions/cleverreach/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=CleverReach)
-* [Sendy](https://ninjaforms.com/extensions/sendy/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=Sendy)
-* [PipelineDeals](https://ninjaforms.com/extensions/pipelinedeals-crm/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=pipelinedeals)
-* [Highrise CRM](https://ninjaforms.com/extensions/highrise-crm/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=highrise+crm)
-* [OnePage CRM](https://ninjaforms.com/extensions/onepage-crm/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=onepage+crm)
-* [PDF Form Submissions](https://ninjaforms.com/extensions/pdf-form-submission/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=pdf+form+submissions)
-* [Intelligence WP](https://ninjaforms.com/extensions/intelligencewp/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=intelligencewp)
-* [Elavon](https://ninjaforms.com/extensions/elavon/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=Elavon)
-* [Excel Export](https://ninjaforms.com/extensions/excel-export/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=excel+export)
-* [WebMerge](https://ninjaforms.com/extensions/webmerge/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=webmerge)
-* [Help Scout](https://ninjaforms.com/extensions/help-scout/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=help+scout)
-* [ClickSend](https://ninjaforms.com/extensions/clicksend-sms/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=clicksend)
-* [Twilio](https://ninjaforms.com/extensions/twilio-sms/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=Ninja+Forms+Readme&utm_content=twilio)
+Ninja Forms&reg; is a registered trademark of Saturday Drive INC. We are a WordPress forms or WP forms builder, not to be confused with the independent WPForms brand for WordPress. All official Ninja Forms [add-ons](https://ninjaforms.com/add-ons/?utm_source=Ninja+Forms+Plugin&utm_medium=readme) and [memberships](https://ninjaforms.com/pricing/?utm_source=Ninja+Forms+Plugin&utm_medium=readme) can be found on our official website, ninjaforms.com.
 
 == Frequently Asked Questions ==
-= Where can I get support? =
-Our team provides support at: <a href="https://ninjaforms.com/contact/">https://ninjaforms.com/contact</a>
 
-You can find the full scope of the support we are able to provide at: <a href="https://ninjaforms.com/scope-of-support/">https://ninjaforms.com/scope-of-support</a>
+= Who should use Ninja Forms? =
+Ninja Forms is perfect for all levels of WordPress users. Whether you’re starting your first blog, selling your product or service online, designing, developing, or really anything under the sun, you’ll have the tools you need. Ninja Forms is the is the drag and drop WordPress form builder that will help you build the custom WordPress forms you need like a professional with an easy to use drag and drop form builder.
 
-= Where can I find documentation? =
-Documentation for Ninja Forms can be found at: <a href="https://ninjaforms.com/documentation/">https://ninjaforms.com/documentation</a>
+= Do I need to know any code to use the Ninja Forms form builder? =
+Absolutely not. While Ninja Forms has been designed to be very developer-friendly, no coding skills whatsoever are required to use the plugin or any add-on.
 
-= Where can I report a bug? =
-Report bugs, suggest ideas, and participate in development at: <a href="https://git.saturdaydrive.io/ninja-forms/ninja-forms">https://git.saturdaydrive.io/ninja-forms/ninja-forms</a>
+= Is Ninja Forms GDPR compliant? =
+Yes. Ninja Forms contains a variety of features for easy, automated GDPR compliance. This includes template forms for user requests for the personally identifiable data you have on them, and to comply with the Right to be Forgotten.
 
-= Where can I go for Developer Questions? =
-The Ninja Forms framework is hosted on [GitLab](https://git.saturdaydrive.io/ninja-forms/ninja-forms). If you're a developer and want to help make Ninja Forms better, please submit issues or merge requests there.
+= Can I send email with Ninja Forms? =
+Yes! Any number of emails can be sent anytime a form is submitted. Every email sent from your WordPress forms can be customized, including form submission data, and supports attachments (can include [WordPress file uploads](https://ninjaforms.com/extensions/file-uploads/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)). These emails can also be [sent conditionally](https://ninjaforms.com/extensions/conditional-logic/?utm_source=Ninja+Forms+Plugin&utm_medium=readme) to certain recipients only, and can be set up to include a [PDF copy](https://ninjaforms.com/extensions/pdf-form-submission/?utm_source=Ninja+Forms+Plugin&utm_medium=readme) of the form.
 
-You can find our full library of developer documentation here: <a href="http://developer.ninjaforms.com/codex">http://developer.ninjaforms.com/codex</a>
+Having email deliverability issues with your current WordPress form plugin? We’ve also developed [SendWP](https://sendwp.com/?utm_source=Ninja+Forms+Plugin&utm_medium=readme) to work side by side with Ninja Forms to deliver your email ourselves with a 99.75% delivery success rate (and full support).
 
-You can also join our Ninja Forms Developer Community Slack Channel here: <a href="http://developer.ninjaforms.com/slack">http://developer.ninjaforms.com/slack</a>
+= What form fields are included in Ninja Forms? =
+Ninja Forms has a field for just about every need. Below are the WordPress form fields included in the core Ninja Forms contact form plugin:
+
+*Common Fields*
+* Single Line Text
+* Paragraph Text
+* Radio List
+* Select (dropdown)
+* Multi-Select
+* Select Image
+* Single Checkbox
+* Checkbox List
+* Date
+* Submit
+
+*User Information Fields*
+* First Name
+* Last Name
+* Email Address
+* Phone
+* Address
+* City
+* US States
+* Country
+* Zip
+
+*Layout Fields*
+* HTML
+* Divider
+
+*Miscellaneous Fields*
+* Confirm
+* Hidden
+* Number
+* Recaptcha
+* Anti-Spam
+* Star Rating
+
+*Specialty Fields*
+Many more popular user fields like file uploads for WordPress and Save Progress can be added with Ninja Forms add-ons. [Pick and choose just the ones you need](https://ninjaforms.com/add-ons/?utm_source=Ninja+Forms+Plugin&utm_medium=readme)!
+
+Payment fields, like subtotal, tax, and total can be added using any Common Field to easily make a payment form, donation form, order form, booking form, or any payment form using PayPal and/or Stripe and others.
+
+= Can I Import/Export forms? =
+It’s push-a-button easy to import/export forms between staging and live sites, just like posts and pages using the standard WordPress features.
+
+= What types of forms can I build with Ninja Forms? =
+The Ninja Forms drag and drop form builder for WordPress makes it very easy to build countless different types of forms. These are just some of the kinds of forms you can build with the Ninja Forms contact form plugin:
+* contact form
+* email form
+* custom form
+* pdf form
+* payment form
+* registration form
+* login form
+* update profile form
+* contact me
+* signature form
+* upload form
+* file upload form
+* conditional form,
+* feedback form
+* appointment form
+* quote form
+* survey form
+* contact button form
+* signup form
+* subscription form
+* email subscription form
+* newsletter form
+* donation form
+* booking form
+* event form
+* quote request form
+* multi page form
+* conditional logic form
+* subscription form
+* application form
+* employment verification form
+* scholarship application form
+* maintenance request form
+* request form
+* referral form
+* volunteer form
+* fundraising form
+* MailChimp form
+* Campaign Monitor form
+* Constant Contact form
+* Mailpoet form
+* AWeber form
+* CleveRreach form
+* Emma form
+* Convertkit form
+* Active Campaign form
+* Salesforce form
+* Zoho form
+* Capsule form
+* Insightly form
+* PipelineDeals form
+* OnePageCRM form
+
+= Can I integrate Ninja Forms with my email marketing service, CRM, or other favorite service? =
+Almost certainly. The Ninja Forms builder integrates directly with over a dozen [email marketing and CRM services](https://ninjaforms.com/add-ons/?utm_source=Ninja+Forms+Plugin&utm_medium=readme) including MailChimp, Constant Contact, Active Campaign, Salesforce, Insightly, Zoho, and many more. 
+
+Ninja Forms also integrates with 1,000+ other popular services through our [Zapier integration](https://ninjaforms.com/extensions/zapier/?utm_source=Ninja+Forms+Plugin&utm_medium=readme). Some of the more popular services that we see our users integrate flawlessly with include:
+* Hubspot CRM
+* HubSpot Email Marketing
+* Discord
+* Shopify
+* GitHub
+* Google Sheets
+* Google Drive
+* Dropbox
+* Amazon S3
+* Esignatures.io
+* Approveme
+* Signnow
+* Docusign
+* Zendesk
+* Braintree
+* Microsoft Office 365
+* Microsoft Excel
+* Microsoft Dynamics 365 CRM
+* LinkedIn
+* Eventbrite
+* Wunderlist
+* Evernote
+* Sakari SMS
+* SendinBlue
+* SugarCRM
+* Asana
+* Basecamp
+* Todoist
+* SurveyMonkey
+* PipeDrive CRM
+* Zoho Mail
+* Zoho Invoice
+* Agile CRM
+* Infusionsoft
+* Freshbooks
+* Freshsales
+* Intercom
+* Click Funnels
+* Printfection
+* Acuity Scheduling
+* Quickbooks Online
+
+= What type of support is available for Ninja Forms? =
+We have a dedicated support team standing by to help with anything you may need. We’re available 9am-4pm EST, Mon-Fri, and strive to answer all customer requests within 24 hours.
 
 == Installation ==
 This section describes how to install the plugin and get it working.
@@ -137,21 +303,76 @@ This section describes how to install the plugin and get it working.
 
 == Upgrade Notice ==
 
-= 3.4.22 (21 November 2019) =
+= 3.4.24.1 (5 March 2020) =
+
+*Security:*
+
+* Patched an HTML injection vulnerability in our merge tag system. Many thanks to Tom Standley at ContainCo for practicing responsible disclosure.
 
 *Bugs:*
 
-* The unique field restriction should no longer block payment actions from completing.
-* Corrected an error that was preventing the current list of favorite fields from displaying in any location.
-* Updated some of our builder styles to account for updates in WordPress 5.3.
-* Corrected an error that sometimes caused the images in the select image field to not be found.
-* Disabled an internal error logging function that was sometimes causing bloat in our database tables.
+* User permission filters should now work as expected.
+* Select image fields should now work properly when dev mode is disabled.
+* Resolved an error that was causing php warnings on some API calls.
+* Email settings should now properly read email addresses surrounded by <> characters.
+* Resolved an error that was causing deprecated function warnings in php error logs.
+* Forms with calculations should now display properly on sites using a "formal" language setting.
+* Export should now properly appear as an option in the bulk actions on the submissions page.
+* Resolved an error that was preventing the add-on manager from installing plugins.
 
 *Changes:*
 
-* Email actions now support file attachments from the WordPress media library.
+* Add-on updates will now enforce php requirements if the current version on the installation is below the minimum for the add-on.
 
 == Changelog ==
+
+= 3.4.24.1 (5 March 2020) =
+
+*Security:*
+
+* Patched an HTML injection vulnerability in our merge tag system. Many thanks to Tom Standley at ContainCo for practicing responsible disclosure.
+
+= 3.4.24 (2 March 2020) =
+
+*Bugs:*
+
+* User permission filters should now work as expected.
+* Select image fields should now work properly when dev mode is disabled.
+* Resolved an error that was causing php warnings on some API calls.
+* Email settings should now properly read email addresses surrounded by <> characters.
+* Resolved an error that was causing deprecated function warnings in php error logs.
+* Forms with calculations should now display properly on sites using a "formal" language setting.
+* Export should now properly appear as an option in the bulk actions on the submissions page.
+* Resolved an error that was preventing the add-on manager from installing plugins.
+
+*Changes:*
+
+* Add-on updates will now enforce php requirements if the current version on the installation is below the minimum for the add-on.
+
+= 3.4.23 (12 February 2020) =
+
+*Security:*
+
+* Patched a delayed XSS vulnerability in our email action.
+* Hardened the authorization security on our settings page.
+* Patched a stored XSS vulnerability on our settings page.
+
+*Bugs:*
+
+* Ninja Forms should now properly honor user profile language settings if they are not the site default.
+* Opening the form builder should no longer result in a php warning about an invalid argument.
+* Cleaned up our publish code to avoid a few other php warnings.
+
+*Changes:*
+
+* Updated our event registration template to be more accessibility compliant.
+
+= 3.4.22.1 (4 February 2020) =
+
+*Security:*
+
+* Hardened the authorization security on several of our form endpoints.
+* Audited all translation functions to prevent injection attacks.
 
 = 3.4.22 (21 November 2019) =
 

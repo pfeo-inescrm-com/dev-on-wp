@@ -27,7 +27,7 @@ $container-size: 1170px;
 }
 
 @mixin gradient{
-  background: linear-gradient(to left, $scolor, $pcolor);
+  background: linear-gradient(to left, $tcolor, $pcolor);
 }
 // @param $parent is the parent of the element that will get focus on click
 @mixin focusOnClick($focusColor){

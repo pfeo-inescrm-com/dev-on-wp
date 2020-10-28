@@ -13,7 +13,7 @@ OAuth::getInstance()->setup();
 add_action( 'wp_ajax_nf_services', function(){
   $services = apply_filters( 'ninja_forms_services', [
     'ninja-forms-addon-manager' => [
-      'name' => __( 'Add-on Manager (Beta)', 'ninja-mail' ),
+      'name' => esc_html__( 'Add-on Manager (Beta)', 'ninja-mail' ),
       'slug' => 'ninja-forms-addon-manager',
       'installPath' => 'ninja-forms-addon-manager/ninja-forms-addon-manager.php',
       'description' => 'Install any purchased Ninja Forms add-ons with a single click. No need to download a file or copy/paste a license key! <strong>* Won\'t work on a local dev environment.</strong>',
@@ -56,10 +56,10 @@ add_action( 'wp_ajax_nf_services_install', function() {
   // });
 
   if ( ! current_user_can('install_plugins') )
-    die( json_encode( [ 'error' => __( 'Sorry, you are not allowed to install plugins on this site.' ) ] ) );
+    die( json_encode( [ 'error' => esc_html__( 'Sorry, you are not allowed to install plugins on this site.' ) ] ) );
 
-  $plugin = $_REQUEST[ 'plugin' ];
-  $install_path = $_REQUEST[ 'install_path' ];
+  $plugin = \WPN_Helper::sanitize_text_field($_REQUEST['plugin']);
+  $install_path = \WPN_Helper::sanitize_text_field($_REQUEST['install_path']);
 
   include_once( ABSPATH . 'wp-admin/includes/plugin-install.php' ); //for plugins_api..
   $api = plugins_api( 'plugin_information', array(

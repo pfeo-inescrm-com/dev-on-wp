@@ -1,5 +1,6 @@
 <?php
 
+// Ajax called handled just below
 add_action( 'wp_ajax_ninja_forms_sendwp_remote_install', 'wp_ajax_ninja_forms_sendwp_remote_install_handler' );
 
 function wp_ajax_ninja_forms_sendwp_remote_install_handler () {
@@ -58,7 +59,7 @@ function wp_ajax_ninja_forms_sendwp_remote_install_handler () {
     if( ! function_exists('sendwp_get_server_url') ) {
         ob_end_clean();
         echo json_encode( array(
-            'error' => __( 'Something went wrong. SendWP was not installed correctly.' ),
+            'error' => esc_html__( 'Something went wrong. SendWP was not installed correctly.' ),
             'install' => $install,
             ) );
         exit;
@@ -66,10 +67,10 @@ function wp_ajax_ninja_forms_sendwp_remote_install_handler () {
     
     echo json_encode( array(
         'partner_id' => 16,
-        'register_url' => sendwp_get_server_url() . '_/signup',
-        'client_name' => sendwp_get_client_name(),
-        'client_secret' => sendwp_get_client_secret(),
-        'client_redirect' => sendwp_get_client_redirect(),
+        'register_url' => esc_url(sendwp_get_server_url() . '_/signup'),
+        'client_name' => esc_attr( sendwp_get_client_name() ),
+        'client_secret' => esc_attr( sendwp_get_client_secret() ),
+        'client_redirect' => esc_url(sendwp_get_client_redirect()),
     ) );
     exit;
 }
