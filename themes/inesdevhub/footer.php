@@ -117,7 +117,7 @@
 
                     <div class="col-lg-3 col-md-6 col-12 mt-5 mt-lg-0">
                     <div class="info__logo">
-                                <img src="<?php echo get_template_directory_uri() . '/assets/images/logo-inescrm-white-166x35.png';  ?>" alt="footer logo">
+                                <img src="<?php echo get_template_directory_uri() . '/assets/images/INESCRM-Efficy-logo-white-166x57.png';  ?>" alt="footer logo">
                             </div>
                         <?php
                         if (is_active_sidebar('inesdevhub-sidebar-footer-4')) {

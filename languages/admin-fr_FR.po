@@ -1274,179 +1274,181 @@ msgstr "Envoi d’un nouveau média"
 
 #. translators: 1: WordPress version number, 2: Plural number of bugs. Singular
 #. security issue.
-#: wp-admin/about.php:339
+#: wp-admin/about.php:384
 msgid "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bugs."
 msgstr[0] "La <strong>version %1$s</strong> a corrigé un problème de sécurité et %2$s bug."
 msgstr[1] "La <strong>version %1$s</strong> a corrigé un problème de sécurité et %2$s bugs."
 
+#. translators: 1: WordPress version number, 2: Plural number of bugs.
 #. translators: 1: WordPress version number, 2: plural number of bugs. More
 #. than one security issue.
-#. translators: 1: WordPress version number, 2: Plural number of bugs.
-#: wp-admin/about.php:108 wp-admin/about.php:333
+#: wp-admin/about.php:58 wp-admin/about.php:153 wp-admin/about.php:378
 msgid "<strong>Version %1$s</strong> addressed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed %2$s bugs."
 msgstr[0] "La <strong>version %1$s</strong> a corrigé %2$s bug."
 msgstr[1] "La <strong>version %1$s</strong> a corrigé %2$s bugs."
 
+#. translators: %s: WordPress version number
 #. translators: %s: WordPress version number.
-#: wp-admin/about.php:330
+#: wp-admin/about.php:83 wp-admin/about.php:375
 msgid "<strong>Version %s</strong> addressed some security issues."
 msgstr "La <strong>version %s</strong> a corrigé quelques problèmes de sécurité."
 
 #. translators: %s: WordPress version number.
-#: wp-admin/about.php:328
+#: wp-admin/about.php:373
 msgid "<strong>Version %s</strong> addressed one security issue."
 msgstr "La <strong>version %s</strong> a corrigé un problème de sécurité."
 
-#: wp-admin/about.php:324
+#: wp-admin/about.php:369
 msgid "Maintenance and Security Release"
 msgstr "Mise à jour de maintenance et de sécurité"
 
-#: wp-admin/about.php:322
+#: wp-admin/about.php:367
 msgid "Security Releases"
 msgstr "Mises à jour de sécurité"
 
-#: wp-admin/about.php:321
+#: wp-admin/about.php:366
 msgid "Security Release"
 msgstr "Mise à jour de sécurité"
 
-#: wp-admin/about.php:319
+#: wp-admin/about.php:364
 msgid "Maintenance Releases"
 msgstr "Mises à jour de maintenance"
 
-#: wp-admin/about.php:318
+#: wp-admin/about.php:363
 msgid "Maintenance Release"
 msgstr "Mise à jour de maintenance"
 
-#: wp-admin/about.php:308
+#: wp-admin/about.php:353
 msgid "Go to Dashboard"
 msgstr "Aller sur le tableau de bord"
 
-#: wp-admin/about.php:308
+#: wp-admin/about.php:353
 msgid "Go to Dashboard &rarr; Home"
 msgstr "Aller sur l’accueil"
 
-#: wp-admin/about.php:305
+#: wp-admin/about.php:350
 msgid "Return to Dashboard &rarr; Updates"
 msgstr "Retourner aux mises à jour"
 
-#: wp-admin/about.php:305
+#: wp-admin/about.php:350
 msgid "Return to Updates"
 msgstr "Retourner aux mises à jour"
 
 #. translators: %s: Link to the PHP 7 developer notes.
-#: wp-admin/about.php:292
+#: wp-admin/about.php:337
 msgid "WordPress 5.3 aims to fully support PHP 7.4. This release contains <a href=\"%s\">multiple changes</a> to remove deprecated functionality and ensure compatibility. WordPress continues to encourage all users to run the latest and greatest versions of PHP."
 msgstr "WordPress 5.3 vise à prendre totalement en charge PHP 7.4. Cette version contient de <a href=\"%s\">multiples modifications</a> pour retirer les fonctionnalités dépréciées et assurer la compatibilité. WordPress continue d’encourager ses utilisatrices et utilisateurs à faire tourner leurs sites sur la dernière et la meilleure version de PHP."
 
-#: wp-admin/about.php:287
+#: wp-admin/about.php:332
 msgid "PHP 7.4 Compatibility"
 msgstr "Compatibilité PHP 7.4"
 
 #. translators: %s: Link to the date/time developer notes.
-#: wp-admin/about.php:280
+#: wp-admin/about.php:325
 msgid "Developers can now work with <a href=\"%s\">dates and timezones</a> in a more reliable way. Date and time functionality has received a number of new API functions for unified timezone retrieval and PHP interoperability, as well as many bug fixes."
 msgstr "Les développeurs et développeuses peuvent maintenant mieux travailler avec les <a href=\"%s\">dates et fuseaux horaires</a>. La fonctionnalité de gestion de la date et de l’heure a reçu quantité de nouvelles fonctions API pour unifier l’utilisation des fuseaux horaires, pour améliorer l’intéropérabilité PHP ainsi que plusieurs correctifs et améliorations diverses."
 
-#: wp-admin/about.php:275
+#: wp-admin/about.php:320
 msgid "Date/Time Component Fixes"
 msgstr "Correctifs sur le composant date/heure"
 
-#: wp-admin/about.php:272
+#: wp-admin/about.php:317
 msgid "For Developers"
 msgstr "Pour les développeuses et les développeurs"
 
-#: wp-admin/about.php:257
+#: wp-admin/about.php:302
 msgid "You’ll now be periodically asked to confirm that your admin email address is up to date when you log in as an administrator. This reduces the chance of getting locked out of your site if you change your email address."
 msgstr "Il vous sera dorénavant périodiquement demandé de confirmer que votre adresse de messagerie est à jour quand vous vous connectez en tant qu’administrateur. Cela réduit le risque de verrouillage sans pouvoir accéder à votre site si vous changez d’adresse de messagerie."
 
-#: wp-admin/about.php:256
+#: wp-admin/about.php:301
 msgid "Admin Email Verification"
 msgstr "Vérification de l’e-mail d’administration"
 
-#: wp-admin/about.php:253
+#: wp-admin/about.php:298
 msgid "The improvements introduced in 5.3 make it even easier to identify issues. Expanded recommendations highlight areas that may need troubleshooting on your site from the Health Check screen."
 msgstr "Les améliorations introduites dans 5.3 rendent encore plus facile l’identification des problèmes. Les recommandations qui nécessiteraient un dépannage sont mises en avant sur l’écran « Santé de votre site »."
 
-#: wp-admin/about.php:252
+#: wp-admin/about.php:297
 msgid "Site Health Checks"
 msgstr "Vérifications de l’état de santé du site"
 
-#: wp-admin/about.php:249
+#: wp-admin/about.php:294
 msgid "Your images will be correctly rotated upon upload according to the embedded orientation data. This feature was first proposed nine years ago and made possible through the perserverance of many dedicated contributors."
 msgstr "Vos images seront correctement orientées lors du téléversement en fonction des données d’orientation embarquées dans le fichier. Cette fonctionnalité a été proposée pour la première fois il y a neuf ans, et son implémentation a été rendue possible grâce à la persévérance de plusieurs contributrices et contributeurs passionné·e·s."
 
-#: wp-admin/about.php:248
+#: wp-admin/about.php:293
 msgid "Automatic Image Rotation"
 msgstr "Rotation automatique des images"
 
-#: wp-admin/about.php:245
+#: wp-admin/about.php:290
 msgid "Improvements for Everyone"
 msgstr "Des améliorations pour tout le monde"
 
 #. translators: %s: Link to the Inter font website.
-#: wp-admin/about.php:221
+#: wp-admin/about.php:266
 msgid "As befits a theme called Twenty Twenty, clarity and readability is also a big focus. The theme includes the typeface <a href=\"%s\">Inter</a>, designed by Rasmus Andersson. Inter comes in a Variable Font version, a first for default themes, which keeps load times short by containing all weights and styles of Inter in just two font files."
 msgstr "Ce thème nommé « Twenty Twenty » le mérite bien : la clarté et la lisibilité sont aussi de grandes priorités. Le thème inclut la police <a href=\"%s\">Inter</a>, conçue par Rasmus Andersson. « Inter » est implémentée sous la forme d’une police variable, une première pour un thème par défaut. Cela améliore les temps de chargement car cette police contient toutes les tailles et toutes les variations de styles en seulement deux fichiers."
 
-#: wp-admin/about.php:215
+#: wp-admin/about.php:260
 msgid "As the block editor celebrates its first birthday, we are proud that Twenty Twenty is designed with flexibility at its core. Show off your services or products with a combination of columns, groups, and media blocks. Set your content to wide or full alignment for dynamic and engaging layouts. Or let your thoughts be the star with a centered content column!"
 msgstr "Le nouvel éditeur fêtant son premier anniversaire, nous sommes fièr·e·s que l’idée directrice de Twenty Twenty soit la flexibilité. Montrez vos services ou vos produits avec des combinaisons de colonnes, de groupes et de blocs médias. Mettez en place vos contenus en grande ou même pleine largeur pour des mises en page dynamiques et attirantes… ou laissez vos réflexions prendre toute la place avec une simple colonne de contenu centrée !"
 
-#: wp-admin/about.php:214
+#: wp-admin/about.php:259
 msgid "Introducing Twenty Twenty"
 msgstr "Arrivée de Twenty Twenty"
 
-#: wp-admin/about.php:202
+#: wp-admin/about.php:247
 msgid "Additional style options allow you to set your preferred style for any block that supports this feature"
 msgstr "Des options de style supplémentaires vous permettent de définir votre style préféré pour n’importe quel bloc qui prend en charge cette fonctionnalité"
 
-#: wp-admin/about.php:201
+#: wp-admin/about.php:246
 msgid "Heading blocks now offer controls for text color"
 msgstr "Le bloc Titre dispose maintenant d’un sélecteur de couleur de texte"
 
-#: wp-admin/about.php:200
+#: wp-admin/about.php:245
 msgid "The new Predefined layouts make it a cinch to arrange content into advanced designs"
 msgstr "Les nouvelles mises en page prédéfinies transforment en jeu d'enfant l’organisation du contenu dans des conceptions avancées"
 
-#: wp-admin/about.php:199
+#: wp-admin/about.php:244
 msgid "The Columns block now supports fixed column widths"
 msgstr "Le bloc des colonnes prend maintenant en charge les largeurs fixes de colonnes"
 
-#: wp-admin/about.php:198
+#: wp-admin/about.php:243
 msgid "The new Group block lets you easily divide your page into colorful sections"
 msgstr "Le nouveau bloc Groupe vous permet de diviser facilement votre page en sections colorées"
 
 #. translators: %s: The current WordPress version number.
-#: wp-admin/about.php:192
+#: wp-admin/about.php:237
 msgid "WordPress %s adds even more robust tools for creating amazing designs."
 msgstr "WordPress %s ajoute des outils toujours plus robustes pour concevoir de superbes sites."
 
-#: wp-admin/about.php:187
+#: wp-admin/about.php:232
 msgid "Expanded Design Flexibility"
 msgstr "Flexibilité de conception étendue"
 
-#: wp-admin/about.php:180
+#: wp-admin/about.php:225
 msgid "Accessibility improvements include the integration of block editor styles in the admin interface. These improved styles fix many accessibility issues: color contrast on form fields and buttons, consistency between editor and admin interfaces, new snackbar notices, standardizing to the default WordPress color scheme, and the introduction of Motion to make interacting with your blocks feel swift and natural. For people who use a keyboard to navigate the dashboard, the block editor now has a Navigation mode. This lets you jump from block to block without tabbing through every part of the block controls."
 msgstr "Les améliorations d’accessibilité incluent l’intégration des styles de l’éditeur dans l’interface d’administration. Ces améliorations corrigent de nombreux problèmes d’accessibilité : contrastes des couleurs sur les champs de formulaires et sur les boutons, cohérence entre l’éditeur et les écrans d’administration, nouvelles notices affichées à la volée, standardisation du jeu de couleurs par défaut de WordPress, et l’introduction d’animations pour rendre l’interaction avec les blocs plus élégante et naturelle. Pour les personnes utilisant un clavier pour naviguer sur l’administration, l’éditeur dispose maintenant d’un mode de navigation. Cela permet de sauter d’un bloc à l’autre sans tabuler à travers l’ensemble des éléments de chaque bloc."
 
-#: wp-admin/about.php:176
+#: wp-admin/about.php:221
 msgid "This enhancement-focused update introduces over 150 new features and usability improvements, including improved large image support for uploading non-optimized, high-resolution pictures taken from your smartphone or other high-quality cameras. Combined with larger default image sizes, pictures always look their best."
 msgstr "Cette mise à jour focalisée sur les améliorations introduit plus de 150 nouvelles fonctionnalités et améliorations d’utilisabilité, comme la prise en charge des grandes images pour téléverser les images de haute résolution prises avec votre téléphone ou avec d’autre appareils de haute résolution. En combinaison avec l’utilisation de tailles d’images plus grandes par défaut, vos photos seront toujours traitées du mieux possible."
 
-#: wp-admin/about.php:174
+#: wp-admin/about.php:219
 msgid "Block Editor Improvements"
 msgstr "Améliorations de l’éditeur de blocs"
 
-#: wp-admin/about.php:161
+#: wp-admin/about.php:206
 msgid "5.3 expands and refines the block editor introduced in WordPress 5.0 with a new block, more intuitive interactions, and improved accessibility. New features in the editor increase design freedoms, provide additional layout options and style variations to allow designers complete control over the look of a site. This release also introduces the Twenty Twenty theme giving the user more design flexibility and integration with the block editor. Creating beautiful web pages and advanced layouts has never been easier."
 msgstr "5.3 développe et affine l’éditeur introduit dans WordPress 5.0 avec un nouveau bloc, des interactions plus intuitives et une accessibilité améliorée. Les nouvelles fonctionnalités de l’éditeur augmentent la liberté de conception, fournissent des options de mise en page supplémentaires et des variations de styles permettant aux concepteurs de contrôler totalement l’apparence de leur site. Cette version introduit également le thème Twenty Twenty, offrant à l’utilisateur plus de flexibilité de conception et d’intégration avec l’éditeur. Créer de belles pages web et des mises en page avancées n’a jamais été aussi simple."
 
 #. translators: %s: HelpHub URL
 #. translators: %s: Documentation URL.
-#: wp-admin/about.php:70 wp-admin/about.php:95 wp-admin/about.php:120
-#: wp-admin/about.php:145 wp-admin/about.php:351
+#: wp-admin/about.php:70 wp-admin/about.php:90 wp-admin/about.php:115
+#: wp-admin/about.php:140 wp-admin/about.php:165 wp-admin/about.php:190
+#: wp-admin/about.php:396
 msgid "For more information, see <a href=\"%s\">the release notes</a>."
 msgstr "Pour plus d’informations, consultez les <a href=\"%s\">notes de publication</a>."
 
@@ -1454,14 +1456,14 @@ msgstr "Pour plus d’informations, consultez les <a href=\"%s\">notes de public
 #. than one security issue.
 #. translators: 1: WordPress version number, 2: Plural number of bugs. More
 #. than one security issue.
-#: wp-admin/about.php:58 wp-admin/about.php:83 wp-admin/about.php:133
-#: wp-admin/about.php:345
+#: wp-admin/about.php:103 wp-admin/about.php:128 wp-admin/about.php:178
+#: wp-admin/about.php:390
 msgid "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bugs."
 msgstr[0] "La <strong>version %1$s</strong> a corrigé quelques problèmes de sécurité et %2$s bug."
 msgstr[1] "La <strong>version %1$s</strong> a corrigé quelques problèmes de sécurité et %2$s bugs."
 
-#: wp-admin/about.php:53 wp-admin/about.php:325
+#: wp-admin/about.php:53 wp-admin/about.php:370
 msgid "Maintenance and Security Releases"
 msgstr "Mises à jour de maintenance et de sécurité"
 
@@ -11116,7 +11118,8 @@ msgstr "<a href=\"%1$s\">WordPress %2$s</a> est disponible ! <a href=\"%3$s\" a
 #. translators: %s: WordPress version
 #: wp-admin/includes/update.php:280 wp-admin/install.php:239
 #: wp-admin/update-core.php:78 wp-admin/upgrade.php:83 wp-admin/about.php:73
-#: wp-admin/about.php:98 wp-admin/about.php:123 wp-admin/about.php:148
+#: wp-admin/about.php:93 wp-admin/about.php:118 wp-admin/about.php:143
+#: wp-admin/about.php:168 wp-admin/about.php:193
 msgid "https://wordpress.org/support/wordpress-version/version-%s/"
 msgstr "https://wordpress.org/support/wordpress-version/version-%s/"
 
@@ -13787,3 +13790,23 @@ msgstr "WordPress"
 #: wp-admin/freedoms.php:50 wp-admin/about.php:45
 msgid "Credits"
 msgstr "Crédits"
+
+#. Author URI of the plugin
+msgid "http://ma.tt/"
+msgstr "https://ma.tt/"
+
+#. Author of the plugin
+msgid "Matt Mullenweg"
+msgstr "Matt Mullenweg"
+
+#. Description of the plugin
+msgid "This is not just a plugin, it symbolizes the hope and enthusiasm of an entire generation summed up in two words sung most famously by Louis Armstrong: Hello, Dolly. When activated you will randomly see a lyric from <cite>Hello, Dolly</cite> in the upper right of your admin screen on every page."
+msgstr "Ce n’est pas qu’une extension. Elle symbolise l’espoir et l’enthousiasme de toute une génération, résumé en deux mots, qu’a notamment chanté Louis Armstrong : Hello, Dolly. Une fois activée, elle affichera une ligne aléatoirement des paroles de la chanson <cite>Hello, Dolly</cite>, en haut à droite de toutes les pages de l’administration."
+
+#. Plugin URI of the plugin
+msgid "http://wordpress.org/plugins/hello-dolly/"
+msgstr "https://wordpress.org/plugins/hello-dolly/"
+
+#. Plugin Name of the plugin
+msgid "Hello Dolly"
+msgstr "Hello Dolly"
