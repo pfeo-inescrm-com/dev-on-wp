@@ -219,14 +219,13 @@ $home_url = home_url('/');
             <div class="container">
                 <div class="row">
                     <div class="col text-center">
-                        <h3>Restes informés des dernières mises à jour de nos API !</h3>
+                        <h3>Restez informés des dernières mises à jour de nos API !</h3>
                         <br>
-                        <p>Retrouvez toutes les mises à jour de nos API REST et SOAP. Restez informé en vous inscrivant
-                            à notre flux RSS</p>
+                        <p>Retrouvez toutes les mises à jour de nos API REST et SOAP, inscrivez-vous à notre flux RSS</p>
                         <br>
                         <div class="cta-group">
                             <a href="https://espace-client.inescrm.fr/maj-api-ines?format=feed&type=rss">
-                                <button class="btn btn-info btn-lg btn--round" style="width: 250px;">Je m’abonne au flux RSS</button>
+                                <button class="btn btn-info btn-lg btn--round" style="width: 250px;text-transform: inherit;">Je m’abonne au flux RSS</button>
                             </a>
                         </div>
                     </div>
